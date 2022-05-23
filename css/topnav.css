@@ -1,0 +1,14 @@
+.topnav {
+ height: 45px;
+ width: 100vw;
+ background-color: white;
+}
+.topnav a {
+ padding: 15px;
+ background-color: white;
+ color: black;
+ transition: ease-in-out 0.3s;
+}
+.topnav a:hover {
+ background-color: #e3e3e3; 
+}
