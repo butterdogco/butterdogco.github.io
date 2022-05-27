@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="img/hqdefault-modified.png" rel="shortcut icon">
-    <!-- <link href="css/topnav.css" rel="stylesheet"> -->
-    <title>Butter Dog Co - Home</title>
-    <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: rgb(40,37,93);
-      background: linear-gradient(128deg, rgba(40,37,93,1) 0%, rgba(22,22,36,1) 35%, rgba(0,77,93,1) 100%);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      height: 100vh;
-    }
-    .gradient {
-      background: #4A7AFF;
-      background: linear-gradient(to right, #4A7AFF 13%, #2E43FF 45%, #3500A1 100%);
+<head>
+  <title>Butter Dog Co - Home</title>
+  <link rel="shortcut icon" href="https://butterdogco.github.io/img/hqdefault-modified.png">
+<style>
+body {
+  background-color: gray;
+}
+.main {
+  margin-top: 0px;
+}
+.topnav {
+  list-style-type: none;
+  margin-top: 5px;
+  padding: 0px;
+  position: ;
+  background-color: transparent;
+  width: 98vw;
+  height: 60px;
+  border-radius: 8px;
+  float: left;
+}
+.topnav li {
+  position: inline;
+  float: right;
+}
+.topnav a {
+  display: inline;
+  padding: 15px;
+  transition: ease 0.3s;
+  border-radius: 8px;
+  width: 60px;
+  height: 30px;
+  margin: 0;
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+.topnav a:hover {
+  color: white;
+  font-weight: bold;
+}
+.topnav img {
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+</style>
+</head>
+<body>
+<ul class="topnav">
+    <a href="https://butterdogco.github.io" style="float: left;"><img src="https://butterdogco.github.io/img/hqdefault-modified.png"></a>
+    <li><a href="apps">Apps</a></li>
+	<li><a href="#">Home</a></li>
+</ul>
+<div class="main">
+<h1 style="
+      background: none;
+      background: linear-gradient(100deg, #1254b0 1%, #333333 10%, #00adf7 30%);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-     }
-     ul {
-     list-style-type: none;
-     padding: 0px;
-     position: fixed;
-     height: 40px;
-     width: 100vw;
-     background-color: white;
-     }
-     li {
-     display: inline;
-     padding: 15px;
-     transition-duration: 0.3s;
-     background-color: white;
-     }
-     li:hover {
-     background-color: #e3e3e3;
-     }
-     a {
-     color: black;
-     text-decoration: none;
-     }
-    </style>
-  </head>
-  <body>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="apps">Apps</a></li>
-    </ul>
-    <b>
-    <h2 class="gradient" style="margin-left: 30px; margin-top: 30px;">Welcome to Butter Dog Co</h2>
-    <h4 class="gradient" style="margin-left: 30px;">Feel free to take a look around</h4>
-    </b>
-  </body>
+      -webkit-text-fill-color: transparent;">Welcome to Butter Dog Co</h1>
+<h2 style="
+      background: none;
+      background: linear-gradient(100deg, #1254b0 1%, #333333 10%, #00bdf7 25%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;">Check out some of our sites</h2>
+</div>
+</body>
 </html>
+
+
