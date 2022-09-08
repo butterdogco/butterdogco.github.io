@@ -4,13 +4,15 @@
   <title>Butter Dog Co - Apps</title>
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/img/favicon.ico">
 <style>
+@keyframes slideIn {
+	
+	}
 body {
-  background-image: url('img/background.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: none;
+  background-color: white;
   font-family: 'Roboto', sans-serif;
-  height: 99vh;
+  max-height: 100vh;
+  margin: 0;
+  color: black;
 }
 .main {
   margin-top: 0px;
@@ -34,24 +36,23 @@ body {
 .topnav a {
   display: inline;
   padding: 15px;
-  transition: ease 0.3s;
+  transition: ease-in-out 0.3s;
   border-radius: 8px;
   width: 60px;
   height: 30px;
   margin: 0;
   display: block;
-  color: black;
+  color: rgb(43, 43, 43);
   text-decoration: none;
-  color: white;
 }
 .topnav a:hover {
-  color: #e0e0e0;
+  color: #000000;
   font-weight: bold;
 }
 .topnav img {
   float: left;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
 }
 h1, h2, p {
   color: white;
@@ -64,14 +65,18 @@ h1, h2, p {
   border-radius: 8px;
   object-fit: contain;
 }
+.toplogo {
+  margin-left: 10px;
+}
 </style>
 </head>
 <body>
 <div class="bg">
 <ul class="topnav">
-    <a href="https://butterdogco.github.io" style="float: left;"><img src="https://butterdogco.github.io/img/hqdefault-modified.png"></a>
+    <a href="https://butterdogco.github.io" style="float: left;"><img class="toplogo" src="https://butterdogco.github.io/img/hqdefault-modified.png"></a>
+	<li><a href="https://butterdogco.com/news">News</a></li>
     <li><a href="#">Apps</a></li>
-	<li><a href="https://butterdogco.github.io">Home</a></li>
+	<li><a href="https://butterdogco.com">Home</a></li>
 </ul>
 <div class="main">
 <center>
