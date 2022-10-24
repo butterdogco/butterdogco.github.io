@@ -7,10 +7,18 @@
     href="https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/img/favicon.ico">
   <link rel="stylesheet" href="css/card.css">
   <style>
-    @keyframes slideIn {}
+    @keyframes slideIn {
+      0% {
+        margin-left: 100vw;
+      }
+      100% {
+        margin-left: 0vw;
+      }
+    }
 
     body {
       color: white;
+      animation: slideIn 0.2s ease-in-out;
     }
 
     .main {
