@@ -5,7 +5,6 @@
   <title>Butter Dog Co - Apps</title>
   <link rel="icon" type="image/x-icon"
     href="https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/img/favicon.ico">
-  <link rel="stylesheet" href="css/card.css">
   <style>
     @keyframes slideIn {
       0% {
@@ -17,8 +16,8 @@
     }
 
     body {
+      background-color: rgb(20,20,20);
       color: white;
-      animation: slideIn 0.2s ease-in-out;
     }
 
     .main {
@@ -102,11 +101,43 @@
     .toplogo {
       margin-left: 10px;
     }
-
+    
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    
     .card-image img {
       object-fit: contain;
-      height: 100%;
+      height: 180px;
+      width: 400px;
+      margin: 10px;
     }
+    
+    #cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    
+    .card {
+      overflow: hidden;
+      width: 400px;
+      height: 320px;
+      background-color: rgb(30,30,30);
+      display: inline-flex;
+      border-radius: 8px;
+    }
+    
+    .card-info-title {
+      margin-left: 10px;
+    }
+    
+    h3 {
+      font-size: 25px;
+    }
+    
   </style>
 </head>
 
@@ -119,13 +150,13 @@
       <li><a href="#">Apps</a></li>
       <li><a href="https://butterdogco.com">Home</a></li>
     </ul>
+    <center>
     <div class="main">
-      <center>
         <h1>Apps</h1>
         <i>
           <p style="margin-bottom: 50px;">by Butter Dog Co</p>
         </i>
-      </center>
+        </center>
       <div id="cards">
         <a href="https://boogle.butterdogco.com">
           <div class="card">
@@ -148,7 +179,7 @@
           <div class="card">
             <div class="card-content">
               <div class="card-image">
-                <img src="img/butterflix_round.png">
+                <img src="https://butterdogco.com/img/butterflix_round.png">
               </div>
               <div class="card-info-wrapper">
                 <div class="card-info">
@@ -165,7 +196,7 @@
           <div class="card">
             <div class="card-content">
               <div class="card-image">
-                <img src="img/favicon.ico">
+                <img src="https://butterdogco.com/img/favicon.ico">
               </div>
               <div class="card-info-wrapper">
                 <div class="card-info">
@@ -178,47 +209,68 @@
             </div>
           </div>
         </a>
-        <a href="https://sites.google.com/view/btrplus" <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/butterplus.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>butter +</h3>
-                  <h4>movies but with a plus on the right</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="https://sites.google.com/bsd48.org/buterfiy/" <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/favicon.ico">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>butterfiy</h3>
-                  <h4>music that makes your butter rock hard</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="https://search.butterdogco.com/apps/wikibedia">
+        <a href="https://sites.google.com/bsd48.org/buterfiy">
           <div class="card">
             <div class="card-content">
               <div class="card-image">
-                <img src="img/Untitled.png">
+                <img src="https://butterdogco.com/img/butterplus.png">
               </div>
               <div class="card-info-wrapper">
                 <div class="card-info">
                   <div class="card-info-title">
-                    <h3>wikabedia</h3>
-                    <h4>know more about your butter</h4>
+                    <h3>butter +</h3>
+                    <h4>movies but with a plus</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://sites.google.com/view/bulu">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <img src="https://butterdogco.com/img/favicon.ico">
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <div class="card-info-title">
+                    <h3>butterfiy</h3>
+                    <h4>wanna break from the ads? listen to more ads.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://search.butterdogco.com/apps/bdog-webstore/">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <img src="https://butterdogco.com/img/favicon.ico">
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <div class="card-info-title">
+                    <h3>webstore</h3>
+                    <h4>get some new butter</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <img src="https://butterdogco.com/img/favicon.ico">
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <div class="card-info-title">
+                    <h3>anem</h3>
+                    <h4>description</h4>
                   </div>
                 </div>
               </div>
@@ -226,7 +278,6 @@
           </div>
         </a>
       </div>
-      <script src="js/card.js"></script>
     </div>
 </body>
 
