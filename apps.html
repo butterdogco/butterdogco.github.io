@@ -184,7 +184,7 @@
 </head>
 
 <body>
-  <img src="https://i.ytimg.com/vi/fP_xuYXgGVY/maxresdefault.jpg" class="men" style="opacity: 0%; display: none;">
+  <img src="https://i.ytimg.com/vi/fP_xuYXgGVY/maxresdefault.jpg" class="men" id="men" style="opacity: 0%; display: none;">
   <div class="bg">
     <ul class="topnav">
       <a href="https://butterdogco.github.io" style="float: left;"><img class="toplogo"
@@ -424,6 +424,18 @@
       </a>
     </div>
   </div>
+  <script>
+    window.onload = function() {
+      
+    }
+    async function test() {
+  console.log('start timer');
+  document.getElementById('men').style.display = 'block';
+  await new Promise(resolve => setTimeout(resolve, 200));
+  console.log('after 1 second');
+  document.getElementById('men').style.display = 'none';
+}  
+  </script>
 </body>
 
 </html>
