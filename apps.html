@@ -15,6 +15,16 @@
         margin-left: 0vw;
       }
     }
+    
+    @keyframes men {
+     0% {
+       opacity: 0%;
+      }
+      
+     100% {
+       opacity: 100%;
+      }
+    }
 
     @font-face {
       font-family: 'Dm Sans', sans-serif;
@@ -159,10 +169,20 @@
     h3 {
       font-size: 25px;
     }
+    
+    .men {
+     animation: men 0.3s;
+     width: 100vw;
+     height: 100vh;
+     image-repeat: none;
+     position: fixed;
+     margin: none;
+    }
   </style>
 </head>
 
 <body>
+  <img src="https://i.ytimg.com/vi/fP_xuYXgGVY/maxresdefault.jpg" class="men">
   <div class="bg">
     <ul class="topnav">
       <a href="https://butterdogco.github.io" style="float: left;"><img class="toplogo"
