@@ -10,14 +10,21 @@
       0% {
         margin-left: 100vw;
       }
+
       100% {
         margin-left: 0vw;
       }
     }
 
+    @font-face {
+      font-family: 'Dm Sans', sans-serif;
+      src: url("fonts/DMSans-Regular.ttf") format("tff");
+    }
+
     body {
-      background-color: rgb(20,20,20);
+      background-color: rgb(20, 20, 20);
       color: white;
+      font-family: 'Dm Sans', sans-serif;
     }
 
     .main {
@@ -101,12 +108,12 @@
     .toplogo {
       margin-left: 10px;
     }
-    
+
     a {
       color: white;
       text-decoration: none;
     }
-    
+
     .card-image img {
       object-fit: contain;
       height: 170px;
@@ -123,36 +130,35 @@
       border: none;
       outline: none;
     }
-    
+
     #cards {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
     }
-    
+
     .card {
       overflow: hidden;
       width: 400px;
       height: 320px;
-      background-color: rgb(30,30,30);
+      background-color: rgb(30, 30, 30);
       display: inline-flex;
       border-radius: 8px;
       transition: 0.2s ease-in-out;
     }
-    
+
     .card:hover {
-      background-color:rgb(50, 50, 50)
+      background-color: rgb(50, 50, 50)
     }
 
     .card-info-title {
       margin-left: 10px;
     }
-    
+
     h3 {
       font-size: 25px;
     }
-    
   </style>
 </head>
 
@@ -166,236 +172,236 @@
       <li><a href="https://butterdogco.com">Home</a></li>
     </ul>
     <center>
-    <div class="main">
+      <div class="main">
         <h1>Apps</h1>
         <i>
           <p style="margin-bottom: 50px;">by Butter Dog Co</p>
         </i>
-        </center>
-      <div id="cards">
-        <a href="https://boogle.butterdogco.com">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="https://raw.githubusercontent.com/butterdogco/Boogle-2.0/main/img/boogle_square.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>Boogle</h3>
-                    <h4>search. because epic.</h4>
-                  </div>
+    </center>
+    <div id="cards">
+      <a href="https://boogle.butterdogco.com">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="https://raw.githubusercontent.com/butterdogco/Boogle-2.0/main/img/boogle_square.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>Boogle</h3>
+                  <h4>search. because epic.</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://sites.google.com/view/butter-flix/">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/butterflix.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>butterflix</h3>
-                    <h4>watch movie because epic</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://sites.google.com/view/butter-flix/">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/butterflix.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>butterflix</h3>
+                  <h4>watch movie because epic</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://sites.google.com/view/bulu">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/bulu.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>bulu</h3>
-                    <h4>three hour ads every five minutes</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://sites.google.com/view/bulu">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/bulu.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>bulu</h3>
+                  <h4>three hour ads every five minutes</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://sites.google.com/bsd48.org/buterfiy">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="https://butterdogco.com/img/butterplus.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>butter +</h3>
-                    <h4>movies but with a plus</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://sites.google.com/bsd48.org/buterfiy">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="https://butterdogco.com/img/butterplus.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>butter +</h3>
+                  <h4>movies but with a plus</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://sites.google.com/bsd48.org/buterfiy/">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/butterfiy.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>butterfiy</h3>
-                    <h4>wanna break from the ads? listen to more ads.</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://sites.google.com/bsd48.org/buterfiy/">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/butterfiy.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>butterfiy</h3>
+                  <h4>wanna break from the ads? listen to more ads.</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://search.butterdogco.com/apps/bdog-webstore/">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/webstore.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>webstore</h3>
-                    <h4>get some new butter for your computer</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://search.butterdogco.com/apps/bdog-webstore/">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/webstore.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>webstore</h3>
+                  <h4>get some new butter for your computer</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://sites.google.com/bsd48.org/bik-bok/">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/bik bok.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>bik bok</h3>
-                    <h4>upload terrible content that thousands see</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://sites.google.com/bsd48.org/bik-bok/">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/bik bok.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>bik bok</h3>
+                  <h4>upload terrible content that thousands see</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://sites.google.com/bsd48.org/biscord/">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/biscord.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>biscord</h3>
-                    <h4>chat with other butter dogs</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://sites.google.com/bsd48.org/biscord/">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/biscord.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>biscord</h3>
+                  <h4>chat with other butter dogs</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://sites.google.com/bsd48.org/bbay">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/bbay.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>bbay</h3>
-                    <h4 style="margin-top: -8px">give others money for something you might not recieve</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://sites.google.com/bsd48.org/bbay">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/bbay.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>bbay</h3>
+                  <h4 style="margin-top: -8px">give others money for something you might not recieve</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://sites.google.com/bsd48.org/b-os/">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/butter-os-tab.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>butter os tab</h3>
-                    <h4>epic operating system for your tablet</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://sites.google.com/bsd48.org/b-os/">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/butter-os-tab.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>butter os tab</h3>
+                  <h4>epic operating system for your tablet</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://sites.google.com/bsd48.org/bdonalds">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/butterdonalds.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>butterdonalds</h3>
-                    <h4>cheap food that will maybe give you cancer</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://sites.google.com/bsd48.org/bdonalds">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/butterdonalds.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>butterdonalds</h3>
+                  <h4>cheap food that will maybe give you cancer</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="https://bweeter.butterdogco.com">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/bweeter.png">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>bweeter</h3>
-                    <h4>post random stuff that no one sees</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="https://bweeter.butterdogco.com">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/bweeter.png">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>bweeter</h3>
+                  <h4>post random stuff that no one sees</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-        <a href="img/rat-spinning.gif">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-image">
-                <img src="img/rat-spinning.gif">
-              </div>
-              <div class="card-info-wrapper">
-                <div class="card-info">
-                  <div class="card-info-title">
-                    <h3>horizontally spinning rat</h3>
-                    <h4>the rat is spinning. but horizontally.</h4>
-                  </div>
+        </div>
+      </a>
+      <a href="img/rat-spinning.gif">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="img/rat-spinning.gif">
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <div class="card-info-title">
+                  <h3>horizontally spinning rat</h3>
+                  <h4>the rat is spinning. but horizontally.</h4>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
+  </div>
 </body>
 
 </html>
