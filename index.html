@@ -2,102 +2,337 @@
 <html>
 
 <head>
-  <title>Butter Dog Co - Home</title>
-  <link rel="icon" type="image/x-icon" href="https://butterdogco.github.io/img/favicon.ico">
+  <title>ButterDog Co - Beta</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="the most epic site ever">
+  <meta name="keywords" content="butterdog, butterdogco, butter dog co, bdog, bdogco, butterdogco.github.io, butterdogco.com, butterflix, bulu, buttertube">
+  <meta name="author" content="ButterDogCo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://butterdogco.com/img/favicon.ico">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-    body {
-      background-color: rgb(20, 20, 20);
-      font-family: 'Google Sans', sans-serif;
-      height: 100%;
-      color: rgb(255, 255, 255);
-      font-family: 'Dm Sans', sans-serif;
-    }
-
     @font-face {
       font-family: 'Dm Sans', sans-serif;
-      src: url("fonts/DMSans-Regular.ttf") format("tff");
+      src: url("https://butterdogco.com/fonts/DMSans-Regular.ttf") format("tff");
     }
 
-    .main {
-      margin-top: 0px;
+    @keyframes fadeIn {
+      from {
+        opacity: 0%;
+      }
+
+      to {
+        opacity: 100%;
+      }
     }
 
-    .topnav {
-      list-style-type: none;
-      margin-top: 0px;
-      padding: 0px;
-      background: transparent;
-      width: 98vw;
-      height: 60px;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Dm Sans', sans-serif;
+      background-color: rgb(20, 20, 20);
+      margin: 10px;
+      color: white;
+      animation: fadeIn 0.2s ease;
+      transition: 0.2s ease;
+      background-image: url('https://beta.icloud.com/system/icloud.com/current/static/wallpaper.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 120%;
+      min-height: 99vh;
+
+    }
+
+    #menu-btn {
+      background: none;
+      width: 4%;
+      height: 4%;
       border-radius: 8px;
-      float: left;
+      border: none;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      display: inline-flex;
+      margin-right: 1%;
     }
 
-    .topnav li {
-      position: inline;
-      float: right;
+    #menu-btn:hover {
+      color: rgb(200, 200, 200);
     }
 
-    .topnav a {
-      display: inline;
-      padding: 15px;
-      transition: ease 0.3s;
-      border-radius: 8px;
-      width: 60px;
-      height: 30px;
-      margin: 0;
+    .material-symbols-outlined {
+      width: 80px;
+      height: 80px;
+      font-size: 60px;
+    }
+
+    #menu {
+      background-color: rgba(180, 180, 230, 0.5);
+      backdrop-filter: blur(14px);
+      position: fixed;
+      width: 0;
+      height: 100%;
+      margin-left: -10px;
+      color: white;
+      transition: 0.4s ease;
+      overflow-x: hidden;
+      opacity: 0%;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      padding-top: 60px;
+    }
+
+    #menu h1 {
+      margin-left: 10px;
+      cursor: default;
+    }
+
+    #menu-close {
+      cursor: pointer;
+      color: rgb(180, 180, 180);
+      position: absolute;
+      margin-left: -5vw;
+      margin-top: -6vh;
       display: block;
-      color: rgb(195, 195, 195);
+      transition: 0.4s ease;
+    }
+
+    #menu-close:hover {
+      color: white;
+    }
+
+    #menu a {
+      color: rgb(180, 180, 180);
+      font-size: 30px;
       text-decoration: none;
+      transition: 0.2s;
+      display: block;
+      margin-top: 5%;
+      margin-bottom: 8%;
+      text-align: center;
     }
 
-    .topnav a:hover {
-      color: #ffffff;
-      font-weight: 600;
+    #menu a:hover {
+      color: white;
     }
 
-    .topnav img {
-      float: left;
-      height: 40px;
-      width: 40px;
+    .logo {
+      width: 60px;
+      height: 60px;
+      margin-left: 30px;
+      display: inline-flex;
+    }
+
+    h1 {
+      cursor: default;
+    }
+
+    #main {
+      margin-top: 100px;
+      transition: 0.4s ease;
+    }
+
+    #topnav {
+      position: fixed;
+      margin-top: -101px;
+      background-color: rgba(180, 180, 230, 0.5);
+      width: 100%;
+      padding-top: 1.4%;
+      z-index: 1;
+      backdrop-filter: blur(14px);
+      padding-left: 1%;
+      margin-left: -10px;
+    }
+
+    #imagething1 {
+      background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0LaCM97V-REkyNIeJ-jIlSI3tCxGZhPPiQ:https://www.crushpixel.com/big-static11/preview4/funny-man-giving-thumbs-up-676412.jpg&usqp=CAU');
+      margin-top: 100px;
+    }
+
+    #imagething1 h2 {
+      bottom: 1%;
+      left: 1.7%;
+    }
+
+    #imagething2 {
+      background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        url('https://image.shutterstock.com/image-photo/portrait-excited-casual-man-standing-260nw-535171852.jpg');
+      margin-top: 200px;
+    }
+
+    #imagething2 h2 {
+      bottom: -92.4%;
+      left: 1.7%;
+    }
+
+    #imagething1,
+    #imagething2 {
+      height: 640px;
+      width: 99vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+    }
+
+    #imagething1 h2,
+    #imagething2 h2 {
+      position: absolute;
+    }
+
+    #card {
+      width: 40%;
+      height: 5%;
+      margin: 5%;
+      background-color: rgba(230, 230, 230, 0.5);
+      border-radius: 10px;
+      justify-content: center;
+      transition: 0.2s ease;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    #card:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    #card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    #card img {
+      width: 55%;
+      height: 80%;
+      margin: 2.5%;
+      object-fit: contain;
+    }
+
+    #card h2 {
+      cursor: pointer;
+    }
+
+    #cards {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+    }
+    #big-card {
+      width: 98.5vw;
+      height: 70vh;
+      border-radius: 10px;
+      justify-content: center;
+      transition: 0.2s ease;
+      text-align: center;
+      cursor: pointer;
+      background-color: rgba(180, 180, 230, 0.5);
+      color: white;
+      text-decoration: none;
+      backdrop-filter: blur(14px)
+    }
+    #big-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    #big-card h2 {
+      margin-top: -13vh;
+    }
+    #big-card a {
+      color: inherit;
+      text-decoration: inherit;
     }
   </style>
 </head>
 
 <body>
-  <ul class="topnav">
-    <a href="#" style="float: left;"><img src="https://butterdogco.github.io/img/hqdefault-modified.png"></a>
-    <li><a href="https://butterdogco.com/news">News</a></li>
-    <li><a href="https://butterdogco.com/apps">Apps</a></li>
-    <li><a href="https://butterdogco.com/beta.html" style="width: 160px;">Try the new home</a></li>
-  </ul>
-  <div class="main">
-    <h1>Welcome to Butter Dog Co</h1>
-    <div id="about1" style="float: right;">
-      <img style="height: 320px; width: 500px;"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0LaCM97V-REkyNIeJ-jIlSI3tCxGZhPPiQ:https://www.crushpixel.com/big-static11/preview4/funny-man-giving-thumbs-up-676412.jpg&usqp=CAU">
-      <h2>Here at Butterdog Co, we care about your</h2>
-      <h2>experience.</h2>
-    </div>
-    <div id="about2" style="float: left; margin-top: 300px;">
-      <img style="height: 320px; width: 500px;"
-        src="https://image.shutterstock.com/image-photo/portrait-excited-casual-man-standing-260nw-535171852.jpg">
-      <h2>Thats why we update our when we</h2>
-      <h2> feel like it.</h2>
-    </div>
-    <div id="about2" style="margin-top: 900px;">
-      <img style="height: 320px; width: 99vw;"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0LaCM97V-REkyNIeJ-jIlSI3tCxGZhPPiQ:https://www.crushpixel.com/big-static11/preview4/funny-man-giving-thumbs-up-676412.jpg&usqp=CAU">
-      <br>
-      <h2>Your welcome.</h2>
-      <i>
-        <p>*you're - jimmy</p>
-      </i>
-      <p>shut up jimmy</p>
+  <!-- Top Navigation -->
+  <div id="topnav">
+    <div id="menu-btn" onclick="menu()"><span class="material-symbols-outlined">menu</span></div>
+    <a href="https://butterdogco.com"><img src="https://butterdogco.com/img/favicon.ico" class="logo"></a>
+  </div>
+
+  <!-- Main Page -->
+  <div id="main">
+    <h1>Welcome to ButterDog Co.</h1>
+    <div id="cards">
+      <div id="big-card">
+        <a href="https://butterflix.butterdogco.com">
+          <img src="https://butterdogco.com/img/butterflix%20x%20bulu.png">
+          <h2>ButterFlix and Bulu have joined forces.</h2>
+          <h4>enjoy bulu originals on ButterFlix</h4>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://butterdogco.com/apps">
+          <img src="https://butterdogco.com/img/favicon.ico">
+          <h2>Check out some of our apps</h2>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://butterdogco.com/news">
+          <img src="https://butterdogco.com/img/favicon.ico">
+          <h2>See what's new</h2>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://boogle.butterdogco.com">
+          <img src="https://butterdogco.com/Boogle-2.0/img/boogle_square.png">
+          <h2>Or take a quick search with boogle.</h2>
+        </a>
+      </div>
     </div>
   </div>
+
+  <!-- Side Menu -->
+  <div id="menu">
+    <div id="menu-close"><span onclick="menu_close()" class="material-symbols-outlined">close</span></div>
+    <a href="https://butterdogco.com/apps">Apps</a>
+    <a href="https://butterdogco.com/news">News</a>
+  </div>
+
+
+  <!-- Menu Script -->
+  <script>
+
+    function menu() {
+      document.getElementById('menu').style.width = '30%';
+      document.getElementById('menu-close').style.marginLeft = '85%';
+      document.getElementById('menu').style.opacity = '100%'
+      document.getElementById('main').style.filter = 'blur(14px)';
+    }
+
+    function menu_close() {
+      document.getElementById('menu').style.width = '0%';
+      document.getElementById('menu-close').style.marginLeft = '-15%';
+      document.getElementById('menu').style.opacity = '0%';
+      document.getElementById('main').style.filter = 'blur(0px)';
+    }
+
+    /* function checkFlag() {
+      if(document.getElementById('menu').style.opacity === '0%') {
+         window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds
+      } else {
+        document.getElementById('menu').style.display = 'none';
+      }
+    }
+    checkFlag();*/
+  </script>
+
 </body>
 
 </html>
