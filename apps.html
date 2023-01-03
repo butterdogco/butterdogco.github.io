@@ -2,17 +2,32 @@
 <html>
 
 <head>
-  <title>Butter Dog Co - Apps</title>
-  <link rel="icon" type="image/x-icon"
-    href="https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/img/favicon.ico">
+  <title>ButterDog Co - Apps</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="butterdog apps">
+  <meta name="keywords" content="butterdog, butterdogco, butter dog co, bdog, bdogco, butterdogco.github.io, butterdogco.com, butterflix, bulu, buttertube">
+  <meta name="author" content="ButterDogCo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://butterdogco.com/img/favicon.ico">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <style>
-    @keyframes slideIn {
-      0% {
-        margin-left: 100vw;
+    @font-face {
+      font-family: 'Dm Sans';
+      src: url("https://butterdogco.com/fonts/DMSans-Regular.ttf") format("tff");
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0%;
       }
 
-      100% {
-        margin-left: 0vw;
+      to {
+        opacity: 100%;
       }
     }
     
@@ -28,415 +43,394 @@
       }
     }
 
-    @font-face {
-      font-family: 'Dm Sans', sans-serif;
-      src: url("fonts/DMSans-Regular.ttf") format("tff");
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background-color: rgb(20, 20, 20);
-      color: white;
       font-family: 'Dm Sans', sans-serif;
-    }
-
-    .main {
-      margin-top: 0px;
-      display: inline;
-    }
-
-    .topnav {
-      list-style-type: none;
-      margin-top: 0px;
-      padding: 0px;
-      background-color: transparent;
-      width: 98vw;
-      height: 60px;
-      border-radius: 8px;
-      float: left;
-    }
-
-    .topnav li {
-      position: inline;
-      float: right;
-    }
-
-    .topnav a {
-      display: inline;
-      padding: 15px;
-      transition: ease-in-out 0.3s;
-      border-radius: 8px;
-      width: 60px;
-      height: 30px;
-      margin: 0;
-      display: block;
-      color: rgb(182, 182, 182);
-      text-decoration: none;
-    }
-
-    .topnav a:hover {
-      color: #ffffff;
-      font-weight: 600;
-    }
-
-    .topnav img {
-      float: left;
-      height: 50px;
-      width: 50px;
-    }
-
-    .item {
-      display: inline-block;
-      margin: 20px;
-      transition: 0.2s ease-in-out;
-    }
-
-    .item img {
-      transition: 0.2s ease-in-out;
-    }
-
-    .item:hover {
-      height: 120px !important;
-      width: 120px !important;
-    }
-
-    .item:hover img {
-      height: 120px !important;
-      width: 120px !important;
-    }
-
-    .item p {
-      transition: 0.2s ease-in-out;
-    }
-
-    .item:hover p {
-      letter-spacing: 2px;
-    }
-
-    .item img {
-      border-radius: 8px;
-      object-fit: contain;
-    }
-
-    .toplogo {
-      margin-left: 10px;
-    }
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .card-image img {
-      object-fit: contain;
-      height: 170px;
-      width: 400px;
+      background-color: rgb(20, 20, 20);
       margin: 10px;
-      border-radius: 8px;
-    }
-
-    .card-image {
-      border-radius: 8px;
-      height: 180px;
-      width: 400px;
-      overflow: hidden;
-      border: none;
-      outline: none;
-    }
-
-    #cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    .card {
-      overflow: hidden;
-      width: 400px;
-      height: 320px;
-      background-color: rgb(30, 30, 30);
-      display: inline-flex;
-      border-radius: 8px;
-      transition: 0.2s ease-in-out;
-    }
-
-    .card:hover {
-      background-color: rgb(50, 50, 50)
-    }
-
-    .card-info-title {
-      margin-left: 10px;
-    }
-
-    h3 {
-      font-size: 25px;
+      color: white;
+      animation: fadeIn 0.2s ease;
+      transition: 0.2s ease;
+      background-image: url('https://beta.icloud.com/system/icloud.com/current/static/wallpaper.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 120%;
+      min-height: 99vh;
     }
     
     .men {
-     animation: men 0.3s;
+     animation: men 0.2s;
      width: 100vw;
      height: 100vh;
      image-repeat: none;
      position: fixed;
      margin: none;
+     top: 0;
+     z-index: 9999999999;
+    }
+
+    #menu-btn {
+      background: none;
+      width: 4%;
+      height: 4%;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      display: inline-flex;
+      margin-right: 0;
+    }
+
+    #menu-btn:hover {
+      color: rgb(200, 200, 200);
+    }
+
+    .material-symbols-outlined {
+      width: 80px;
+      height: 80px;
+      font-size: 60px;
+    }
+
+    #menu {
+      background-color: rgba(180, 180, 230, 0.5);
+      backdrop-filter: blur(14px);
+      position: fixed;
+      width: 0;
+      height: 100%;
+      margin-left: -10px;
+      color: white;
+      transition: 0.4s ease;
+      overflow-x: hidden;
+      opacity: 0%;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      padding-top: 60px;
+    }
+
+    #menu h1 {
+      margin-left: 10px;
+      cursor: default;
+    }
+
+    #menu-close {
+      cursor: pointer;
+      color: rgb(210, 210, 210);
+      position: absolute;
+      margin-left: -5vw;
+      margin-top: -6vh;
+      display: block;
+      transition: 0.4s ease;
+    }
+
+    #menu-close:hover {
+      color: white;
+    }
+
+    #menu a {
+      color: rgb(210, 210, 210);
+      font-size: 30px;
+      text-decoration: none;
+      transition: 0.2s;
+      display: block;
+      margin-top: 5%;
+      margin-bottom: 8%;
+      text-align: center;
+    }
+
+    #menu a:hover {
+      color: white;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      margin-left: 1%;
+      display: inline-flex;
+    }
+
+    h1 {
+      cursor: default;
+    }
+
+    #main {
+      margin-top: 100px;
+      transition: 0.4s ease;
+    }
+
+    #topnav {
+      position: fixed;
+      margin-top: -101px;
+      background-color: rgba(180, 180, 230, 0.5);
+      width: 100%;
+      padding-top: 1.4%;
+      z-index: 1;
+      backdrop-filter: blur(14px);
+      padding-left: 1%;
+      margin-left: -10px;
+    }
+
+    #imagething1 {
+      background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0LaCM97V-REkyNIeJ-jIlSI3tCxGZhPPiQ:https://www.crushpixel.com/big-static11/preview4/funny-man-giving-thumbs-up-676412.jpg&usqp=CAU');
+      margin-top: 100px;
+    }
+
+    #imagething1 h2 {
+      bottom: 1%;
+      left: 1.7%;
+    }
+
+    #imagething2 {
+      background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        url('https://image.shutterstock.com/image-photo/portrait-excited-casual-man-standing-260nw-535171852.jpg');
+      margin-top: 200px;
+    }
+
+    #imagething2 h2 {
+      bottom: -92.4%;
+      left: 1.7%;
+    }
+
+    #imagething1,
+    #imagething2 {
+      height: 640px;
+      width: 99vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+    }
+
+    #imagething1 h2,
+    #imagething2 h2 {
+      position: absolute;
+    }
+
+    #card {
+      width: 410px;
+      height: 410px;
+      padding-bottom: 3%;
+      margin: 1%;
+      background-color: rgba(230, 230, 230, 0.5);
+      border-radius: 10px;
+      justify-content: center;
+      transition: 0.2s ease;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+    }
+
+    #card:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    #card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    #card img {
+      width: 70%;
+      height: 70%;
+      margin: 10px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+    
+    #card p {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    #card h2 {
+      cursor: pointer;
+      font-size: 28px;
+    }
+
+    #cards {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+    }
+    #big-card {
+      width: 98.5vw;
+      height: 70vh;
+      border-radius: 10px;
+      justify-content: center;
+      transition: 0.2s ease;
+      text-align: center;
+      cursor: pointer;
+      background-color: rgba(180, 180, 230, 0.5);
+      color: white;
+      text-decoration: none;
+      backdrop-filter: blur(14px)
+    }
+    #big-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    #big-card h2 {
+      margin-top: -13vh;
+    }
+    #big-card a {
+      color: inherit;
+      text-decoration: inherit;
     }
   </style>
 </head>
 
 <body>
-  <img src="img/ayo.webp" class="men" id="men" style="opacity: 0%; display: none;">
-  <div class="bg">
-    <ul class="topnav">
-      <a href="https://butterdogco.github.io" style="float: left;"><img class="toplogo"
-          src="https://butterdogco.github.io/img/hqdefault-modified.png"></a>
-      <li><a href="https://butterdogco.com/news">News</a></li>
-      <li><a href="#">Apps</a></li>
-      <li><a href="https://butterdogco.com">Home</a></li>
-    </ul>
-    <center>
-      <div class="main">
-        <h1>Apps</h1>
-        <i>
-          <p style="margin-bottom: 50px;">by Butter Dog Co</p>
-        </i>
-    </center>
+  <img src="https://butterdogco.com/img/ayo.webp" class="men" id="men" style="opacity: 0%; display: none;">
+  <!-- Top Navigation -->
+  <div id="topnav">
+    <div id="menu-btn" onclick="menu()"><span class="material-symbols-outlined">menu</span></div>
+    <a href="https://butterdogco.com"><img src="https://butterdogco.com/img/favicon.ico" class="logo"></a>
+  </div>
+
+  <!-- Main Page -->
+  <div id="main">
+    <h1 style="cursor: default;">Apps</h1>
+    <p style="cursor: default">by ButterDogCo</p>
     <div id="cards">
-      <a href="https://boogle.butterdogco.com">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="https://raw.githubusercontent.com/butterdogco/Boogle-2.0/main/img/boogle_square.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>Boogle</h3>
-                  <h4>search. because epic.</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="https://butterflix.butterdogco.com">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/butterflix.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>butterflix</h3>
-                  <h4>watch movie because epic</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="https://sites.google.com/view/bulu">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/bulu.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>bulu</h3>
-                  <h4>three hour ads every five minutes</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="https://sites.google.com/view/butterplus">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="https://butterdogco.com/img/butterplus.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>butter +</h3>
-                  <h4>movies but with a plus</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="https://sites.google.com/bsd48.org/buterfiy/">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/butterfiy.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>butterfiy</h3>
-                  <h4>wanna break from the ads? listen to more ads.</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="https://search.butterdogco.com/apps/bdog-webstore/">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/webstore.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>webstore</h3>
-                  <h4>get some new butter for your computer</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="https://sites.google.com/bsd48.org/bik-bok/">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/bik bok.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>bik bok</h3>
-                  <h4>upload terrible content that thousands see</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <!-- <a href="https://sites.google.com/bsd48.org/biscord/">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/biscord.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>biscord</h3>
-                  <h4>chat with other butter dogs</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      -->
-      <a href="https://sites.google.com/bsd48.org/bbay">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/bbay.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>bbay</h3>
-                  <h4 style="margin-top: -8px">give others money for something you might not recieve</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="https://sites.google.com/bsd48.org/b-os/">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/butter-os-tab.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>butter os tab</h3>
-                  <h4>epic operating system for your tablet</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="https://sites.google.com/bsd48.org/bdonalds">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/butterdonalds.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>butterdonalds</h3>
-                  <h4>cheap food that will maybe give you cancer</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="https://bweeter.butterdogco.com">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/bweeter.png">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>bweeter</h3>
-                  <h4>post random stuff that no one sees</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="img/rat-spinning.gif">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-image">
-              <img src="img/rat-spinning.gif">
-            </div>
-            <div class="card-info-wrapper">
-              <div class="card-info">
-                <div class="card-info-title">
-                  <h3>horizontally spinning rat</h3>
-                  <h4>the rat is spinning. but horizontally.</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
+      <div id="card">
+        <a href="https://boogle.butterdogco.com">
+          <img src="https://raw.githubusercontent.com/butterdogco/Boogle-2.0/main/img/boogle_square.png">
+          <h2>boogle</h2>
+          <p>search. because epic.</p>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://sites.google.com/view/butter-flix/">
+          <img src="https://butterdogco.com/img/butterflix.png">
+          <h2>butterflix</h2>
+          <p>watch movie because epic</p>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://sites.google.com/view/bulu/">
+          <img src="https://butterdogco.com/img/bulu.png">
+          <h2>bulu</h2>
+          <p>three hour ads every minute</p>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://sites.google.com/view/butterplus">
+          <img src="https://butterdogco.com/img/butterplus.png">
+          <h2>butter +</h2>
+          <p>movies but with a plus</p>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://sites.google.com/bsd48.org/buterfiy/">
+          <img src="https://butterdogco.com/img/butterfiy.png">
+          <h2>butterfiy</h2>
+          <p>wanna break from the ads? listen to more ads</p>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://search.butterdogco.com/apps/bdog-webstore/">
+          <img src="https://butterdogco.com/img/webstore.png">
+          <h2>webstore</h2>
+          <p>get some new butter content for your computer</p>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://sites.google.com/bsd48.org/bik-bok/">
+          <img src="https://butterdogco.com/img/bik%20bok.png">
+          <h2>bik bok</h2>
+          <p>upload <b>terrible</b> content that thousands see</p>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://sites.google.com/bsd48.org/bbay">
+          <img src="https://butterdogco.com/img/bbay.png">
+          <h2>bbay</h2>
+          <p>give others money for something you may not recieve</p>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://sites.google.com/bsd48.org/b-os/">
+          <img src="https://butterdogco.com/img/butter-os-tab.png">
+          <h2>butter os</h2>
+          <p>the best and most epic operating system for your butter</p>
+        </a>
+      </div>
+`     <div id="card">
+        <a href="https://sites.google.com/bsd48.org/bdonalds">
+          <img src="https://butterdogco.com/img/butterdonalds.png">
+          <h2>butterdonalds</h2>
+          <p>cheap food that will <b>maybe</b> give you cancer</p>
+        </a>
+      </div>
+      <div id="card">
+        <a href="https://butterdogco.com/img/rat-spinning.gif">
+          <img src="https://butterdogco.com/img/rat-spinning.gif">
+          <h2>horizontally spinning rat</h2>
+          <p>the rat is spinning. but horizontally.</p>
+        </a>
+      </div>
     </div>
   </div>
+
+  <!-- Side Menu -->
+  <div id="menu">
+    <div id="menu-close"><span onclick="menu_close()" class="material-symbols-outlined">close</span></div>
+    <a href="https://butterdogco.com/">Home</a>
+    <a href="https://butterdogco.com/news">News</a>
+    <a href="https://butterdogco.com/beta/">Try out new stuff</a>
+  </div>
+
+
+  <!-- Menu Script -->
   <script>
+
+    function menu() {
+      document.getElementById('menu').style.width = '30%';
+      document.getElementById('menu-close').style.marginLeft = '85%';
+      document.getElementById('menu').style.opacity = '100%'
+      document.getElementById('main').style.filter = 'blur(14px)';
+    }
+
+    function menu_close() {
+      document.getElementById('menu').style.width = '0%';
+      document.getElementById('menu-close').style.marginLeft = '-15%';
+      document.getElementById('menu').style.opacity = '0%';
+      document.getElementById('main').style.filter = 'blur(0px)';
+    }
+
     window.onload = function() {
       test();
     };
     async function test() {
-  console.log('start timer');
-  document.getElementById('men').style.display = 'block';
-  await new Promise(resolve => setTimeout(resolve, 200));
-  console.log('after 1 second');
-  document.getElementById('men').style.display = 'none';
-}  
+      console.log('start timer');
+      document.getElementById('men').style.display = 'block';
+      await new Promise(resolve => setTimeout(resolve, 200));
+      document.getElementById('men').style.display = 'none';
+    }
+
+    /* function checkFlag() {
+      if(document.getElementById('menu').style.opacity === '0%') {
+         window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds
+      } else {
+        document.getElementById('menu').style.display = 'none';
+      }
+    }
+    checkFlag();*/
   </script>
+
 </body>
 
 </html>
