@@ -1,372 +1,225 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>ButterDog Co - What's new</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="butterdog apps">
-  <meta name="keywords" content="butterdog, butterdogco, butter dog co, bdog, bdogco, butterdogco.github.io, butterdogco.com, butterflix, bulu, buttertube">
-  <meta name="author" content="ButterDogCo">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="https://butterdogco.com/img/favicon.ico">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <style>
-    @font-face {
-      font-family: 'Dm Sans';
-      src: url("https://butterdogco.com/fonts/DMSans-Regular.ttf") format("tff");
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0%;
-      }
-
-      to {
-        opacity: 100%;
-      }
-    }
+  <head>
+    <title>News - ButterDogCo</title>
+    <link rel="shortcut icon" href="https://butterdogco.com/img/favicon.ico">
+    <style>
     
-    @keyframes men {
-     0% {
-       opacity: 100%;
-       display: block;
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        left: -100vw;
+        margin-left: -100vw;
+      }
+      100% {
+        left: 0px;
+        margin-left: 0px;
+        opacity: 1;
+      }
+    }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        background-image: url('https://4kwallpapers.com/images/wallpapers/windows-11-abstract-background-blue-background-5k-2732x2732-8625.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        margin: 0;
+        height: 210vh;
       }
       
-     100% {
-       opacity: 0%;
-       display: none;
+      a {
+        color: inherit;
+        text-decoration: none;
       }
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Dm Sans', sans-serif;
-      background-color: rgb(20, 20, 20);
-      margin: 10px;
-      color: white;
-      animation: fadeIn 0.2s ease;
-      transition: 0.2s ease;
-      background-image: url('https://beta.icloud.com/system/icloud.com/current/static/wallpaper.webp');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      height: 120%;
-      min-height: 99vh;
-    }
-    
-    .men {
-     animation: men 0.2s;
-     width: 100vw;
-     height: 100vh;
-     image-repeat: none;
-     position: fixed;
-     margin: none;
-     top: 0;
-     z-index: 9999999999;
-    }
-
-    #menu-btn {
-      background: none;
-      width: 4%;
-      height: 4%;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-      display: inline-flex;
-      margin-right: 0;
-    }
-
-    #menu-btn:hover {
-      color: rgb(200, 200, 200);
-    }
-
-    .material-symbols-outlined {
-      width: 80px;
-      height: 80px;
-      font-size: 60px;
-    }
-
-    #menu {
-      background-color: rgba(180, 180, 230, 0.5);
-      backdrop-filter: blur(14px);
-      position: fixed;
-      width: 0;
-      height: 100%;
-      margin-left: -10px;
-      color: white;
-      transition: 0.4s ease;
-      overflow-x: hidden;
-      opacity: 0%;
-      z-index: 1;
-      top: 0;
-      bottom: 0;
-      padding-top: 60px;
-    }
-
-    #menu h1 {
-      margin-left: 10px;
-      cursor: default;
-    }
-
-    #menu-close {
-      cursor: pointer;
-      color: rgb(210, 210, 210);
-      position: absolute;
-      margin-left: -5vw;
-      margin-top: -6vh;
-      display: block;
-      transition: 0.4s ease;
-    }
-
-    #menu-close:hover {
-      color: white;
-    }
-
-    #menu a {
-      color: rgb(210, 210, 210);
-      font-size: 30px;
-      text-decoration: none;
-      transition: 0.2s;
-      display: block;
-      margin-top: 5%;
-      margin-bottom: 8%;
-      text-align: center;
-    }
-
-    #menu a:hover {
-      color: white;
-    }
-
-    .logo {
-      width: 60px;
-      height: 60px;
-      margin-left: 30px;
-      display: inline-flex;
-    }
-
-    h1 {
-      cursor: default;
-    }
-
-    #main {
-      margin-top: 100px;
-      transition: 0.4s ease;
-    }
-
-    #topnav {
-      position: fixed;
-      margin-top: -101px;
-      background-color: rgba(180, 180, 230, 0.5);
-      width: 100%;
-      padding-top: 1.4%;
-      z-index: 1;
-      backdrop-filter: blur(14px);
-      padding-left: 1%;
-      margin-left: -10px;
-    }
-
-    #imagething1 {
-      background-image:
-        linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
-        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0LaCM97V-REkyNIeJ-jIlSI3tCxGZhPPiQ:https://www.crushpixel.com/big-static11/preview4/funny-man-giving-thumbs-up-676412.jpg&usqp=CAU');
-      margin-top: 100px;
-    }
-
-    #imagething1 h2 {
-      bottom: 1%;
-      left: 1.7%;
-    }
-
-    #imagething2 {
-      background-image:
-        linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
-        url('https://image.shutterstock.com/image-photo/portrait-excited-casual-man-standing-260nw-535171852.jpg');
-      margin-top: 200px;
-    }
-
-    #imagething2 h2 {
-      bottom: -92.4%;
-      left: 1.7%;
-    }
-
-    #imagething1,
-    #imagething2 {
-      height: 640px;
-      width: 99vw;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      border-radius: 15px;
-    }
-
-    #imagething1 h2,
-    #imagething2 h2 {
-      position: absolute;
-    }
-
-    #card {
-      width: 80%;
-      height: 500px;
-      padding-bottom: 3%;
-      margin: 1%;
-      background-color: rgba(230, 230, 230, 0.5);
-      border-radius: 10px;
-      justify-content: center;
-      transition: 0.2s ease;
-      text-align: center;
-      cursor: default;
-      display: flex;
-    }
-
-    #card img {
-      width: 100%;
-      height: 83%;
-      border-radius: 10px;
-    }
-    
-    #card p {
-      margin-left: 10px;
-      margin-right: 10px;
-      font-size: 20px;
-    }
-    
-    #card a {
-      width: 100%;
-      height: 100%;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    #card h2 {
-      cursor: default;
-      font-size: 28px;
-    }
-
-    #cards {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      height: 100%;
-      justify-content: center;
-    }
-    #big-card {
-      width: 98.5vw;
-      height: 70vh;
-      border-radius: 10px;
-      justify-content: center;
-      transition: 0.2s ease;
-      text-align: center;
-      cursor: pointer;
-      background-color: rgba(180, 180, 230, 0.5);
-      color: white;
-      text-decoration: none;
-      backdrop-filter: blur(14px)
-    }
-    #big-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-    #big-card h2 {
-      margin-top: -13vh;
-    }
-    #big-card a {
-      color: inherit;
-      text-decoration: inherit;
-    }
-  </style>
-</head>
-
-<body>
-  <img src="https://butterdogco.com/img/ayo.webp" class="men" id="men" style="opacity: 0%; display: none;">
-  <!-- Top Navigation -->
-  <div id="topnav">
-    <div id="menu-btn" onclick="menu()"><span class="material-symbols-outlined">menu</span></div>
-    <a href="https://butterdogco.com"><img src="https://butterdogco.com/img/favicon.ico" class="logo"></a>
-  </div>
-
-  <!-- Main Page -->
-  <div id="main">
-    <center>
-      <h1 style="font-size: 40px; margin-bottom: -10px; cursor: default;">News</h1>
-    </center>
-    <div id="cards">
-      <div id="card">
-        <a>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWomqhkjH9qbJtdPjw4qj8Ofz0nfkkWCvD2ZWwtxPhj-dOIn3oT-392cpLP4KZ5cAuJSM:https://i.pinimg.com/736x/66/ca/de/66cade4b50dd88ae9870db21aa23ca2f.jpg&usqp=CAU">
-          <h2>new revamped pages</h2>
-          <p>yeah it looks better and works (kinda) on mobile</p>
-        </a>
-
-      </div>
-      <div id="card">
-        <a>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWomqhkjH9qbJtdPjw4qj8Ofz0nfkkWCvD2ZWwtxPhj-dOIn3oT-392cpLP4KZ5cAuJSM:https://i.pinimg.com/736x/66/ca/de/66cade4b50dd88ae9870db21aa23ca2f.jpg&usqp=CAU">
-          <h2>*something groundbreaking*</h2>
-          <p>wow</p>
-        </a>
-      </div>
+      
+      #nav {
+        display: inline-flex;
+        height: 115px;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(230,230,240,0.3);
+        backdrop-filter: blur(12px);
+        border-radius: 80px;
+        margin: 10px;
+        z-index: 100;
+        overflow: hidden;
+        animation: slideIn 0.9s ease;
+        transition: 0.3s ease;
+        width: 225px;
+      }
+      
+      #nav img {
+        padding: 15px;
+        margin: 15px;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+      }
+      
+      main {
+        justify-content: center;
+      }
+      
+      .news {
+        justify-content: center;
+      }
+      
+      .news div {
+        padding-bottom: 100px;
+        padding-top: 30px;
+        width: 96vw;
+        height: 80vh;
+        border-radius: 30px;
+        background-color: rgba(230,230,240,0.3);
+        margin-top: 140px;
+        margin-bottom: 30px;
+        text-align: center;
+        transition: 0.3s ease;
+        backdrop-filter: blur(12px);
+        animation: slideIn 0.6s ease;
+        cursor: pointer;
+        border-radius: 80px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .news div:hover {
+        height: 83vh;
+        width: 100vw;
+      }
+      
+      .news img {
+        width: 90%;
+        height: 100%;
+        border-radius: 30px;
+      }
+      
+      .card {
+        width: 410px;
+        height: 410px;
+        padding-bottom: 3%;
+        margin: 1%;
+        background-color: rgba(230, 230, 240, 0.3);
+        border-radius: 30px;
+        justify-content: center;
+        transition: 0.2s ease;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        backdrop-filter: blur(12px);
+      }
+  
+      .card:hover {
+        background-color: rgba(250, 250, 255, 0.5);
+      }
+  
+      .card a {
+        text-decoration: none;
+        color: inherit;
+      }
+  
+      .card img {
+        width: 70%;
+        height: 70%;
+        margin: 10px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      
+      .card p {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+      }
+  
+      .card h2 {
+        cursor: pointer;
+        font-size: 28px;
+      }
+  
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+      }
+      
+      #menuIcon {
+        transition: 0.2s ease;
+      }
+      
+      #menuIcon:hover {
+        filter: brightness(80%);
+      }
+      
+      #closeMenuIcon {
+        display: none;
+      }
+      
+      #nav a {
+        margin: 38px;
+        font-size: 30px;
+        transition: 0.2s ease;
+      }
+      
+      #nav #active {
+        font-weight: bold;
+      }
+      
+      #nav a:hover {
+        letter-spacing: 4px;
+        margin-left: 34px;
+      }
+        
+      </style>
+  </head>
+  <body>
+    <div id="nav">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png" onclick="openMenu()" id="menuIcon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png" onclick="closeMenu()" id="closeMenuIcon">
+      <img src="https://butterdogco.com/img/favicon.ico" id="icon">
+      
+      <a href="https://butterdogco.com/">Home</a>
+      <a href="https://butterdogco.com/apps">Apps</a>
+      <a href="#" id="active">News</a>
+      <a href="https://butterdogco.com/about">About</a>
     </div>
-  </div>
-
-  <!-- Side Menu -->
-  <div id="menu">
-    <div id="menu-close"><span onclick="menu_close()" class="material-symbols-outlined">close</span></div>
-    <a href="https://butterdogco.com/">Home</a>
-    <a href="https://butterdogco.com/apps">Apps</a>
-    <a href="https://butterdogco.com/news">News</a>
-    <a href="https://butterdogco.com/beta/">Try out new stuff</a>
-  </div>
-
-
-  <!-- Menu Script -->
-  <script>
-
-    function menu() {
-      document.getElementById('menu').style.width = '30%';
-      document.getElementById('menu-close').style.marginLeft = '85%';
-      document.getElementById('menu').style.opacity = '100%'
-      document.getElementById('main').style.filter = 'blur(14px)';
-    }
-
-    function menu_close() {
-      document.getElementById('menu').style.width = '0%';
-      document.getElementById('menu-close').style.marginLeft = '-15%';
-      document.getElementById('menu').style.opacity = '0%';
-      document.getElementById('main').style.filter = 'blur(0px)';
-    }
-
-    window.onload = function() {
-      test();
-    };
-    async function test() {
-      console.log('start timer');
-      document.getElementById('men').style.display = 'block';
-      await new Promise(resolve => setTimeout(resolve, 200));
-      document.getElementById('men').style.display = 'none';
-    }
-
-    /* function checkFlag() {
-      if(document.getElementById('menu').style.opacity === '0%') {
-         window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds
-      } else {
-        document.getElementById('menu').style.display = 'none';
+    <main>
+      <div class="news">
+        <a href="https://butterdogco.com">
+          <div>
+            <img src="https://butterdogco.com/img/revamp.png">
+            <h1>Once again revamped pages!</h1>
+          </div>
+        </a>
+        <a href="https://butterflix.butterdogco.com">
+          <div>
+            <img src="https://butterdogco.com/img/Shrek%20and%20amogus%20love%20story%20WIDE.png">
+            <h1>Available on ButterFlix now!</h1>
+          </div>
+        </a>
+      </div>
+    </main>
+    <script>
+      
+      function openMenu() {
+        document.getElementById('nav').style.width = "98.5%";
+        document.getElementById('closeMenuIcon').style.display = "block";
+        document.getElementById('menuIcon').style.display = "none";
       }
-    }
-    checkFlag();*/
-  </script>
-
-</body>
-
+      
+      function closeMenu() {
+        document.getElementById('nav').style.width = "225px";
+        document.getElementById('menuIcon').style.display = "block";
+        document.getElementById('closeMenuIcon').style.display = "none";
+      }
+      
+    </script>
+  </body>
 </html>
