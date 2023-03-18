@@ -3,6 +3,7 @@
   <head>
     <title>Home - ButterDogCo</title>
     <link rel="shortcut icon" href="https://butterdogco.com/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     
     @keyframes slideIn {
@@ -48,10 +49,16 @@
         border-radius: 80px;
         margin: 10px;
         z-index: 100;
-        overflow: hidden;
         animation: slideIn 0.9s ease;
         transition: 0.3s ease;
         width: 225px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        /* for Internet Explorer, Edge */
+        scrollbar-width: none;
+        /* for Firefox */
       }
       
       #nav img {
