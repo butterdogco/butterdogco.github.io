@@ -29,6 +29,7 @@
         min-height: 100vh;
         margin: 0;
         height: 120%;
+        padding-bottom: 40px;
         overflow: overlay;
       }
       
@@ -55,6 +56,10 @@
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
+        -ms-overflow-style: none;
+        /* for Internet Explorer, Edge */
+        scrollbar-width: none;
+        /* for Firefox */
       }
       
       #nav img {
