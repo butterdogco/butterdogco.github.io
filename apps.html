@@ -1,225 +1,237 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Apps - ButterDogCo</title>
-    <link rel="shortcut icon" href="https://butterdogco.com/img/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    
+
+<head>
+  <title>Apps - ButterDogCo</title>
+  <link rel="shortcut icon" href="https://butterdogco.com/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
     @keyframes slideIn {
       0% {
         opacity: 0;
         left: -100vw;
         margin-left: -100vw;
       }
+
       100% {
         left: 0px;
         margin-left: 0px;
         opacity: 1;
       }
     }
-      
-      body {
-        font-family: 'Roboto', sans-serif;
-        color: white;
-        background-image: url('https://4kwallpapers.com/images/wallpapers/windows-11-abstract-background-blue-background-5k-2732x2732-8625.jpeg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        margin: 0;
-        height: 120%;
-        overflow: overlay;
-      }
-      
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      
-      #nav {
-        display: inline-flex;
-        height: 115px;
-        margin: 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(230,230,240,0.3);
-        backdrop-filter: blur(12px);
-        border-radius: 80px;
-        margin: 10px;
-        z-index: 100;
-        animation: slideIn 0.9s ease;
-        transition: 0.3s ease;
-        width: 225px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
-        -ms-overflow-style: none;
-        /* for Internet Explorer, Edge */
-        scrollbar-width: none;
-        /* for Firefox */
-      }
-      
-      #nav img {
-        padding: 15px;
-        margin: 15px;
-        height: 50px;
-        width: 50px;
-        cursor: pointer;
-      }
-      
-      main {
-        justify-content: center;
-      }
-      
-      .news {
-        padding-bottom: 100px;
-        padding-top: 30px;
-        width: 96vw;
-        height: 80vh;
-        border-radius: 30px;
-        background-color: rgba(230,230,240,0.3);
-        margin-top: 140px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        transition: 0.3s ease;
-        backdrop-filter: blur(12px);
-        animation: slideIn 0.6s ease;
-        cursor: pointer;
-      }
-      
-      .news:hover {
-        height: 83vh;
-        width: 100vw;
-      }
-      
-      .news img {
-        width: 90%;
-        height: 100%;
-        border-radius: 30px;
-      }
-      
-      .card {
-        width: 410px;
-        height: 410px;
-        padding-bottom: 3%;
-        margin: 1%;
-        background-color: rgba(230, 230, 240, 0.3);
-        border-radius: 30px;
-        justify-content: center;
-        transition: 0.2s ease;
-        text-align: center;
-        cursor: pointer;
-        display: flex;
-        backdrop-filter: blur(12px);
-      }
-  
-      .card:hover {
-        background-color: rgba(250, 250, 255, 0.5);
-      }
-  
-      .card a {
-        text-decoration: none;
-        color: inherit;
-      }
-  
-      .card img {
-        width: 68%;
-        height: 70%;
-        margin: 10px;
-        object-fit: contain;
-        border-radius: 50%;
-      }
-      
-      .card p {
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 20px;
-      }
-  
-      .card h2 {
-        cursor: pointer;
-        font-size: 28px;
-      }
-  
-      .cards {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-      }
-      
-      #menuIcon {
-        transition: 0.2s ease;
-      }
-      
-      #closeMenuIcon {
-        transition: 0.2s ease;
-      }
-      
-      #menuIcon:hover {
-        filter: brightness(80%);
-      }
-      
-      #closeMenuIcon:hover {
-        filter: brightness(80%);
-      }
-      
-      #closeMenuIcon {
-        display: none;
-      }
-      
-      #nav a {
-        margin: 38px;
-        font-size: 30px;
-        transition: 0.2s ease;
-      }
-      
-      #nav #active {
-        font-weight: bold;
-      }
-      
-      #nav a:hover {
-        letter-spacing: 4px;
-        margin-left: 34px;
-      }
 
-      *::-webkit-scrollbar {
-        background-color: transparent;
-        width: 10px;
-      }
-      *::-webkit-scrollbar-track {
-        background-color: transparent;
-      }
-      *::-webkit-scrollbar-thumb {
-        border-radius: 20px;
-        border: 1px solid transparent;
-        background-color: rgba(0,0,0,0.2);
-        background-clip: content-box;
-      }
-      
-      *::-webkit-scrollbar-thumb:hover {
-        background: gray;
-      }
-        
-      </style>
-  </head>
-  <body>
-    <div id="nav">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png" onclick="openMenu()" id="menuIcon">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/1200px-VisualEditor_-_Icon_-_Close_-_white.svg.png" onclick="closeMenu()" id="closeMenuIcon">
-      <img src="https://butterdogco.com/img/favicon.ico" id="icon" onclick="iconClick()" style="transition: 0.2s ease;">
-      
-      <a href="https://butterdogco.com/">Home</a>
-      <a href="https://butterdogco.com/apps" id="active">Apps</a>
-      <a href="https://butterdogco.com/news">News</a>
-      <a href="https://butterdogco.com/about">About Us</a>
-    </div>
-    <main>
-      <!--
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      background-image: url('https://4kwallpapers.com/images/wallpapers/windows-11-abstract-background-blue-background-5k-2732x2732-8625.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      margin: 0;
+      height: 120%;
+      overflow: overlay;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #nav {
+      display: inline-flex;
+      height: 115px;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(230, 230, 240, 0.3);
+      backdrop-filter: blur(12px);
+      border-radius: 80px;
+      margin: 10px;
+      z-index: 100;
+      animation: slideIn 0.9s ease;
+      transition: 0.3s ease;
+      width: 225px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -ms-overflow-style: none;
+      /* for Internet Explorer, Edge */
+      scrollbar-width: none;
+      /* for Firefox */
+    }
+
+    #nav img {
+      padding: 15px;
+      margin: 15px;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+    }
+
+    main {
+      justify-content: center;
+    }
+
+    .news {
+      padding-bottom: 100px;
+      padding-top: 30px;
+      width: 96vw;
+      height: 80vh;
+      border-radius: 30px;
+      background-color: rgba(230, 230, 240, 0.3);
+      margin-top: 140px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      transition: 0.3s ease;
+      backdrop-filter: blur(12px);
+      animation: slideIn 0.6s ease;
+      cursor: pointer;
+    }
+
+    .news:hover {
+      height: 83vh;
+      width: 100vw;
+    }
+
+    .news img {
+      width: 90%;
+      height: 100%;
+      border-radius: 30px;
+    }
+
+    .card {
+      width: 410px;
+      height: 410px;
+      padding-bottom: 3%;
+      margin: 1%;
+      background-color: rgba(230, 230, 240, 0.3);
+      border-radius: 30px;
+      justify-content: center;
+      transition: 0.2s ease;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      backdrop-filter: blur(12px);
+    }
+
+    .card:hover {
+      background-color: rgba(250, 250, 255, 0.5);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card img {
+      width: 68%;
+      height: 70%;
+      margin: 10px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .card p {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .card h2 {
+      cursor: pointer;
+      font-size: 28px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    #nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    #menuIcon {
+      transition: 0.2s ease;
+    }
+
+    #closeMenuIcon {
+      transition: 0.2s ease;
+    }
+
+    #menuIcon:hover {
+      filter: brightness(80%);
+    }
+
+    #closeMenuIcon:hover {
+      filter: brightness(80%);
+    }
+
+    #closeMenuIcon {
+      display: none;
+    }
+
+    #nav a {
+      margin: 38px;
+      font-size: 30px;
+      transition: 0.2s ease;
+    }
+
+    #nav #active {
+      font-weight: bold;
+    }
+
+    #nav a:hover {
+      letter-spacing: 4px;
+      margin-left: 34px;
+    }
+
+    *::-webkit-scrollbar {
+      background-color: transparent;
+      width: 10px;
+    }
+
+    *::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      border: 1px solid transparent;
+      background-color: rgba(0, 0, 0, 0.2);
+      background-clip: content-box;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+      background: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nav">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png"
+      onclick="openMenu()" id="menuIcon">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/1200px-VisualEditor_-_Icon_-_Close_-_white.svg.png"
+      onclick="closeMenu()" id="closeMenuIcon">
+    <img src="https://butterdogco.com/img/favicon.ico" id="icon" onclick="iconClick()" style="transition: 0.2s ease;">
+
+    <a href="https://butterdogco.com/">Home</a>
+    <a href="https://butterdogco.com/apps" id="active">Apps</a>
+    <a href="https://butterdogco.com/news">News</a>
+    <a href="https://butterdogco.com/about">About Us</a>
+  </div>
+  <main>
+    <!--
       <div class="news">
         <a href="https://butterflix.butterdogco.com">
           <img src="https://butterdogco.com/img/Shrek%20and%20amogus%20love%20story%20WIDE.png">
@@ -227,112 +239,115 @@
         </a>
       </div>
       -->
-      <div style="margin-top: 140px;"></div>
-      <div class="cards">
-        <div class="card">
-          <a href="https://boogle.butterdogco.com">
-            <img src="https://butterdogco.com/Boogle-2.0/img/boogle_square.png">
-            <h2>Boogle</h2>
-            <p>World number one search engine.</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://butterflix.butterdogco.com">
-            <img src="https://butterdogco.com/img/butterflix.png">
-            <h2>ButterFlix</h2>
-            <p>Super amazing movies for free.</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://sites.google.com/view/bulu/">
-            <img src="https://butterdogco.com/img/bulu.png">
-            <h2>bulu</h2>
-            <p>free shows, and movies. (500 ads every three minutes on free plan)</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://sites.google.com/view/butterplus">
-            <img src="https://butterdogco.com/img/butterplus.png">
-            <h2>butter +</h2>
-            <p>free movies but with a plus</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://sites.google.com/bsd48.org/buterfiy/">
-            <img src="https://butterdogco.com/img/butterfiy.png">
-            <h2>butterfiy</h2>
-            <p>wanna break from the ads? listen to more ads</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://search.butterdogco.com/apps/bdog-webstore/">
-            <img src="https://butterdogco.com/img/webstore.png" style="border-radius: 0px">
-            <h2>butter webstore</h2>
-            <p>get some new butter for your computer</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://sites.google.com/bsd48.org/bik-bok/">
-            <img src="https://butterdogco.com/img/bik%20bok.png" style="border-radius: 0px;">
-            <h2>bik bok</h2>
-            <p>upload some <i>quality</i> content that thousands see</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://sites.google.com/bsd48.org/bbay">
-            <img src="https://butterdogco.com/img/bbay.png" style="border-radius: 0px;">
-            <h2>bbay</h2>
-            <p>give others money for something you have a 30% chance of recieving</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://sites.google.com/bsd48.org/b-os/">
-            <img src="https://butterdogco.com/img/butter-os-tab.png">
-            <h2>ButterOS</h2>
-            <p>the best and most epic operating system for butter</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://sites.google.com/bsd48.org/bdonalds">
-            <img src="https://butterdogco.com/img/butterdonalds.png">
-            <h2>butterdonalds</h2>
-            <p>cheap food that will <i>maybe</i> give you cancer</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://mcserver.butterdogco.com">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgJYst2vTri-bSpmbaEO-0OSdrn__k5Ri2yLriLmfQgw&s" style="border-radius: 30px;">
-            <h2>eaglercraft</h2>
-            <p><i>not</i> pirated minecraft</p>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://chat.butterdogco.com">
-            <img src="https://butterdogco.com/img/bdog%20chatnew%20(1).png" style="border-radius: 0px;">
-            <h2>butterdog chat</h2>
-            <p>chat with other butterdogs</p>
-          </a>
-        </div>
+    <div style="margin-top: 140px;"></div>
+    <div class="cards">
+      <div class="card">
+        <a href="https://boogle.butterdogco.com">
+          <img src="https://butterdogco.com/Boogle-2.0/img/boogle_square.png">
+          <h2>Boogle</h2>
+          <p>World number one search engine.</p>
+        </a>
       </div>
-    </main>
-    <script>
-      
-      function openMenu() {
-        document.getElementById('nav').style.width = "98.5%";
-        document.getElementById('closeMenuIcon').style.display = "block";
-        document.getElementById('menuIcon').style.display = "none";
-      }
-      
-      function closeMenu() {
-        document.getElementById('nav').style.width = "225px";
-        document.getElementById('menuIcon').style.display = "block";
-        document.getElementById('closeMenuIcon').style.display = "none";
-      }
+      <div class="card">
+        <a href="https://butterflix.butterdogco.com">
+          <img src="https://butterdogco.com/img/butterflix.png">
+          <h2>ButterFlix</h2>
+          <p>Super amazing movies for free.</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://sites.google.com/view/bulu/">
+          <img src="https://butterdogco.com/img/bulu.png">
+          <h2>bulu</h2>
+          <p>free shows, and movies. (500 ads every three minutes on free plan)</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://sites.google.com/view/butterplus">
+          <img src="https://butterdogco.com/img/butterplus.png">
+          <h2>butter +</h2>
+          <p>free movies but with a plus</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://sites.google.com/bsd48.org/buterfiy/">
+          <img src="https://butterdogco.com/img/butterfiy.png">
+          <h2>butterfiy</h2>
+          <p>wanna break from the ads? listen to more ads</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://search.butterdogco.com/apps/bdog-webstore/">
+          <img src="https://butterdogco.com/img/webstore.png" style="border-radius: 0px">
+          <h2>butter webstore</h2>
+          <p>get some new butter for your computer</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://sites.google.com/bsd48.org/bik-bok/">
+          <img src="https://butterdogco.com/img/bik%20bok.png" style="border-radius: 0px;">
+          <h2>bik bok</h2>
+          <p>upload some <i>quality</i> content that thousands see</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://sites.google.com/bsd48.org/bbay">
+          <img src="https://butterdogco.com/img/bbay.png" style="border-radius: 0px;">
+          <h2>bbay</h2>
+          <p>give others money for something you have a 30% chance of recieving</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://sites.google.com/bsd48.org/b-os/">
+          <img src="https://butterdogco.com/img/butter-os-tab.png">
+          <h2>ButterOS</h2>
+          <p>the best and most epic operating system for butter</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://sites.google.com/bsd48.org/bdonalds">
+          <img src="https://butterdogco.com/img/butterdonalds.png">
+          <h2>butterdonalds</h2>
+          <p>cheap food that will <i>maybe</i> give you cancer</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://mcserver.butterdogco.com">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgJYst2vTri-bSpmbaEO-0OSdrn__k5Ri2yLriLmfQgw&s"
+            style="border-radius: 30px;">
+          <h2>eaglercraft</h2>
+          <p><i>not</i> pirated minecraft</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://chat.butterdogco.com">
+          <img src="https://butterdogco.com/img/bdog%20chatnew%20(1).png" style="border-radius: 0px;">
+          <h2>butterdog chat</h2>
+          <p>chat with other butterdogs</p>
+        </a>
+      </div>
+    </div>
+  </main>
+  <script>
 
-      function iconClick() {
-        document.getElementById('icon').style.rotate = "180deg";
-      }
-      
-    </script>
-  </body>
+    function openMenu() {
+      document.getElementById('nav').style.width = "98.5%";
+      document.getElementById('closeMenuIcon').style.display = "block";
+      document.getElementById('menuIcon').style.display = "none";
+    }
+
+    function closeMenu() {
+      document.getElementById('nav').style.width = "225px";
+      document.getElementById('menuIcon').style.display = "block";
+      document.getElementById('closeMenuIcon').style.display = "none";
+    }
+
+    function iconClick() {
+      document.getElementById('icon').style.rotate = "180deg";
+    }
+
+  </script>
+</body>
+
 </html>

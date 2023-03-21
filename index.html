@@ -1,266 +1,279 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Home - ButterDogCo</title>
-    <link rel="shortcut icon" href="https://butterdogco.com/img/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    
+
+<head>
+  <title>Home - ButterDogCo</title>
+  <link rel="shortcut icon" href="https://butterdogco.com/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
     @keyframes slideIn {
       0% {
         opacity: 0;
         left: -100vw;
         margin-left: -100vw;
       }
+
       100% {
         left: 0px;
         margin-left: 0px;
         opacity: 1;
       }
     }
-      
-      body {
-        font-family: 'Roboto', sans-serif;
-        color: white;
-        background-image: url('https://4kwallpapers.com/images/wallpapers/windows-11-abstract-background-blue-background-5k-2732x2732-8625.jpeg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        margin: 0;
-        height: 120%;
-        overflow: overlay;
-      }
-      
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      
-      #nav {
-        display: inline-flex;
-        height: 115px;
-        margin: 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(230,230,240,0.3);
-        backdrop-filter: blur(12px);
-        border-radius: 80px;
-        margin: 10px;
-        z-index: 100;
-        animation: slideIn 0.9s ease;
-        transition: 0.3s ease;
-        width: 225px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
-        -ms-overflow-style: none;
-        /* for Internet Explorer, Edge */
-        scrollbar-width: none;
-        /* for Firefox */
-      }
-      
-      #nav img {
-        padding: 15px;
-        margin: 15px;
-        height: 50px;
-        width: 50px;
-        cursor: pointer;
-      }
-      
-      main {
-        justify-content: center;
-      }
-      
-      .news {
-        padding-bottom: 100px;
-        padding-top: 30px;
-        width: 96vw;
-        height: 80vh;
-        border-radius: 30px;
-        background-color: rgba(230,230,240,0.3);
-        margin-top: 140px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        transition: 0.3s ease;
-        backdrop-filter: blur(12px);
-        animation: slideIn 0.6s ease;
-        cursor: pointer;
-      }
-      
-      .news:hover {
-        height: 83vh;
-        width: 100vw;
-      }
-      
-      .news img {
-        width: 90%;
-        height: 100%;
-        border-radius: 30px;
-      }
-      
-      .card {
-        width: 410px;
-        height: 410px;
-        padding-bottom: 3%;
-        margin: 1%;
-        background-color: rgba(230, 230, 240, 0.3);
-        border-radius: 30px;
-        justify-content: center;
-        transition: 0.2s ease;
-        text-align: center;
-        cursor: pointer;
-        display: flex;
-        backdrop-filter: blur(12px);
-      }
-  
-      .card:hover {
-        background-color: rgba(250, 250, 255, 0.5);
-      }
-  
-      .card a {
-        text-decoration: none;
-        color: inherit;
-      }
-  
-      .card img {
-        width: 70%;
-        height: 70%;
-        margin: 10px;
-        object-fit: contain;
-        border-radius: 10px;
-      }
-      
-      .card p {
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 20px;
-      }
-  
-      .card h2 {
-        cursor: pointer;
-        font-size: 28px;
-      }
-  
-      .cards {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-      }
-      
-      #menuIcon {
-        transition: 0.2s ease;
-      }
-      
-      #menuIcon:hover {
-        filter: brightness(80%);
-      }
 
-      #closeMenuIcon:hover {
-        filter: brightness(80%);
-      }
-      
-      #closeMenuIcon {
-        display: none;
-        transition: 0.2s ease;
-      }
-      
-      #nav a {
-        margin: 38px;
-        font-size: 30px;
-        transition: 0.2s ease;
-      }
-      
-      #nav #active {
-        font-weight: bold;
-      }
-      
-      #nav a:hover {
-        letter-spacing: 4px;
-        margin-left: 34px;
-      }
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      background-image: url('https://4kwallpapers.com/images/wallpapers/windows-11-abstract-background-blue-background-5k-2732x2732-8625.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      margin: 0;
+      height: 120%;
+      overflow: overlay;
+    }
 
-      *::-webkit-scrollbar {
-        background-color: transparent;
-        width: 10px;
-      }
-      *::-webkit-scrollbar-track {
-        background-color: transparent;
-      }
-      *::-webkit-scrollbar-thumb {
-        border-radius: 20px;
-        border: 1px solid transparent;
-        background-color: rgba(0,0,0,0.2);
-        background-clip: content-box;
-      }
-      
-      *::-webkit-scrollbar-thumb:hover {
-        background: gray;
-      }
-        
-      </style>
-  </head>
-  <body>
-    <div id="nav">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png" onclick="openMenu()" id="menuIcon">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/1200px-VisualEditor_-_Icon_-_Close_-_white.svg.png" onclick="closeMenu()" id="closeMenuIcon">
-      <img src="https://butterdogco.com/img/favicon.ico" id="icon" onclick="iconClick()" style="transition: 0.2s ease;">
-      
-      <a href="#" id="active">Home</a>
-      <a href="https://butterdogco.com/apps">Apps</a>
-      <a href="https://butterdogco.com/news">News</a>
-      <a href="https://butterdogco.com/about">About Us</a>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #nav {
+      display: inline-flex;
+      height: 115px;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(230, 230, 240, 0.3);
+      backdrop-filter: blur(12px);
+      border-radius: 80px;
+      margin: 10px;
+      z-index: 100;
+      animation: slideIn 0.9s ease;
+      transition: 0.3s ease;
+      width: 225px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -ms-overflow-style: none;
+      /* for Internet Explorer, Edge */
+      scrollbar-width: none;
+      /* for Firefox */
+    }
+
+    #nav img {
+      padding: 15px;
+      margin: 15px;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+    }
+
+    main {
+      justify-content: center;
+    }
+
+    .news {
+      padding-bottom: 100px;
+      padding-top: 30px;
+      width: 96vw;
+      height: 80vh;
+      border-radius: 30px;
+      background-color: rgba(230, 230, 240, 0.3);
+      margin-top: 140px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      transition: 0.3s ease;
+      backdrop-filter: blur(12px);
+      animation: slideIn 0.6s ease;
+      cursor: pointer;
+    }
+
+    .news:hover {
+      height: 83vh;
+      width: 100vw;
+    }
+
+    .news img {
+      width: 90%;
+      height: 100%;
+      border-radius: 30px;
+    }
+
+    .card {
+      width: 410px;
+      height: 410px;
+      padding-bottom: 3%;
+      margin: 1%;
+      background-color: rgba(230, 230, 240, 0.3);
+      border-radius: 30px;
+      justify-content: center;
+      transition: 0.2s ease;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      backdrop-filter: blur(12px);
+    }
+
+    .card:hover {
+      background-color: rgba(250, 250, 255, 0.5);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card img {
+      width: 70%;
+      height: 70%;
+      margin: 10px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .card p {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .card h2 {
+      cursor: pointer;
+      font-size: 28px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+    }
+
+    #menuIcon {
+      transition: 0.2s ease;
+    }
+
+    #menuIcon:hover {
+      filter: brightness(80%);
+    }
+
+    #closeMenuIcon:hover {
+      filter: brightness(80%);
+    }
+
+    #closeMenuIcon {
+      display: none;
+      transition: 0.2s ease;
+    }
+
+    #nav a {
+      margin: 38px;
+      font-size: 30px;
+      transition: 0.2s ease;
+    }
+
+    #nav #active {
+      font-weight: bold;
+    }
+
+    #nav a:hover {
+      letter-spacing: 4px;
+      margin-left: 34px;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    #nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    *::-webkit-scrollbar {
+      background-color: transparent;
+      width: 10px;
+    }
+
+    *::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      border: 1px solid transparent;
+      background-color: rgba(0, 0, 0, 0.2);
+      background-clip: content-box;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+      background: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nav">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png"
+      onclick="openMenu()" id="menuIcon">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/1200px-VisualEditor_-_Icon_-_Close_-_white.svg.png"
+      onclick="closeMenu()" id="closeMenuIcon">
+    <img src="https://butterdogco.com/img/favicon.ico" id="icon" onclick="iconClick()" style="transition: 0.2s ease;">
+
+    <a href="#" id="active">Home</a>
+    <a href="https://butterdogco.com/apps">Apps</a>
+    <a href="https://butterdogco.com/news">News</a>
+    <a href="https://butterdogco.com/about">About Us</a>
+  </div>
+  <main>
+    <div class="news">
+      <a href="https://butterflix.butterdogco.com">
+        <img src="https://butterdogco.com/img/Shrek%20and%20amogus%20love%20story%20WIDE.png">
+        <h1>Available on ButterFlix now!</h1>
+      </a>
     </div>
-    <main>
-      <div class="news">
-        <a href="https://butterflix.butterdogco.com">
-          <img src="https://butterdogco.com/img/Shrek%20and%20amogus%20love%20story%20WIDE.png">
-          <h1>Available on ButterFlix now!</h1>
+    <div class="cards">
+      <div class="card">
+        <a href="https://boogle.butterdogco.com">
+          <img src="https://butterdogco.com/Boogle-2.0/img/boogle_square.png">
+          <h2>Take a quick and easy search with Boogle.</h2>
         </a>
       </div>
-      <div class="cards">
-        <div class="card">
-          <a href="https://boogle.butterdogco.com">
-            <img src="https://butterdogco.com/Boogle-2.0/img/boogle_square.png">
-            <h2>Take a quick and easy search with Boogle.</h2>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://butterflix.butterdogco.com">
-            <img src="https://butterdogco.com/img/butterflix.png">
-            <h2>Chill and watch ButterFlix?</h2>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://butterdogco.com/apps">
-            <img src="https://butterdogco.com/img/favicon.ico">
-            <h2>Check out our other apps!</h2>
-          </a>
-        </div>
+      <div class="card">
+        <a href="https://butterflix.butterdogco.com">
+          <img src="https://butterdogco.com/img/butterflix.png">
+          <h2>Chill and watch ButterFlix?</h2>
+        </a>
       </div>
-    </main>
-    <script>
-      
-      function openMenu() {
-        document.getElementById('nav').style.width = "98.5%";
-        document.getElementById('closeMenuIcon').style.display = "block";
-        document.getElementById('menuIcon').style.display = "none";
-      }
-      
-      function closeMenu() {
-        document.getElementById('nav').style.width = "225px";
-        document.getElementById('menuIcon').style.display = "block";
-        document.getElementById('closeMenuIcon').style.display = "none";
-      }
+      <div class="card">
+        <a href="https://butterdogco.com/apps">
+          <img src="https://butterdogco.com/img/favicon.ico">
+          <h2>Check out our other apps!</h2>
+        </a>
+      </div>
+    </div>
+  </main>
+  <script>
 
-      function iconClick() {
-        document.getElementById('icon').style.rotate = "180deg";
-      }
-      
-    </script>
-  </body>
+    function openMenu() {
+      document.getElementById('nav').style.width = "98.5%";
+      document.getElementById('closeMenuIcon').style.display = "block";
+      document.getElementById('menuIcon').style.display = "none";
+    }
+
+    function closeMenu() {
+      document.getElementById('nav').style.width = "225px";
+      document.getElementById('menuIcon').style.display = "block";
+      document.getElementById('closeMenuIcon').style.display = "none";
+    }
+
+    function iconClick() {
+      document.getElementById('icon').style.rotate = "180deg";
+    }
+
+  </script>
+</body>
+
 </html>
