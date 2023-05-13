@@ -4,16 +4,41 @@
   <head>
     <title>cool game</title>
     <style>
+    
+      @keyframes thing {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    
+      body {
+        background-color: black;
+      }
+    
       center {
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
         font-weight: bolder;
+        background-image: url(https://butterdogco.com/img/catipillar.jpg);
+        background-size: 200% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 60vw;
       }
       
-      center p {
+      .text {
         text-transform: capitalize;
+        color: white;
+        text-shadow: 0 0 3px #000000;
+        cursor: default;
+        animation: thing 1s linear;
+        animation-delay: 1s;
+        opacity: 0;
       }
     </style>
 
@@ -49,12 +74,18 @@
 
   <body>
     <center>
-      <p id="ip"></p>
-      <p id="city"></p>
-      <p id="continent"></p>
-      <p id="latitude"></p>
-      <p id="longitude"></p>
+      <p id="ip" class="text"></p>
+      <p id="city" class="text"></p>
+      <p id="continent" class="text"></p>
+      <p id="latitude" class="text"></p>
+      <p id="longitude" class="text"></p>
     </center>
+    <script>
+    function ok() {
+			document.getElementsByClassName('text').style.opacity = "1";
+    }
+    setTimeout(ok, 2000);
+    </script>
   </body>
 
 </html>
