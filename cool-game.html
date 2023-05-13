@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>cool game</title>
+    <style>
+      center {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-weight: bolder;
+      }
+      
+      center p {
+        text-transform: capitalize;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <script>
+      /* Add "https://api.ipify.org?format=json" statement
+               this will communicate with the ipify servers in
+               order to retrieve the IP address $.getJSON will
+               load JSON-encoded data from the server using a
+               GET HTTP request */
+
+      $.getJSON("https://api.ipify.org?format=json", function(data) {
+
+        // Setting text of element P with id gfg
+        $("#ip").html("IP: " + data.ip);
+      })
+
+      fetch('https://api.geoapify.com/v1/ipinfo?apiKey=592cb48155824458865dcee2e711262e')
+        .then(response => response.json())
+        .then(data => {
+          // You can now access the location data in the "data" object
+          console.log(data);
+          $("#latitude").html("LATITUDE: " + data.location.latitude);
+          $("#longitude").html("LONGITUDE: " + data.location.longitude);
+          $("#city").html("CITY: " + data.city.name);
+          $("#continent").html("CONTINENT: " + data.continent.name);
+        })
+
+    </script>
+  </head>
+
+  <body>
+    <center>
+      <p id="ip"></p>
+      <p id="city"></p>
+      <p id="continent"></p>
+      <p id="latitude"></p>
+      <p id="longitude"></p>
+    </center>
+  </body>
+
+</html>
