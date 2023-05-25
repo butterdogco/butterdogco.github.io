@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRKNHWYBXN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-MRKNHWYBXN');
+  </script>
+
+  <title>Science Project - ButterDogCo</title>
+  <link rel="shortcut icon" href="https://butterdogco.github.io/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <style>
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        left: -100vw;
+        margin-left: -100vw;
+      }
+
+      100% {
+        left: 0px;
+        margin-left: 0px;
+        opacity: 1;
+      }
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      background-image: url('https://butterdogco.github.io/img/background.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      margin: 0;
+      height: 120%;
+      overflow: overlay;
+      padding-bottom: 10vh;
+      
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #nav {
+      display: inline-flex;
+      height: 115px;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(230, 230, 240, 0.3);
+      backdrop-filter: blur(12px);
+      border-radius: 80px;
+      margin: 10px;
+      z-index: 100;
+      animation: slideIn 0.9s ease;
+      transition: 0.3s ease;
+      width: 225px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -ms-overflow-style: none;
+      /* for Internet Explorer, Edge */
+      scrollbar-width: none;
+      /* for Firefox */
+    }
+
+    #nav img {
+      padding: 15px;
+      margin: 15px;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+    }
+
+    main {
+      justify-content: center;
+    }
+
+    .news {
+      padding-bottom: 100px;
+      padding-top: 30px;
+      width: 96vw;
+      height: 80vh;
+      border-radius: 30px;
+      background-color: rgba(230, 230, 240, 0.3);
+      margin-top: 140px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      transition: 0.3s ease;
+      backdrop-filter: blur(12px);
+      animation: slideIn 0.6s ease;
+      cursor: pointer;
+    }
+
+    .news:hover {
+      height: 83vh;
+      width: 100vw;
+    }
+
+    .news img {
+      width: 90%;
+      height: 100%;
+      border-radius: 30px;
+    }
+
+    .card {
+      width: 410px;
+      height: 410px;
+      padding-bottom: 3%;
+      margin: 1%;
+      background-color: rgba(230, 230, 240, 0.3);
+      border-radius: 30px;
+      justify-content: center;
+      transition: 0.2s ease;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      backdrop-filter: blur(12px);
+    }
+
+    .card:hover {
+      background-color: rgba(250, 250, 255, 0.5);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card a img {
+      width: 340px;
+      height: 340px;
+      margin: 10px;
+      object-fit: crop;
+      border-radius: 30px;
+    }
+
+    .card p {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .card h2 {
+      cursor: pointer;
+      font-size: 28px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+    }
+
+    #menuIcon {
+      transition: 0.2s ease;
+    }
+
+    #menuIcon:hover {
+      filter: brightness(80%);
+    }
+
+    #closeMenuIcon:hover {
+      filter: brightness(80%);
+    }
+
+    #closeMenuIcon {
+      display: none;
+      transition: 0.2s ease;
+    }
+
+    #nav a {
+      margin: 38px;
+      font-size: 30px;
+      transition: 0.2s ease;
+    }
+
+    #nav #active {
+      font-weight: bold;
+    }
+
+    #nav a:hover {
+      letter-spacing: 4px;
+      margin-left: 34px;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    #nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    *::-webkit-scrollbar {
+      background-color: transparent;
+      width: 10px;
+    }
+
+    *::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      border: 1px solid transparent;
+      background-color: rgba(0, 0, 0, 0.2);
+      background-clip: content-box;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+      background: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nav">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png"
+      onclick="openMenu()" id="menuIcon">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/1200px-VisualEditor_-_Icon_-_Close_-_white.svg.png"
+      onclick="closeMenu()" id="closeMenuIcon">
+    <img src="https://butterdogco.github.io/img/favicon.ico" id="icon" onclick="iconClick()" style="transition: 0.2s ease;">
+
+    <a href="https://butterdogco.github.io/">Home</a>
+    <a href="https://butterdogco.github.io/apps">Apps</a>
+    <a href="https://butterdogco.github.io/news">News</a>
+    <a href="https://butterdogco.github.io/about">About Us</a>
+    <a href="#" id="active">Science Project</a>
+  </div>
+  <main>
+    <div class="news">
+      <img src="https://www.treehugger.com/thmb/0j8Wx_p3vn3356KXDB758Luw9Rw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1214202236-5cc1308b157a4d1fb5c1bbccc1a4ee29.jpg">
+      <h1>Why we need <b>sustainable energy.</b></h1>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <a onclick="document.getElementById('why').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });">
+          <img src="https://images.nationalgeographic.org/image/upload/v1638892314/EducationHub/photos/tennessee-power-plant.jpg">
+          <h2>Why we need this</h2>
+        </a>
+      </div>
+      <div class="card">
+        <a onclick="document.getElementById('impacts').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });">
+          <img src="https://iea.imgix.net/1f05e7ce-3c0d-433c-a473-6525d97c34d0/shutterstock_210379843.jpg?auto=compress%2Cformat&fit=min&q=80&rect=468%2C0%2C3744%2C3744">
+          <h2>Impacts on the environment</h2>
+        </a>
+      </div>
+    </div>
+    <div class="news" id="why">
+      <img src="https://cdn.unenvironment.org/styles/article_billboard_image/s3/2020-11/hills-2836301_1920.jpg?h=0f921ce1&itok=6UWlvrNt">
+      <h1>Why this is important</h1>
+      <p style="margin-top: -20px;">Global warming is starting to become a very large issue, if we don't do anything now, we may not be able to see another blue sky in the next 100 years or so.</p>
+    </div>
+    <div class="news" id="impacts">
+      <img src="https://images.nationalgeographic.org/image/upload/v1638892314/EducationHub/photos/tennessee-power-plant.jpg">
+      <h1>Impacts on the environment</h1>
+      <p style="margin-top: -20px;">Our current energy sources have a very harmful impact on the environment, they are a major reason why global warming exists.</p>
+    </div>
+  </main>
+  <script>
+
+    function openMenu() {
+      document.getElementById('nav').style.width = "98.5%";
+      document.getElementById('closeMenuIcon').style.display = "block";
+      document.getElementById('menuIcon').style.display = "none";
+    }
+
+    function closeMenu() {
+      document.getElementById('nav').style.width = "225px";
+      document.getElementById('menuIcon').style.display = "block";
+      document.getElementById('closeMenuIcon').style.display = "none";
+    }
+
+    function iconClick() {
+      document.getElementById('icon').style.rotate = "180deg";
+    }
+
+  </script>
+</body>
+
+</html>
