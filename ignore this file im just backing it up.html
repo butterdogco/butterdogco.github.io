@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <style>
+    @fontface {
+      font-family: 'Gotham SSM'
+      src: url("https://butterdogco.github.io/fonts/Gotham Black.otf")
+    }
+    
+    @keyframes app {
+      0% {
+        opacity: 0;
+        margin-left: 0;
+      }
+      100% {
+        opacity: 1;
+        margin-left: 2vh;
+      }
+    }
+    
+    * {
+      font-family: 'Gotham SSM';
+      text-decoration: none;
+    }
+    
+    body {
+      background: black;
+      color: white;
+      margin: 0;
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    
+    .apps {
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      transition: 0.2s ease;
+    }
+    
+    .app {
+      animation: app 0.5s ease;
+      width: 27.1vh;
+      height: 24vh;
+      background: rgb(50,50,50);
+      padding: 1.3vh;
+      text-align: center;
+      border-radius: 3vh;
+      font-size: 2vh;
+      transition: 0.2s ease;
+      margin: 2vh;
+      cursor: pointer;
+    }
+    
+    .app:hover {
+      filter: brightness(110%);
+    }
+    
+    .app img {
+      width: 100%;
+      height: 70%;
+      cursor: pointer;
+      border-radius: 2vh;
+    }
+    
+    .app h3 {
+      margin-top: 0.8vh;
+      cursor: pointer;
+    }
+    
+    .app p {
+      color: rgb(160,160,160);
+      margin-top: -1.7vh;
+      cursor: pointer;
+    }
+    
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      border: 0;
+      outline: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    
+    #nav {
+      width: 8vw;
+      height: 3vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(50,50,50,0.5);
+      border-radius: 0vh 0vh 2vh 0vh;
+      opacity: 0.2;
+      transition: 0.2s ease;
+    }
+    
+    #nav:hover {
+      opacity: 1;
+    }
+    
+    #nav button {
+      background: none;
+      border: 0;
+      width: 8vw;
+      margin: 0;
+      height: 100%;
+      color: white;
+      cursor: pointer;
+    }
+    
+    </style>
+  </head>
+  <body>
+    <div class="apps" id="apps">
+      
+    </div>
+    <script>
+      function load(head,text,image,func) {
+        const div = document.createElement('div');
+        const img = document.createElement('img');
+        const hding = document.createElement('h3');
+        const p = document.createElement('p');
+        div.setAttribute('class','app');
+        div.setAttribute('onclick',func)
+        img.setAttribute('src',image)
+        hding.innerHTML = head;
+        p.innerHTML = text;
+        if (text == "") {
+          div.style.height = "21vh";
+          img.style.height = "80%";
+        }
+        document.getElementById('apps').appendChild(div);
+        div.appendChild(img);
+        div.appendChild(hding);
+        div.appendChild(p);
+      }
+      
+      function open(url) {
+        document.body.style.opacity = 0;
+        setTimeout(function() {
+        window.location.href = url
+        },250)
+      }
+      
+      function createDefaults() {
+        load("MSC2","","https://butterdogco.github.io/img/favicon.ico","app('mscTWO')")
+        load("MSCM","","https://butterdogco.github.io/img/favicon.ico","app('mscM')")
+      }
+      
+      function home() {
+        document.getElementById('apps').style.display = "inline-flex";
+        document.getElementById('apps').style.opacity = "1";
+        if (document.getElementById('frame')) {
+          document.getElementById('frame').remove();
+        }
+        if (document.getElementById('nav')) {
+          document.getElementById('nav').remove();
+        }
+      }
+      
+      function createNav() {
+        const div = document.createElement('div');
+        const btn = document.createElement('button');
+        div.setAttribute('id','nav');
+        btn.setAttribute('class','navBack');
+        btn.setAttribute('onclick','home()')
+        btn.innerHTML = "Back"
+        document.body.appendChild(div)
+        div.appendChild(btn)
+      }
+      
+      function createFrame(url) {
+        const frame = document.createElement("iframe");
+        frame.setAttribute('src',url);
+        frame.setAttribute('id','frame')
+        document.body.appendChild(frame);
+      }
+      
+      function app(name) {
+        document.getElementById('apps').style.opacity = "0";
+        setTimeout(function(){
+          document.getElementById('apps').style.display = "none";
+          if (name == "rblx") {
+            createFrame("https://butterdogco.github.io")
+            createNav();
+          } else if(name == "mscTWO") {
+            createFrame("https://butterdogco.github.io/stunning-umbrella/")
+            createNav();
+          } else if(name == "mscM") {
+            createFrame("https://butterdogco.github.io/test-page2/")
+            createNav();
+          } else {
+            alert("Error: App not found.")
+            home();
+          }
+        }, 200)
+      }
+      
+      createDefaults();
+      
+      window.onerror = function(error) {
+        alert("Error: " + error);
+      };
+    </script>
+  </body>
+</html>
