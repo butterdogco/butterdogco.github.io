@@ -1,9 +1,16 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: discord message
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Discord Message Notify
-      uses: appleboy/discord-action@v1.0.0
+    - uses: actions/checkout@master
+    - name: send custom message with args
+      uses: appleboy/discord-action@master
+      with:
+        webhook_id: ${{ secrets.WEBHOOK_ID }}
+        webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+        args: The ${{ github.event_name }} event triggered first step.
+
