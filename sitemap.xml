@@ -4,8 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://b-dog.co/</loc>
@@ -28,5 +26,31 @@
   <priority>0.80</priority>
 </url>
 
+<url>
+  <loc>https://boogle.b-dog.co/</loc>
+  <lastmod>2023-12-15T18:57:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://boogle.b-dog.co/images</loc>
+  <lastmod>2023-12-15T18:57:47+00:00</lastmod>
+  <priority>0.40</priority>
+</url>
+<url>
+  <loc>https://boogle.b-dog.co/about</loc>
+  <lastmod>2023-12-15T18:57:47+00:00</lastmod>
+  <priority>0.40</priority>
+</url>
+<url>
+  <loc>https://boogle.b-dog.co/themes</loc>
+  <lastmod>2023-12-15T18:57:47+00:00</lastmod>
+  <priority>0.40</priority>
+</url>
+
+<url>
+  <loc>https://wikabedia.b-dog.co/</loc>
+  <lastmod>2024-01-05T20:15:52+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
 
 </urlset>
