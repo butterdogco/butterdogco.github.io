@@ -56,7 +56,7 @@
       position: fixed;
       top: 0;
       left: 1;
-	  right:1;
+	    right:1;
       background-color: rgba(230, 230, 240, 0.1);
       backdrop-filter: blur(12px);
       border-radius: 30px;
@@ -65,7 +65,7 @@
       animation: slideIn 0.9s ease;
       transition: 0.3s Ease-in-out;
       width: 225px;
-      overflow-x: hidden;
+      overflow-x: scroll;
       overflow-y: hidden;
       white-space: nowrap;
       -ms-overflow-style: none;
@@ -109,6 +109,13 @@
       width: 90%;
       height: 100%;
       border-radius: 30px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1330px) {
+      .news img {
+        content:url("img/general/dark_moed_mobile.png");
+      }
     }
 
     .card {
@@ -240,8 +247,8 @@
   </div>
   <main>
     <p><div class="news">
-      <a href="img/Wikabedia (1)..png">
-        <img src="https://github.com/butterdogco/butterdogco.github.io/blob/main/img/dark%20moad.png?raw=true">
+      <a href="#">
+        <img src="https://github.com/butterdogco/butterdogco.github.io/blob/main/img/general/dark%20moad.png?raw=true">
         <h1>Welcome to  dark mode! (The other pages will get this soon!)</h1>
       </a>
     </div></p>
