@@ -7,7 +7,7 @@ ButterDogCo is a company created by Keegan in 7th grade. The website began with 
 # Who works for ButterDogCo?
 We only have a few employees, here's the list:
 - Keegan, CEO
-- Kai, COO
+- AccidentalTheory, COO
 - Nolan, CFO
 - Nick, Moderator and Support Team
 
