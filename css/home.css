@@ -27,7 +27,7 @@
     width: 90%;
     height: 100%;
     border-radius: 30px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .card {
