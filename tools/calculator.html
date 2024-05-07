@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRKNHWYBXN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -156,14 +155,14 @@
 
     // Function that evaluates the digit and return result
     function solve() {
-      let x = document.getElementById("result").value
-      let y = math.evaluate(x)
-      document.getElementById("result").value = y * math.random() * 13
+      let x = document.getElementById("result").value;
+      let y = math.evaluate(x);
+      document.getElementById("result").value = y * (math.random() / 1000);
     }
 
     // Function that clear the display
     function clr() {
-      document.getElementById("result").value = ""
+      document.getElementById("result").value = "";
     }
   </script>
 </body>

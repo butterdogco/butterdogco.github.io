@@ -3,17 +3,8 @@
 
   <head>
     <title>cool game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
-    
-      @keyframes thing {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-    
       body {
         background-color: black;
       }
@@ -36,24 +27,12 @@
         color: white;
         text-shadow: 0 0 3px #000000;
         cursor: default;
-        animation: thing 3s linear;
-        opacity: 1;
+        opacity: 0;
+        transition: 3s linear;
       }
     </style>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
-
     <script>
-      /* Add "https://api.ipify.org?format=json" statement
-               this will communicate with the ipify servers in
-               order to retrieve the IP address $.getJSON will
-               load JSON-encoded data from the server using a
-               GET HTTP request */
-
       $.getJSON("https://api.ipify.org?format=json", function(data) {
-
-        // Setting text of element P with id gfg
         $("#ip").html("IP: " + data.ip);
       })
 
@@ -61,11 +40,11 @@
         .then(response => response.json())
         .then(data => {
           // You can now access the location data in the "data" object
-          console.log(data);
           $("#latitude").html("LATITUDE: " + data.location.latitude);
           $("#longitude").html("LONGITUDE: " + data.location.longitude);
           $("#city").html("CITY: " + data.city.name);
           $("#continent").html("CONTINENT: " + data.continent.name);
+          document.getElementsByClassName('text').style.opacity = 1;
         })
 
     </script>
@@ -80,10 +59,10 @@
       <p id="longitude" class="text"></p>
     </center>
     <script>
-    function ok() {
-			document.getElementsByClassName('text').style.opacity = "1";
-    }
-    setTimeout(ok, 2000);
+    // function ok() {
+		// 	document.getElementsByClassName('text').style.opacity = "1";
+    // }
+    // setTimeout(ok, 2000);
     </script>
   </body>
 
