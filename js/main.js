@@ -37,4 +37,6 @@ if (!link.includes("https://b-dog.co")) {
       }
     }
   }
+} else if (link.includes("/altsite")) {
+  window.location.href = "index";
 }

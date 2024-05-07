@@ -31,6 +31,12 @@ background-color: rgba(250, 250, 255, 0.3);
     border-radius: 30px;
   }
 
+  .news a {
+    color:white;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
   .card {
     width: 410px;
     height: 490px;
