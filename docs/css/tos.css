@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 170px;
+}
+
 main {
   margin-top: 170px;
 }
