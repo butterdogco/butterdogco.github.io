@@ -1,3 +1,76 @@
+// Card Creation
+function addCard(cardInfo) {
+  var name = cardInfo.Name || "";
+  var desc = cardInfo.Desc || "";
+  var icon = cardInfo.Icon || "img/butterdog.png";
+  var link = cardInfo.Link || "#";
+  var altLink = cardInfo.AltLink || undefined;
+  
+  const div = document.createElement("div");
+  div.className = "card";
+  const a = document.createElement("a");
+  a.href = link;
+  const img = document.createElement("img");
+  img.src = icon;
+  const heading = document.createElement("h2");
+  heading.innerText = name;
+  const p = document.createElement("p");
+  p.innerText = desc;
+  
+  div.appendChild(a);
+  a.appendChild(img);
+  a.appendChild(heading);
+  a.appendChild(p);
+  document.getElementById("cards").appendChild(div);
+}
+
+try {
+  var fileName = location.pathname.split("/").slice(-1);
+  cards[fileName].forEach(function(card) {
+    addCard(card);
+  });
+} catch (err) {
+  // then ignore
+}
+
+// DVD Logo Funny
+const funnyEnabled = true;
+const funnyImages = [
+  "https://w7.pngwing.com/pngs/626/579/png-transparent-blu-ray-disc-computer-icons-dvd-compact-disc-dvd-text-logo-desktop-wallpaper-thumbnail.png",
+  "https://github.com/butterdogco/butterdogco.github.io/blob/main/docs/img/catipillar.jpg?raw=true",
+  "https://upload.wikimedia.org/wikipedia/en/8/85/Bill_Nye_the_Science_Guy_title_screen.jpg"
+];
+
+function getRandomInt(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+}
+
+function createFunny() {
+  funnyImages.forEach(function(image) {
+    let img = document.createElement("img");
+    img.className = "dvd";
+    img.src = image;
+    document.body.appendChild(img);
+    
+    function yes() {
+      let randomX = getRandomInt(0, screen.availWidth);
+      let randomY = getRandomInt(0, screen.availHeight);
+      let random = Math.random() * 500;
+      img.style.left = `${randomX}px`;
+      img.style.top = `${randomY}px`;
+      img.style.width = `${random}px`;
+      img.style.transform = `rotateX(${random}deg) rotateY(${random}deg) rotateZ(${random}deg)`;
+      setTimeout(yes, getRandomInt(10, 1000));
+    }
+    yes();
+  });
+}
+// if (funnyEnabled === true) {
+//   createFunny();
+// }
+
 // Menu Functions
 function openMenu() {
   document.getElementById('nav').style.width = "98.5%";
@@ -18,9 +91,12 @@ function playFunnySound() {
   audio.play();
 }
 
+let rotateNum = 0;
 function iconClick() {
   playFunnySound();
-  document.getElementById('icon').style.rotate = "180deg";
+  createFunny();
+  rotateNum = rotateNum + 180;
+  document.getElementById('icon').style.rotate = `${rotateNum}deg`;
 }
 
 // Alternate Site Detection
