@@ -25,7 +25,7 @@ function addCard(cardInfo) {
 }
 
 try {
-  var fileName = location.pathname.split("/").slice(-1);
+  var fileName = document.getElementById("pageID").innerHTML;
   cards[fileName].forEach(function(card) {
     addCard(card);
   });

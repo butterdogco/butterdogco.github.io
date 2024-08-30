@@ -174,3 +174,7 @@
     pointer-events: none;
     animation: fadeIn 5s ease;
   }
+  
+  #pageID {
+    display: none;
+  }
