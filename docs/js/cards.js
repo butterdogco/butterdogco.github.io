@@ -1,5 +1,5 @@
 const cards = {
-  ["index.html"]:[
+  ["home"]:[
     {
       Name:"Make a search with Boogle",
       Desc:"",
@@ -22,7 +22,7 @@ const cards = {
       Link:"applications",
     }
   ],
-  ["applications.html"]:[
+  ["apps"]:[
     {
       Name:"Boogle",
       Desc:"Da best serch engun",
