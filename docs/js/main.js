@@ -92,9 +92,16 @@ function playFunnySound() {
 }
 
 let rotateNum = 0;
+let musicStarted = false;
 function iconClick() {
   playFunnySound();
   createFunny();
+  if (musicStarted === false) {
+    musicStarted = true;
+    const audio = new Audio("audio/dubstep.wav");
+    document.head.appendChild(audio);
+    audio.play();
+  }
   rotateNum = rotateNum + 180;
   document.getElementById('icon').style.rotate = `${rotateNum}deg`;
 }
