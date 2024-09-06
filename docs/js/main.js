@@ -4,12 +4,21 @@ function addCard(cardInfo) {
   var desc = cardInfo.Desc || "";
   var icon = cardInfo.Icon || "img/butterdog.png";
   var link = cardInfo.Link || "#";
-  var altLink = cardInfo.AltLink || undefined;
+  var altLink = cardInfo.AltLink || null;
+  var secret = cardInfo.Secret;
+  var disabled = cardInfo.Disabled;
+
+  if (disabled) {
+    return;
+  }
   
   const div = document.createElement("div");
-  div.className = "card";
+  div.classList.add("card");
+  if (secret) {
+    div.classList.add("hidden");
+  }
   const a = document.createElement("a");
-  a.href = link;
+  a.href = altLink || link;
   const img = document.createElement("img");
   img.src = icon;
   const heading = document.createElement("h2");
