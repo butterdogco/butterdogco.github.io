@@ -9,7 +9,7 @@ We only have a few employees, here's the list:
 - Keegan, CEO
 - AccidentalTheory, COO
 - Nolan, CFO
-- Nick, Moderator and Support Team
+- Nick, Administrator
 
 # Interested in joining our community?
 We love when people continue to join our community, allowing us to improve our services, and create a stronger community. You can join our Discord with this link: https://discord.gg/KZzVM4rfg6.
