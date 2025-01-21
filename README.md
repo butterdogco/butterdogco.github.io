@@ -8,7 +8,7 @@ ButterDogCo is a company created by Keegan in 7th grade. The website began with 
 We only have a few employees, here's the list:
 - Keegan, CEO
 - AccidentalTheory, COO
-- Nolan, CFO
+- Nolan, MIM
 - Nick, Administrator
 
 # Interested in joining our community?
