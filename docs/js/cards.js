@@ -18,7 +18,7 @@ const cards = {
     {
       Name:"check out our other apps",
       Desc:"",
-      Icon:"img/apps.png",
+      Icon:"img/icons/Apps.png",
       Link:"applications",
     }
   ],

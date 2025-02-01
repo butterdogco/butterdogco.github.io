@@ -14,7 +14,7 @@ main {
   transition: 0.15s Ease-in-out;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  animation: slideIn 0.6s ease;
+  animation: slideInFromTop 0.6s ease;
   cursor: default;
 
   img {
