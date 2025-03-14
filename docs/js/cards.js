@@ -85,10 +85,11 @@ const cards = {
       Link:"https://sites.google.com/bsd48.org/bbay"
     },
     {
-      Name:"butteros",
-      Desc:"the bestest and most epicest os for buter",
+      Name:"butterOS",
+      Desc:"da latest and greatest ting for ur computer",
       Icon:"img/icons/ButterOS.png",
-      Link:"https://sites.google.com/bsd48.org/b-os/"
+      Link:"https://b-dog.co/ButterOS/",
+      AltLink: "https://butterdogceo.github.io/ButterOS/"
     },
     {
       Name:"butterdonalds",
