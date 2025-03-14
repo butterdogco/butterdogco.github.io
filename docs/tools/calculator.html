@@ -39,7 +39,7 @@
       font-weight: bold;
       border: none;
       border-radius: 12px;
-      transition: 0.2s ease-in-out;
+      transition: 0.15s ease-in-out;
     }
 
     input[type="button"]:hover {
@@ -144,7 +144,7 @@
     }
 
     var cal = document.getElementById("calcu");
-    cal.onkeyup = function (event) {
+    cal.onkeydown = function (event) {
       if (event.keyCode === 13) {
         console.log("Enter");
         let x = document.getElementById("result").value
@@ -156,8 +156,14 @@
     // Function that evaluates the digit and return result
     function solve() {
       let x = document.getElementById("result").value;
-      let y = math.evaluate(x);
-      document.getElementById("result").value = y * (math.random() / 1000);
+      let y;
+      if (x == "9+10") {
+        y = 21;
+      } else {
+        const multiplier = math.evaluate(x) / (math.evaluate(x) / 16) - (math.evaluate(x) + 2) + math.evaluate(x);
+        y = math.evaluate(x) + multiplier;
+      }
+      document.getElementById("result").value = y;
     }
 
     // Function that clear the display
