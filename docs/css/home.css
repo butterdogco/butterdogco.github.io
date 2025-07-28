@@ -38,7 +38,7 @@ main {
   background-color: rgba(230, 230, 240, 0.1);
   border-radius: var(--cardCornerRadius);
   justify-content: center;
-  transition: 0.2s ease;
+  transition: 0.15s ease background-color;
   text-align: center;
   cursor: pointer;
   display: flex;
@@ -96,7 +96,7 @@ main {
   background-color: rgba(250, 250, 255, 0.2);
 }
 
-@media (max-width: 1158px) {
+@media (max-width: 1421px) {
   .news {
     min-height: 30vh;
   }
