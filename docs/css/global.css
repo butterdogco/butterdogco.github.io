@@ -54,7 +54,8 @@
 }
 
 html {
-  background-image: url("https://github.com/butterdogco/butterdogco.github.io/blob/main/docs/img/backgrounds/VerticalBackgroundTest3.png?raw=true");
+  background-color: #19120d;
+  background-image: url("../img/backgrounds/VerticalBackgroundTest3.png");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
