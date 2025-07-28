@@ -1,25 +1,20 @@
 main {
   justify-content: center;
+  margin-top: 140px;
 }
 
 .news {
-  padding-bottom: 130px;
-  padding-top: 30px;
-  padding-left: 1.5vw;
-  padding-right: 1.5vw;
-  width: 87vw;
-  height: 40vh;
-  border-radius: 30px;
-  background-color: rgba(230, 230, 240, 0.1);
-  margin-top: 140px;
-  text-align: center;
-  margin-left: auto;
+  max-width: 87vw;
   margin-right: auto;
-  transition: 0.3s ease;
+  margin-left: auto;
+  padding: 30px;
+  background-color: rgba(230, 230, 240, 0.1);
+  border-radius: 30px;
+  text-align: center;
+  transition: 0.15s ease background-color;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   animation: slideIn 0.6s ease;
-  cursor: pointer;
 }
 
 .news:hover {
