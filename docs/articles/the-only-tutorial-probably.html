@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Custom Roblox Skybox Tutorial - ButterDogCo</title>
+  <link rel="apple-touch-icon" sizes="256x256" href="img/butterdog.png">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/pp.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="keywords" content="butterdogco, roblox, skybox, tutorial, png to tex, custom skybox, roblox tex file">
+  <meta name="description" content="probably the only tutorial on how to make custom Roblox skybox TeX files">
+</head>
+
+<body>
+  <div id="nav">
+    <img src="img/Menu%20icon.png" onclick="openMenu()" id="menuIcon">
+    <img src="img/Close%20icon.png" onclick="closeMenu()" id="closeMenuIcon">
+    <img src="img/favicon.ico" id="icon" onclick="iconClick()" style="transition: 0.2s ease;">
+
+    <a href="index">Home</a>
+    <a href="applications">Apps</a>
+    <a href="news">News</a>
+    <a href="about">About Us</a>
+  </div>
+  <main>
+    <h1>How to make a custom Roblox skybox</h1>
+    <p>More specifically, converting PNG files into TeX files for use in the Roblox client.</p>
+    <i>Article written by the ButterDogCEO, on August 7th 2025.</i>
+
+    <h1>Table of Contents</h1>
+    <p><a href="#1" class="hyperlink">1. Getting skybox textures</a></p>
+    <p><a href="#2" class="hyperlink">2. Image resizing</a></p>
+    <p><a href="#3" class="hyperlink">3. Converting to TeX</a></p>
+    <p><a href="#4" class="hyperlink">4. Replacing skybox files</a></p>
+    <p><a href="#5" class="hyperlink">5. Enjoy your custom skybox</a></p>
+
+    <h1 id="1">1. Getting skybox textures</h1>
+    <p>First, you need skybox texture files. You can find these online, I personally found mine on the Roblox toolbox.
+    </p>
+    <p>You will need textures for the following directions:</p>
+    <ul>
+      <li>back</li>
+      <li>down</li>
+      <li>front</li>
+      <li>left</li>
+      <li>right</li>
+      <li>up</li>
+    </ul>
+
+    <h1 id="2">2. Image resizing</h1>
+    <p>All skybox textures need to be 512x512 pixels in size. If you need to resize all you images, I personally found
+      the following website to be useful: <a
+        href="https://bulkresizephotos.com/en?type=exact&width=512&height=512&pad=false&format=png">https://bulkresizephotos.com/</a>
+    </p>
+
+    <h1 id="3">3. Converting to TeX</h1>
+    <ul>
+      <li>For every skybox texture file, you will need to convert it to the DDS file format, with BC1/DXT1 compression.
+        I personally did this using GIMP.</li>
+      <li>Once you have the DDS files, you will need to rename them to the following names:</li>
+      <ul>
+        <li>back.dds -> sky512_bk.tex</li>
+        <li>down.dds -> sky512_dn.tex</li>
+        <li>front.dds -> sky512_ft.tex</li>
+        <li>left.dds -> sky512_lf.tex</li>
+        <li>right.dds -> sky512_rt.tex</li>
+        <li>up.dds -> sky512_up.tex</li>
+      </ul>
+      <p>Note: No conversion is required for DDS to TeX conversion for Roblox, simply renaming works.</p>
+    </ul>
+
+    <h1 id="4">4. Replacing skybox files</h1>
+    <p>Now that you have the skybox textures in the correct format, you can replace the default skybox textures in
+      Roblox.</p>
+    <p>To do this, you have a few methods:</p>
+    <ul>
+      <li>
+        Using Bloxstrap or similar to replace the skybox textures in the Roblox client. This is the most straightforward
+        method.
+        <ol>
+          <li>Download and install Bloxstrap (or Fishstrap) from <a class="hyperlink"
+              href="https://bloxstraplabs.com/">https://bloxstraplabs.com/</a> if you haven't already.</li>
+          <li>Place your skybox TeX files in the appropriate folder, usually located at
+            <code>%LocalAppData%\Bloxstrap\Modifications\PlatformContent\pc\textures\sky\</code>. Note that you may need
+            to create the folders if they do not exist, Bloxstrap does not by default create folders.
+          <li>Replace the existing skybox TeX files with your custom ones, ensuring you keep backups of the original
+            files.</li>
+          <li>Launch Roblox, and your custom skybox should now be visible in-game.</li>
+          <li>If your skybox is black, you may have missed a step or incorrectly converted some of the files. Contact
+            @k_ws on Discord for additional support, only after you've attempted the instructions once more.</li>
+        </ol>
+      </li>
+      <li>
+        Manually replacing the skybox textures in the Roblox client files. This method is more complex, and differs
+        based on your operating system.
+        <ol>
+          <li>Navigate to the Roblox installation directory, typically found at
+            <code>%LocalAppData%\Roblox\Versions\version-xxxxxx\content\textures\sky\</code>.</li>
+          <li>Replace the existing skybox TeX files with your custom ones, ensuring you keep backups of the original
+            files.</li>
+          <li>Launch Roblox, and your custom skybox should now be visible in-game.</li>
+          <li>If you skybox is black, you may have missed a step or incorrectly converted some of the files. Contact
+            @k_ws on Discord for additional support, only after you've attempted the instructions once more.</li>
+        </ol>
+      </li>
+    </ul>
+
+    <h1 id="5">5. Enjoy your custom skybox</h1>
+    <p>Once you've replaced the skybox textures, you can launch Roblox and enjoy your custom skybox in any game that
+      uses the default skybox textures.</p>
+    <p>If you encounter any issues, double-check the steps above, ensure your textures are correctly formatted, and that
+      you've replaced the files in the correct directory.</p>
+    <p>Note: This tutorial is based on the current state of Roblox and may change in the future. Always refer to the
+      latest documentation or community resources for updates.</p>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
