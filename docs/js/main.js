@@ -122,7 +122,7 @@ function iconClick() {
 // Alternate Site Detection
 // ⚠ Modifying these functions violates ButterDogCo Terms of Service ⚠
 const link = window.location.href;
-if (!link.includes("https://b-dog.co")) {
+if (!link.includes("https://butterdogco.com")) {
   const item = document.createElement('a');
   const div = document.getElementById('nav');
   if (div) {
