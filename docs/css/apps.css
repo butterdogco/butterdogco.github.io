@@ -38,7 +38,7 @@
 
 .card {
   width: 410px;
-  padding-bottom: 3%;
+  padding: 24px;
   background-color: rgba(230, 230, 240, 0.1);
   border-radius: 30px;
   justify-content: center;
@@ -60,20 +60,20 @@
 }
 
 .card img {
-  width: 70%;
-  height: 70%;
+  width: 250px;
+  height: 250px;
   margin: 10px;
   object-fit: contain;
   border-radius: 10px;
 }
 
-.card p {
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 20px;
-}
-
 .card h2 {
   cursor: pointer;
+  margin: 0;
   font-size: 28px;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 20px;
 }
