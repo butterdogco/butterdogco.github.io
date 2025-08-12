@@ -55,7 +55,6 @@
 
 html,
 body {
-  width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
   margin: 0;
@@ -67,12 +66,13 @@ html {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  width: 100vw;
 }
 
 body {
   background: transparent;
   min-height: 100vh;
-  max-width: 100vw;
+  width: calc(100vw - (10px * 2));
   padding: 10px;
   padding-bottom: 15px;
 }
