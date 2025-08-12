@@ -53,24 +53,28 @@
   color: white;
 }
 
+html,
+body {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+}
+
 html {
   background-color: #19120d;
   background-image: url("../img/backgrounds/VerticalBackgroundTest3.png");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  overflow-x: hidden;
-  padding-bottom: 15px;
 }
 
 body {
-  background-color: transparent;
+  background: transparent;
   min-height: 100vh;
-  height: 120%;
   max-width: 100vw;
-  overflow-x: hidden;
   padding: 10px;
-  margin: 0;
+  padding-bottom: 15px;
 }
 
 a {
