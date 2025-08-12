@@ -37,15 +37,16 @@
 }
 
 .card {
+  display: flex;
   width: 410px;
   padding: 24px;
+  flex-grow: 1;
   background-color: rgba(230, 230, 240, 0.1);
   border-radius: 30px;
   justify-content: center;
   transition: 0.25s ease;
   text-align: center;
   cursor: pointer;
-  display: flex;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
