@@ -135,9 +135,9 @@ if (!link.includes("https://butterdogco.com")) {
       item.id = "active";
       const p = document.getElementById('altSiteInfoText');
       if (link.includes("https://butterdogceo.github.io") && p) {
-        p.innerHTML = "This is an alternate website for ButterDogCo, the main website can be found <a href='https://b-dog.co'>here</a>.";
+        p.innerHTML = "This is an alternate website for ButterDogCo, the main website can be found <a href='https://butterdogco.com'>here</a>.";
       } else if (p) {
-        p.innerHTML = "This is an unofficial website for ButterDogCo. Please note that anything found here can be modified by the site host, the official website can be found <a href='https://b-dog.co'>here</a>.";
+        p.innerHTML = "This is an unofficial website for ButterDogCo. Please note that anything found here can be modified by the site host, the official website can be found <a href='https://butterdogco.com'>here</a>.";
       }
     }
   }

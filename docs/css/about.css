@@ -1,6 +1,7 @@
+@import url('./global.css');
+
 main {
   justify-content: center;
-  margin-top: 140px;
 }
 
 .news {

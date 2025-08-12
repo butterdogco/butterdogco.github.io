@@ -6,52 +6,52 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://b-dog.co/</loc>
+  <loc>https://butterdogco.com/</loc>
   <lastmod>2025-06-11T04:24:22+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://b-dog.co/applications</loc>
+  <loc>https://butterdogco.com/applications</loc>
   <lastmod>2025-05-11T04:24:22+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://b-dog.co/news</loc>
+  <loc>https://butterdogco.com/news</loc>
   <lastmod>2025-07-11T04:24:22+00:00</lastmod>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://b-dog.co/about</loc>
+  <loc>https://butterdogco.com/about</loc>
   <lastmod>2025-07-11T04:24:22+00:00</lastmod>
   <priority>0.85</priority>
 </url>
 
 <url>
-  <loc>https://wikabedia.b-dog.co/</loc>
+  <loc>https://wikabedia.butterdogco.com/</loc>
   <lastmod>2025-03-05T20:15:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://b-dog.co/tos</loc>
+  <loc>https://butterdogco.com/tos</loc>
   <lastmod>2025-08-07T04:24:22+00:00</lastmod>
   <priority>0.25</priority>
 </url>
 
 <url>
-  <loc>https://b-dog.co/pp</loc>
+  <loc>https://butterdogco.com/pp</loc>
   <lastmod>2025-08-07T04:24:22+00:00</lastmod>
   <priority>0.25</priority>
 </url>
 
 <url>
-  <loc>https://b-dog.co/mcrules</loc>
+  <loc>https://butterdogco.com/mcrules</loc>
   <lastmod>2025-07-03T04:24:22+00:00</lastmod>
   <priority>0.15</priority>
 </url>
 
 <url>
-  <loc>https://b-dog.co/articles/the-only-tutorial-probably</loc>
+  <loc>https://butterdogco.com/articles/the-only-tutorial-probably</loc>
   <lastmod>2025-08-07T04:24:22+00:00</lastmod>
   <priority>0.05</priority>
 </url>

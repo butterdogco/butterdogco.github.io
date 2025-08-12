@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Support Redirect</title>
-        <link rel="apple-touch-icon" sizes="256x256" href="img/butterdog.png">
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="description" content="te ofical buterdogco websiet">
-        <style>
-            * {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                color: white;
-            }
-            body {
-                background: rgb(50,50,70);
-            }
-            h1 {
-                color: white;
-            }
-            p {
-                color: white;
-            }
-            a {
-                color: rgb(160,160,240);
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Attempting to redirect you to the support Email...</h1>
-        <p>Didn't get redirected? Click the link below, or email support@b-dog.co.</p>
-        <a href="mailto:support@b-dog.co?subject=ButterDogCo%20Support&body=My%20problem%20is%3A%0A%0AMy%20name%20is%3A">Email Support</a>
-    </body>
+
+<head>
+    <title>Support Redirect</title>
+    <link rel="apple-touch-icon" sizes="256x256" href="img/butterdog.png">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="te ofical buterdogco websiet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRKNHWYBXN"></script>
     <script>
-        window.location.href = "mailto:support@b-dog.co?subject=ButterDogCo%20Support&body=My%20problem%20is%3A%0A%0AMy%20name%20is%3A";
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MRKNHWYBXN');
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/ios-pwa-splash@1.0.0/cdn.min.js"></script>
+    <script>iosPWASplash('img/butterdog.png', '#19120d');</script>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        body {
+            background: rgb(50, 50, 70);
+        }
+
+        h1 {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+
+        a {
+            color: rgb(160, 160, 240);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Attempting to redirect you to the support Email...</h1>
+    <p>Didn't get redirected? Click the link below, or email support@b-dog.co.</p>
+    <a href="mailto:support@b-dog.co?subject=ButterDogCo%20Support&body=My%20problem%20is%3A%0A%0AMy%20name%20is%3A">Email
+        Support</a>
+</body>
+<script>
+    window.location.href = "mailto:support@b-dog.co?subject=ButterDogCo%20Support&body=My%20problem%20is%3A%0A%0AMy%20name%20is%3A";
+</script>
+
 </html>

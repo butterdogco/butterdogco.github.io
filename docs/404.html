@@ -2,7 +2,11 @@
 <html>
 
 <head>
-  <!-- Google tag (gtag.js) -->
+  <title>what</title>
+  <link rel="shortcut icon"
+    href="https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/favicon.ico">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="te ofical buterdogco websiet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRKNHWYBXN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,12 +15,8 @@
 
     gtag('config', 'G-MRKNHWYBXN');
   </script>
-
-  <title>what</title>
-  <link rel="shortcut icon"
-    href="https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/favicon.ico">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="description" content="te ofical buterdogco websiet">
+  <script src="https://cdn.jsdelivr.net/npm/ios-pwa-splash@1.0.0/cdn.min.js"></script>
+  <script>iosPWASplash('img/butterdog.png', '#19120d');</script>
   <style>
     * {
       cursor: default;
@@ -33,13 +33,37 @@
     body {
       font-family: 'Roboto', sans-serif;
       background-image: url('https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/backgrounds/VerticalBackgroundTest3.png');
-      color: white;
       background-repeat: no-repeat;
       background-size: cover;
+      color: white;
+      text-shadow: 0 0 12px rgba(0,0,0,0.6);
     }
 
-    a {
-      color: rgb(230, 230, 255);
+    ul {
+      padding: 0;
+      list-style-type: disc;
+      list-style-position: outside;
+
+      li {
+        margin: 10px 0;
+
+        a {
+          font-size: 18px;
+          cursor: pointer;
+          color: rgb(185, 185, 252);
+          border-radius: 4px;
+          outline-color: transparent;
+          outline-style: solid;
+          outline-offset: 6px;
+          transition: 0.1s ease outline-color;
+
+          &:hover,
+          &:focus,
+          &:active {
+            outline-color: rgba(185, 185, 252, 0.75);
+          }
+        }
+      }
     }
 
     div.center {
@@ -68,10 +92,13 @@
 <body>
   <div class="center">
     <h1 style="font-size: 120px;text-align: center;margin-top: -80px;">dang</h1>
-    <h1 style="text-align: center;margin-top: -80px;margin-bottom: 80px">we can't find that page 💀</h1>
-    <h1>womp womp</h1>
-    <h3>idk if you made a typo or not but double check that, otherwise <a href="https://discord.gg/KZzVM4rfg6">report an
-        issue in the discord</a>.<br><br> return to <a href="index.html">home page</a></h3>
+    <h1 style="text-align: center;margin-top: -80px;margin-bottom: 80px">we can't find that page 😭</h1>
+    <h3>If you typed the link manually, check if you made a typo.<br>Otherwise, you have a few options:</h3>
+    <ul>
+      <li><a href="./">Go to the home page</a></li>
+      <li><a href="https://github.com/butterdogco/butterdogco.github.io/issues/new">Report an issue on GitHub</a></li>
+      <li><a href="https://discord.gg/KZzVM4rfg6">Report an issue on Discord</a></li>
+    </ul>
   </div>
 </body>
 
