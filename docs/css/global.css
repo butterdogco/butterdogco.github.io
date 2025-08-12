@@ -57,8 +57,6 @@ html,
 body {
   overflow-x: hidden;
   margin: 0;
-  width: calc(100vw - (10px * 2));
-  min-height: calc(100vh - 10px - 15px);
 }
 
 html {
@@ -67,12 +65,15 @@ html {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  padding: 10px 10px 15px 10px;
+  width: 100vw;
+  padding: 0;
 }
 
 body {
   background: transparent;
-  padding: 0;
+  width: calc(100vw - 20px);
+  min-height: calc(100vh - 25px);
+  padding: 10px 10px 15px 10px;
 }
 
 a {
