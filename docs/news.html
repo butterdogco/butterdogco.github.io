@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <div id="nav">
+  <nav class="top-nav" id="nav">
     <img src="img/Menu%20icon.png" onclick="openMenu()" id="menuIcon">
     <img src="img/Close%20icon.png" onclick="closeMenu()" id="closeMenuIcon">
     <img src="img/favicon.ico" id="icon" onclick="iconClick()" style="transition: 0.2s ease;">
@@ -32,36 +32,44 @@
     <a href="applications">Apps</a>
     <a href="#" id="active">News</a>
     <a href="about">About Us</a>
-  </div>
+  </nav>
   <main>
-    <div class="news">
-      <a href="about">
-        <div>
-          <img src="img/VillagerRizz.gif" alt="Minecraft Server Season 5 Poster">
-          <h1>Minecraft Server Release</h1>
-          <p>We've released our Minecraft server once again, this time with Season 5! Join our Discord to play and learn more.</p>
-          <i>Posted July 28th, 2025</i>
-        </div>
+    <div class="news-container">
+      <a class="news-card" href="#">
+        <img src="img/posters/SiteImprovements.png" alt="Website Improvements Announcement Poster">
+        <article class="content">
+          <h1 class="header">Primary Website Improvements</h1>
+          <p class="text">We've been working hard recently to improve our main website, which was previously rather
+            dated. You'll notice subtle design improvements, such as these news cards that you are reading, and many
+            other details. If you have any suggestions, concerns, or questions, let us know in our Discord server!</p>
+          <i class="details">Posted August 14th, 2025</i>
+        </article>
       </a>
-    </div>
-    <div class="news">
-      <a href="#">
-        <div>
-          <img src="img/KaiBlair.png" alt="Kai Blair Super Duper Urgent Announcement Poster">
-          <h1>VERY IMPORTANT (trust)</h1>
-          <p>Kai spotted the above in Blair (Roblox)</p>
-          <i>Posted July 27th, 2025</i>
-        </div>
+      <a class="news-card" href="about">
+        <img src="img/posters/VillagerRizz.gif" alt="Minecraft Server Season 5 Poster">
+        <article class="content">
+          <h1 class="header">Minecraft Server Release</h1>
+          <p class="text">We've released our Minecraft server once again, this time with Season 5! Join our Discord to
+            play and learn
+            more.</p>
+          <i class="details">Posted July 28th, 2025</i>
+        </article>
       </a>
-    </div>
-    <div class="news">
-      <a href="#">
-        <div>
-          <img src="img/general/dark%20moad.png" alt="Dark Mode Announcement Poster">
-          <h1>We've switched to Dark Mode!</h1>
-          <p>Your eyes will thank you.</p>
-          <i>Posted January 25th, 2024</i>
-        </div>
+      <a class="news-card" href="#">
+        <img src="img/posters/KaiBlair.png" alt="Kai Blair Super Duper Urgent Announcement Poster">
+        <article class="content">
+          <h1 class="header">VERY IMPORTANT (trust)</h1>
+          <p class="text">Kai spotted the above in Blair (Roblox)</p>
+          <i class="details">Posted July 27th, 2025</i>
+        </article>
+      </a>
+      <a class="news-card" href="#">
+        <img src="img/posters/DarkMode.png" alt="Dark Mode Announcement Poster">
+        <article class="content">
+          <h1 class="header">We've switched to Dark Mode!</h1>
+          <p class="text">Your eyes will thank you.</p>
+          <i class="details">Posted January 25th, 2024</i>
+        </article>
       </a>
     </div>
   </main>

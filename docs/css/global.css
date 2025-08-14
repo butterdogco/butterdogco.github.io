@@ -3,6 +3,9 @@
 :root {
   --cardCornerRadius: 30px;
   --cardGap: 15px;
+
+  --shadow-light: 0 0 6px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes slideIn {
@@ -93,7 +96,7 @@ a.hyperlink {
   text-decoration: underline;
 }
 
-#nav {
+.top-nav {
   display: inline-flex;
   height: 115px;
   position: fixed;
