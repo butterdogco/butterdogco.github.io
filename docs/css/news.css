@@ -57,10 +57,14 @@
 }
 
 @media (max-width: 1025px) {
-  .news-card {
+  .news-container .news-card {
     flex-flow: column;
 
-    .img {
+    .header {
+      font-size: 35px;
+    }
+
+    img {
       width: 100%;
       max-width: none;
     }

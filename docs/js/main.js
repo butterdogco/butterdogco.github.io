@@ -21,6 +21,7 @@ function createCard(cardInfo) {
   a.href = cardAltLink || cardLink;
   const img = document.createElement("img");
   img.src = cardIcon;
+  img.setAttribute("loading", "lazy");
   const heading = document.createElement("h2");
   heading.innerText = cardName;
   const p = document.createElement("p");
