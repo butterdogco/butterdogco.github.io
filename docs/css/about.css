@@ -3,3 +3,7 @@
 @import url('./elements/news-card.css');
 @import url('./elements/cards.css');
 @import url('./elements/card.css');
+
+.news-container .news-card img {
+    object-fit: contain;
+}
