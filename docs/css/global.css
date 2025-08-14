@@ -209,3 +209,7 @@ pre {
 .hidden {
   display: none;
 }
+
+.img-anchor-right {
+  object-position: right;
+}
