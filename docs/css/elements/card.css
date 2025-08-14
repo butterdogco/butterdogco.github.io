@@ -32,6 +32,7 @@
 .card img {
   width: 250px;
   height: 250px;
+  max-width: 93vw;
   margin: 10px;
   object-fit: contain;
   border-radius: 10px;
