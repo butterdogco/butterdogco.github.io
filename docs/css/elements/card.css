@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 410px;
+  padding: 24px;
+  flex-grow: 1;
+  background-color: rgba(230, 230, 240, 0.1);
+  border-radius: 30px;
+  justify-content: center;
+  transition: 0.25s ease;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.card:hover {
+  background-color: rgba(250, 250, 255, 0.2);
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.card h2 {
+  cursor: pointer;
+  margin: 0;
+  font-size: 28px;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 20px;
+}

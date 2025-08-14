@@ -213,3 +213,11 @@ pre {
 .img-anchor-right {
   object-position: right;
 }
+
+.img-square {
+  aspect-ratio: 1 / 1;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
