@@ -14,6 +14,7 @@
   --object-padding: 30px;
   --object-border-radius: 30px;
 
+  --nav-default-width: calc((var(--nav-icon-size) * 2) + var(--nav-object-gap));
   --nav-icon-size: 50px;
   --nav-object-gap: 40px;
   --nav-outline-thickness: 2.5px;
@@ -117,7 +118,7 @@ a.hyperlink {
   margin: var(--nav-outline-thickness) 0 0 var(--nav-outline-thickness);
   gap: var(--nav-object-gap);
   align-items: center;
-  width: calc((var(--nav-icon-size) * 2) + var(--nav-object-gap));
+  width: var(--nav-default-width);
   background-color: rgba(230, 230, 240, 0.1);
   outline: 2.5px solid rgba(255,255,255,0.1);
   padding: calc(var(--object-padding) - var(--nav-outline-thickness));
@@ -256,7 +257,7 @@ pre {
 
 @media (max-width: 500px) {
   .top-nav.active {
-    width: auto;
+    width: var(--nav-default-width);
     height: auto;
     top: 0;
     left: 0;
