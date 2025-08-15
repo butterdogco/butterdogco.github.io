@@ -20,7 +20,7 @@ function createCard(cardInfo) {
   a.classList.add("card");
   a.classList.toggle("hidden", cardIsSecret);
   a.href = cardAltLink || cardLink || "#";
-  if (a.href != "#" && a.href.includes("://")) {
+  if (a.href != "#" && !a.href.includes("://butterdogco.com/")) {
     // Open in a new tab
     a.target = "_blank";
     // Create the "external link" icon
