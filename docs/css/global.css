@@ -16,6 +16,7 @@
 
   --nav-icon-size: 50px;
   --nav-object-gap: 40px;
+  --nav-outline-thickness: 2.5px;
 }
 
 @keyframes slideIn {
@@ -112,12 +113,13 @@ a.hyperlink {
   display: inline-flex;
   position: fixed;
   flex-flow: row;
+  inset: 0 var(--nav-outline-thickness) 0 var(--nav-outline-thickness);
   gap: var(--nav-object-gap);
   align-items: center;
   width: calc((var(--nav-icon-size) * 2) + var(--nav-object-gap));
   background-color: rgba(230, 230, 240, 0.1);
   outline: 2.5px solid rgba(255,255,255,0.1);
-  padding: var(--object-padding);
+  padding: calc(var(--object-padding) - var(--nav-outline-thickness));
   overflow: scroll hidden;
   white-space: nowrap;
   border-radius: var(--object-border-radius);
@@ -130,7 +132,7 @@ a.hyperlink {
   z-index: 8;
 
   &.active {
-    width: calc(100vw - (var(--page-side-padding) * 2) - (var(--object-padding) * 2));
+    width: calc(100vw - (var(--page-side-padding) * 2) - (var(--object-padding) * 2) - var(--nav-outline-thickness));
 
     #menuIcon {
       opacity: 0;

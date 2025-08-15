@@ -15,19 +15,24 @@ function createCard(cardInfo) {
   if (cardIsDisabled || !cardsContainer) {
     return;
   }
-  
+
   const a = document.createElement("a");
   a.classList.add("card");
   a.classList.toggle("hidden", cardIsSecret);
   a.href = cardAltLink || cardLink || "#";
-  if (a.href != "#" && !a.href.includes("://butterdogco.com/")) {
-    // Open in a new tab
-    a.target = "_blank";
-    // Create the "external link" icon
-    const span = document.createElement("span");
-    span.classList.add("material-symbols-rounded", "open-icon");
-    span.innerHTML = "open_in_new";
-    a.appendChild(span);
+  if (a.href != "#") {
+    a.title = "Click to open " + cardName;
+
+    if (!a.href.includes("://butterdogco.com/")) {
+      // Open in a new tab
+      a.target = "_blank";
+      a.title += " in a new tab";
+      // Create the "external link" icon
+      const span = document.createElement("span");
+      span.classList.add("material-symbols-rounded", "open-icon");
+      span.innerHTML = "open_in_new";
+      a.appendChild(span);
+    }
   }
   if (cardIcon) {
     const img = document.createElement("img");
@@ -45,7 +50,7 @@ function createCard(cardInfo) {
     p.innerText = cardDesc;
     a.appendChild(p);
   }
-  
+
   cardsContainer.appendChild(a);
 }
 
@@ -59,7 +64,7 @@ try {
   if (!pageId) {
     throw new Error("Page ID element is missing content")
   }
-  cards[pageId].forEach(function(cardInfo) {
+  cards[pageId].forEach(function (cardInfo) {
     createCard(cardInfo);
   });
 } catch (err) {
@@ -85,12 +90,12 @@ function getRandomInt(min, max) {
 
 // Creates the bouncing images and sets up an update loop for them
 function createFunny() {
-  funnyImages.forEach(function(image) {
+  funnyImages.forEach(function (image) {
     const img = document.createElement("img");
     img.classList.add("dvd");
     img.src = image;
     document.body.appendChild(img);
-    
+
     function updatePosition() {
       const randomX = getRandomInt(-50, screen.availWidth);
       const randomY = getRandomInt(-50, screen.availHeight);
@@ -164,8 +169,8 @@ if (!link.includes("https://butterdogco.com")) {
   var things_array = [...things];
   things_array.forEach(obj => {
     if (obj.getAttribute('data-alt-link')) {
-        obj.href = obj.getAttribute('data-alt-link');
-        obj.title = "Click to open alternate link";
+      obj.href = obj.getAttribute('data-alt-link');
+      obj.title = "Click to open alternate link";
     }
   });
 } else if (link.includes("/altsite")) {
