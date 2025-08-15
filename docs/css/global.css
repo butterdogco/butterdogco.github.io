@@ -259,11 +259,6 @@ pre {
   .top-nav.active {
     width: var(--nav-default-width);
     height: auto;
-    top: 0;
-    left: 0;
-    margin: 0;
-    background-color: rgba(190, 190, 200, 0.3);
-    border-radius: 0 0 var(--object-border-radius) 0;
     flex-wrap: wrap;
     align-items: start;
 
