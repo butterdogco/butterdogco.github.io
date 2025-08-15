@@ -2,7 +2,6 @@ const cards = {
   ["home"]:[
     {
       Name:"learn more with Wikabedia",
-      Desc:"",
       Icon:"img/icons/Wikabedia.png",
       Link:"https://wikabedia.b-dog.co",
       AltLink:"https://butterdogceo.github.io/Wikabedia/",
@@ -10,14 +9,12 @@ const cards = {
 
     {
       Name:"post some garbage on bweeter",
-      Desc:"",
       Icon:"img/icons/Bweeter.png",
       Link:"https://bweeter.bettermode.io/",
     },
     
     {
       Name:"check out some more apps",
-      Desc:"",
       Icon:"img/icons/Apps.png",
       Link:"applications",
     }

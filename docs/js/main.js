@@ -1,54 +1,71 @@
-// Card Creation
+const cardsContainer = document.getElementById("cards");
+const nav = document.getElementById("nav");
+
+// Card creation function
+// cardInfo attributes: Name, Desc?, Icon, Link, AltLink?, Secret?, Disabled?
 function createCard(cardInfo) {
-  const cardName = cardInfo.Name || "";
-  const cardDesc = cardInfo.Desc || "";
-  const cardIcon = cardInfo.Icon || "img/butterdog.png";
+  const cardName = cardInfo.Name;
+  const cardDesc = cardInfo.Desc;
+  const cardIcon = cardInfo.Icon;
   const cardLink = cardInfo.Link || "#";
-  const cardAltLink = cardInfo.AltLink || null;
+  const cardAltLink = cardInfo.AltLink;
   const cardIsSecret = cardInfo.Secret || false;
   const cardIsDisabled = cardInfo.Disabled || false;
 
-  if (cardIsDisabled) {
+  if (cardIsDisabled || !cardsContainer) {
     return;
   }
   
-  const div = document.createElement("div");
-  div.classList.add("card");
-  if (cardIsSecret) {
-    div.classList.add("hidden");
-  }
   const a = document.createElement("a");
-  a.href = cardAltLink || cardLink;
-  const img = document.createElement("img");
-  img.src = cardIcon;
-  img.setAttribute("loading", "lazy");
-  const heading = document.createElement("h2");
-  heading.innerText = cardName;
-  const p = document.createElement("p");
-  p.innerText = cardDesc;
+  a.classList.toggle("hidden", cardIsSecret);
+  a.href = cardAltLink || cardLink || "#";
+  if (a.href != "#" && a.href.includes("://")) {
+    // Open in a new tab
+    a.target = "_blank";
+    // Create the "external link" icon
+    const span = document.createElement("span");
+    span.classList.add("material-symbols-rounded", "open-icon");
+    span.innerHTML = "open_in_new";
+    a.appendChild(span);
+  }
+  if (cardIcon) {
+    const img = document.createElement("img");
+    img.src = cardIcon;
+    img.setAttribute("loading", "lazy");
+    a.appendChild(img);
+  }
+  if (cardName) {
+    const heading = document.createElement("h2");
+    heading.innerText = cardName;
+    a.appendChild(heading);
+  }
+  if (cardDesc) {
+    const p = document.createElement("p");
+    p.innerText = cardDesc;
+    a.appendChild(p);
+  }
   
-  div.appendChild(a);
-  a.appendChild(img);
-  a.appendChild(heading);
-  a.appendChild(p);
-  document.getElementById("cards").appendChild(div);
+  cardsContainer.appendChild(a);
 }
 
 try {
-  const pageId = document.getElementById("pageID");
-  if (!pageId) {
+  const pageIdElement = document.querySelector('meta[name="page-id"]');
+  if (!pageIdElement) {
     throw new Error("Page ID element not found");
   }
 
-  const fileName = pageId.innerHTML;
-  cards[fileName].forEach(function(card) {
-    createCard(card);
+  const pageId = pageIdElement.getAttribute("content");
+  if (!pageId) {
+    throw new Error("Page ID element is missing content")
+  }
+  cards[pageId].forEach(function(cardInfo) {
+    createCard(cardInfo);
   });
 } catch (err) {
-  // Simply ignore (Page doesn't have cards)
+  console.error(err);
 }
 
-// DVD Logo Funny
+// DVD logo funny bouncing images
 const funnyEnabled = true;
 const funnyImages = [
   "https://w7.pngwing.com/pngs/626/579/png-transparent-blu-ray-disc-computer-icons-dvd-compact-disc-dvd-text-logo-desktop-wallpaper-thumbnail.png",
@@ -58,12 +75,14 @@ const funnyImages = [
   "https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/butterdog.png?raw=true"
 ];
 
+// Utility function that gets a random number between the 2 ranges (no way really)
 function getRandomInt(min, max) {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);
   return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 }
 
+// Creates the bouncing images and sets up an update loop for them
 function createFunny() {
   funnyImages.forEach(function(image) {
     const img = document.createElement("img");
@@ -85,14 +104,14 @@ function createFunny() {
   });
 }
 
-// Menu Functions
-const nav = document.getElementById("nav");
+// Take a guess as to what this does
 function toggleMenu() {
   if (nav) {
     nav.classList.toggle("active");
   }
 }
 
+// Plays the funny sound
 function playFunnySound() {
   const audio = new Audio("audio/this%20look%20like%20gaming%20area.mp3");
   audio.controls = true;
@@ -102,6 +121,8 @@ function playFunnySound() {
 
 let rotateNum = 0;
 let musicStarted = false;
+
+// I wonder when this runs
 function iconClick() {
   playFunnySound();
   createFunny();

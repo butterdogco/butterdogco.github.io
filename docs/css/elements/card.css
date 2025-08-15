@@ -13,33 +13,36 @@
   cursor: pointer;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-}
 
-.card:hover {
-  background-color: rgba(250, 250, 255, 0.2);
-}
+  &:hover {
+    background-color: rgba(250, 250, 255, 0.2);
+  }
 
-.card a {
-  text-decoration: none;
-  color: inherit;
-}
+  .open-icon {
+    position: absolute;
+    top: var(--object-padding);
+    right: var(--object-padding);
+    font-size: 40px;
+    opacity: .5;
+  }
 
-.card img {
-  width: 250px;
-  height: 250px;
-  max-width: 93vw;
-  margin: 10px;
-  object-fit: contain;
-  border-radius: 10px;
-}
+  img {
+    width: 250px;
+    height: 250px;
+    max-width: 93vw;
+    margin: 10px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
 
-.card h2 {
-  cursor: pointer;
-  margin: 0;
-  font-size: 28px;
-}
+  h2 {
+    cursor: pointer;
+    margin: 0;
+    font-size: 28px;
+  }
 
-.card p {
-  margin: 4px 0;
-  font-size: 20px;
+  p {
+    margin: 4px 0;
+    font-size: 20px;
+  }
 }

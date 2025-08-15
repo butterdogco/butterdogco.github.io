@@ -34,21 +34,31 @@ main {
   justify-content: center;
 }
 
+/* In the future this should be imported from the card.css file, but for simplicity right now we'll recreate it, since it has custom behavior */
 .card {
-  height: 100%;
+  display: flex;
   background-color: rgba(230, 230, 240, 0.1);
   border-radius: var(--cardCornerRadius);
-  justify-content: center;
-  transition: 0.15s ease background-color;
-  text-align: center;
-  cursor: pointer;
-  display: flex;
-  animation: slideInFromTop 0.6s ease;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  height: 100%;
+  padding: 10px;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: 10px;
+  flex-flow: column;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: slideInFromTop 0.6s ease;
+  transition: 0.15s ease background-color;
+
+  .open-icon {
+    position: absolute;
+    top: var(--object-padding);
+    right: var(--object-padding);
+    font-size: 40px;
+    opacity: .5;
+  }
 
   a {
     text-decoration: none;
