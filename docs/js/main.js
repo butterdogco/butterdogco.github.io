@@ -23,7 +23,9 @@ function createCard(cardInfo) {
   if (a.href != "#") {
     a.title = "Click to open " + cardName;
 
-    if (!a.href.includes("://butterdogco.com/")) {
+    // We don't want to apply this if a link is a page of this repo
+    // But we should still allow links that include butterdogco.com
+    if (!(a.href.includes("://butterdogco.com") && a.href.split("/").length <= 4)) {
       // Open in a new tab
       a.target = "_blank";
       a.title += " in a new tab";
