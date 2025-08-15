@@ -1,28 +1,31 @@
 @import url('./global.css');
 
 main {
+  display: flex;
+  flex-flow: column;
+  gap: var(--cardGap);
   justify-content: center;
 }
 
 .news {
-  margin-bottom: 15px;
-  padding-top: 30px;
-  width: 100%;
-  height: 20vh;
-  border-radius: var(--cardCornerRadius);
+  width: calc(100% - (var(--object-padding) * 2));
   background-color: rgba(230, 230, 240, 0.1);
+  padding: var(--object-padding);
+  border-radius: var(--cardCornerRadius);
   text-align: center;
+  cursor: default;
   transition: 0.15s Ease-in-out;
+  animation: slideInFromTop 0.3s ease;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  animation: slideInFromTop 0.3s ease;
-  cursor: default;
-
+  
   img {
-    width: 90%;
-    height: 50%;
-    border-radius: var(--cardCornerRadius);
+    height: 150px;
     object-fit: contain;
+  }
+
+  h1 {
+    margin: 0;
   }
 }
 
@@ -108,10 +111,6 @@ main {
 }
 
 @media (max-width: 1421px) {
-  .news {
-    min-height: 30vh;
-  }
-
   .cards {
     width: 100%;
     gap: 15px;
