@@ -17,6 +17,7 @@ function createCard(cardInfo) {
   }
   
   const a = document.createElement("a");
+  a.classList.add("card");
   a.classList.toggle("hidden", cardIsSecret);
   a.href = cardAltLink || cardLink || "#";
   if (a.href != "#" && a.href.includes("://")) {
