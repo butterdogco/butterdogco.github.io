@@ -113,7 +113,7 @@ a.hyperlink {
   display: inline-flex;
   position: fixed;
   flex-flow: row;
-  inset: 0 var(--nav-outline-thickness) 0 var(--nav-outline-thickness);
+  margin: var(--nav-outline-thickness) 0 0 var(--nav-outline-thickness);
   gap: var(--nav-object-gap);
   align-items: center;
   width: calc((var(--nav-icon-size) * 2) + var(--nav-object-gap));
