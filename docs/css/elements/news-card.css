@@ -49,6 +49,10 @@
       background-color: rgba(250, 250, 255, 0.2);
     }
   }
+
+  &[href="#"] {
+    cursor: default;
+  }
 }
 
 @media (max-width: 1025px) {

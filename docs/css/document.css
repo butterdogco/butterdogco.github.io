@@ -1,10 +1,5 @@
 @import url('./global.css');
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 170px;
-}
-
 main {
   margin-top: 170px !important;
   margin-left: 12px;

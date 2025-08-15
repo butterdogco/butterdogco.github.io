@@ -80,6 +80,8 @@ html {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  scroll-behavior: smooth;
+  scroll-padding-top: 170px;
   width: 100vw;
   padding: 0;
 }
