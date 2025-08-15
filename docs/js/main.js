@@ -72,8 +72,8 @@ function createFunny() {
     document.body.appendChild(img);
     
     function updatePosition() {
-      const randomX = getRandomInt(0, screen.availWidth);
-      const randomY = getRandomInt(0, screen.availHeight);
+      const randomX = getRandomInt(-50, screen.availWidth);
+      const randomY = getRandomInt(-50, screen.availHeight);
       const randomSomething = Math.random() * 500;
       img.style.left = `${randomX}px`;
       img.style.top = `${randomY}px`;
@@ -86,16 +86,11 @@ function createFunny() {
 }
 
 // Menu Functions
-function openMenu() {
-  document.getElementById('nav').style.width = "98.5%";
-  document.getElementById('closeMenuIcon').style.display = "block";
-  document.getElementById('menuIcon').style.display = "none";
-}
-
-function closeMenu() {
-  document.getElementById('nav').style.width = "225px";
-  document.getElementById('menuIcon').style.display = "block";
-  document.getElementById('closeMenuIcon').style.display = "none";
+const nav = document.getElementById("nav");
+function toggleMenu() {
+  if (nav) {
+    nav.classList.toggle("active");
+  }
 }
 
 function playFunnySound() {

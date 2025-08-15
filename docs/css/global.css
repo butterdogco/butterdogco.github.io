@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
+  --page-side-padding: 10px;
+  --page-bottom-padding: 15px;
+
   --cardCornerRadius: 30px;
   --cardGap: 15px;
 
   --shadow-light: 0 0 6px rgba(0, 0, 0, 0.3);
   --shadow-medium: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  --object-padding: 30px;
+  --object-border-radius: 30px;
+
+  --nav-icon-size: 50px;
+  --nav-object-gap: 40px;
 }
 
 @keyframes slideIn {
@@ -77,9 +86,9 @@ html {
 
 body {
   background: transparent;
-  width: calc(100vw - 20px);
-  min-height: calc(100vh - 25px);
-  padding: 10px 10px 15px 10px;
+  width: calc(100vw - (var(--page-side-padding) * 2));
+  min-height: calc(100vh - (var(--page-side-padding) + var(--page-bottom-padding)));
+  padding: var(--page-side-padding) var(--page-side-padding) var(--page-bottom-padding) var(--page-side-padding);
 }
 
 main {
@@ -98,25 +107,36 @@ a.hyperlink {
 
 .top-nav {
   display: inline-flex;
-  height: 115px;
   position: fixed;
-  top: 0;
+  flex-flow: row;
+  gap: var(--nav-object-gap);
+  align-items: center;
+  width: calc((var(--nav-icon-size) * 2) + var(--nav-object-gap));
   background-color: rgba(230, 230, 240, 0.1);
   outline: 2.5px solid rgba(255,255,255,0.1);
+  padding: var(--object-padding);
+  overflow: scroll hidden;
+  white-space: nowrap;
+  border-radius: var(--object-border-radius);
   backdrop-filter: blur(12px) brightness(90%);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 30px;
-  margin: 10px;
-  margin-left: 0;
-  z-index: 8;
   animation: slideIn 0.6s ease;
   transition: 0.3s Ease-in-out;
-  width: 225px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  z-index: 8;
+
+  &.active {
+    width: calc(100vw - (var(--page-side-padding) * 2) - (var(--object-padding) * 2));
+
+    #menuIcon {
+      display: none;
+    }
+
+    #closeMenuIcon {
+      display: block;
+    }
+  }
 
   ::-webkit-scrollbar {
     display: none;
@@ -126,21 +146,20 @@ a.hyperlink {
     transition: 0.15s ease;
 
     &:hover {
-      filter: brightness(80%);
+      filter: brightness(60%);
     }
   }
 
   #closeMenuIcon {
     display: none;
-    transition: 0.15s Ease-in-out;
+    transition: 0.15s ease;
 
     &:hover {
-      filter: brightness(80%);
+      filter: brightness(60%);
     }
   }
 
   a {
-    margin: 38px;
     font-size: 30px;
     text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -157,14 +176,11 @@ a.hyperlink {
 
   #active {
     font-weight: bold;
-    letter-spacing: 4;
   }
 
   img {
-    padding: 15px;
-    margin: 15px;
-    height: 50px;
-    width: 50px;
+    height: var(--nav-icon-size);
+    width: var(--nav-icon-size);
     cursor: pointer;
   }
 }
