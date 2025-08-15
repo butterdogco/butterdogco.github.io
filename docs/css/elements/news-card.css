@@ -10,7 +10,7 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: 0.15s ease-in-out background-color;
-  animation: slideIn 0.6s ease;
+  animation: slideIn 0.3s ease;
 
   img {
     width: 500px;

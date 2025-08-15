@@ -17,6 +17,7 @@
   --nav-icon-size: 50px;
   --nav-object-gap: 40px;
   --nav-outline-thickness: 2.5px;
+  --nav-link-width: 85px;
 }
 
 @keyframes slideIn {
@@ -125,14 +126,17 @@ a.hyperlink {
   border-radius: var(--object-border-radius);
   backdrop-filter: blur(12px) brightness(90%);
   -webkit-backdrop-filter: blur(12px);
-  animation: slideIn 0.6s ease;
-  transition: 0.3s Ease-in-out;
+  animation: slideIn 0.3s ease;
+  transition: 0.2s ease-in-out;
   -ms-overflow-style: none;
   scrollbar-width: none;
   z-index: 8;
 
   &.active {
-    width: calc(100vw - (var(--page-side-padding) * 2) - (var(--object-padding) * 2) - var(--nav-outline-thickness));
+    /* Basically 'auto' except manually calculated, requires modification when navbar is changed */
+    width: calc((var(--nav-icon-size) * 2) + (var(--nav-object-gap) * 5) + (var(--nav-link-width) * 4));
+    /* Screen-width calculation, used as max-width here to prevent overflow on smaller screens */
+    max-width: calc(100vw - (var(--page-side-padding) * 2) - (var(--object-padding) * 2) - var(--nav-outline-thickness));
 
     #menuIcon {
       opacity: 0;
@@ -172,6 +176,8 @@ a.hyperlink {
 
   a {
     font-size: 30px;
+    max-width: var(--nav-link-width);
+    min-width: var(--nav-link-width);
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: transparent;
