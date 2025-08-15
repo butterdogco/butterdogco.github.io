@@ -6,6 +6,7 @@
   padding: 24px;
   flex-grow: 1;
   background-color: rgba(230, 230, 240, 0.1);
+  text-shadow: var(--shadow-light);
   border-radius: 30px;
   justify-content: center;
   transition: 0.25s ease;
@@ -33,6 +34,10 @@
     margin: 10px;
     object-fit: contain;
     border-radius: 10px;
+
+    &.shadow {
+      box-shadow: var(--shadow-medium);
+    }
   }
 
   h2 {
@@ -44,5 +49,6 @@
   p {
     margin: 4px 0;
     font-size: 20px;
+
   }
 }
