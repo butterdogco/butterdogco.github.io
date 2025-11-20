@@ -8,8 +8,8 @@ ButterDogCo is a company created by Keegan in 7th grade. The website began with 
 We only have a few employees, here's the list:
 - Keegan, CEO
 - Kai, COO
-- Nolan, MIM
+- Nolan, CFO
 - Nick, Administrator
 
 # Interested in joining our community?
-We love when people continue to join our community, allowing us to improve our services, and create a stronger community. You can join our Discord with this link: https://discord.gg/KZzVM4rfg6.
+You can join our Discord here: https://discord.gg/KZzVM4rfg6.
