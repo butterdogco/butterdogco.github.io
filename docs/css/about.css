@@ -3,7 +3,26 @@
 @import url('./elements/cards.css');
 @import url('./elements/card.css');
 
-.news-card img {
-    object-fit: contain;
-    width: 300px;
+.section-header {
+	animation: fadeIn 0.3s ease;
+	width: 100%;
+	text-align: center;
+	margin: 24px 0 20px 0;
+}
+
+.news-card {
+
+	img,
+	.image {
+		object-fit: contain;
+		width: 300px;
+	}
+}
+
+.cards .news-card {
+	width: 100%;
+
+	object.image {
+		filter: drop-shadow(var(--shadow-light));
+	}
 }

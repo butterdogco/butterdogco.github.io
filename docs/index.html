@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/home.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="mobile-web-app-capable" content="yes">  
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="keywords" content="butterdogco, bdogco, butterdogco.github.io, butterdogco.com, boogle">
   <meta name="description" content="te ofical buterdogco websiet">
   <meta name="page-id" content="home">
@@ -22,28 +22,37 @@
   <script src="https://cdn.jsdelivr.net/npm/ios-pwa-splash@1.0.0/cdn.min.js"></script>
   <script>iosPWASplash('img/general/ButterDog Glow.png', '#19120d');</script>
 </head>
-  <nav class="top-nav" id="nav">
-    <img
-      src="img/Menu%20icon.png"
-      onclick="toggleMenu()" id="menuIcon">
-    <img
-      src="img/Close%20icon.png"
-      onclick="toggleMenu()" id="closeMenuIcon">
-    <img src="img/favicon.ico" id="icon" onclick="iconClick()" style="transition: 0.2s ease;">
+<nav class="top-nav" id="nav">
+  <img src="img/Menu%20icon.png" onclick="toggleMenu()" id="menuIcon">
+  <img src="img/Close%20icon.png" onclick="toggleMenu()" id="closeMenuIcon">
+  <img src="img/icons/ButterDog.png" id="icon" onclick="iconClick()">
 
-    <a href="#" id="active">Home</a>
-    <a href="applications">Apps</a>
-    <a href="news">News</a>
-    <a href="about">About</a>
-  </nav>
-  <main>
-    <div class="news">
-      <img src="img/general/ButterDog Glow.png">
-      <h1>Welcome to ButterDogCo!</h1>
-    </div>
-    <div class="cards" id="cards"></div>
-  </main>
-  <script src="js/cards.js"></script>
-  <script src="js/main.js"></script>
+  <a href="#" id="active">Home</a>
+  <a href="applications">Apps</a>
+  <a href="news">News</a>
+  <a href="about">About</a>
+</nav>
+<main>
+  <div class="news">
+    <img src="img/general/ButterDog Glow.png">
+    <h1>Welcome to ButterDogCo!</h1>
+  </div>
+  <div class="cards" id="cards"></div>
+
+  <h2 class="section-header">Latest News</h2>
+  <a class="news-card" href="news#post-5">
+    <img src="img/posters/Birthday.png" alt="ButterDogCo 3rd Birthday Poster" class="img-anchor-right" loading="lazy">
+    <article class="content">
+      <h1 class="header">ButterDogCo's 3rd birthday!</h1>
+      <p class="text">Today is ButterDogCo's 3rd birthday! Our first website on Google Sites was created on November
+        9th, 2022.
+        We don't have anything big for planned as celebration, but we'll be updating our main website a bit.</p>
+      <p class="details">Posted November 9th, 2025 and NOT on November 22nd (trust)</p>
+    </article>
+  </a>
+</main>
+<script src="js/cards.js"></script>
+<script src="js/main.js"></script>
 </body>
+
 </html>

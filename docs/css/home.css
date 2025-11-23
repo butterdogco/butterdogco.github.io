@@ -1,10 +1,18 @@
 @import url('./global.css');
+@import url('./elements/news-card.css');
 
 main {
   display: flex;
   flex-flow: column;
   gap: var(--cardGap);
   justify-content: center;
+}
+
+.section-header {
+  animation: fadeIn 0.3s ease;
+  width: 100%;
+  text-align: center;
+  margin: 24px 0 20px 0;
 }
 
 .news {
@@ -18,7 +26,7 @@ main {
   animation: slideInFromTop 0.3s ease;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  
+
   img {
     height: 150px;
     object-fit: contain;
@@ -42,7 +50,7 @@ main {
   display: flex;
   background-color: rgba(230, 230, 240, 0.1);
   border-radius: var(--cardCornerRadius);
-  height: 100%;
+  height: calc(44vh - 20px);
   padding: 10px;
   flex-grow: 1;
   flex-shrink: 1;
@@ -67,7 +75,7 @@ main {
     text-decoration: none;
     color: inherit;
   }
-  
+
   img {
     width: 70%;
     height: 70%;

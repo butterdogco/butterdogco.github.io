@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/about.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="mobile-web-app-capable" content="yes">  
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="keywords" content="butterdogco, bdogco, butterdogco.github.io, butterdogco.com, boogle">
   <meta name="description" content="te ofical buterdogco lore">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRKNHWYBXN"></script>
@@ -26,7 +26,7 @@
   <nav class="top-nav" id="nav">
     <img src="img/Menu%20icon.png" onclick="toggleMenu()" id="menuIcon">
     <img src="img/Close%20icon.png" onclick="toggleMenu()" id="closeMenuIcon">
-    <img src="img/favicon.ico" id="icon" onclick="iconClick()" style="transition: 0.2s ease;">
+    <img src="img/icons/ButterDog.png" id="icon" onclick="iconClick()">
     <a href="./">Home</a>
     <a href="applications">Apps</a>
     <a href="news">News</a>
@@ -37,16 +37,19 @@
       <img class="img-square img-circle no-shadow" src="img/general/ButterDog Glow.png">
       <article class="content">
         <h1 class="header">What is ButterDogCo?</h1>
-        <p class="text">We're a company that doesn't make any money, but create websites for fun.</p>
+        <p class="text" style="white-space: normal;">We're a group that creates services for others to simply enjoy.
+          Created on November 9th, 2025, we initially started as a simple "search engine" on Google Sites. We've since
+          grown far from there, now creating all kinds of apps, websites, games, and more.
+        </p>
       </article>
     </div>
 
-    <h1 style="text-align: center; margin: 24px 0 20px 0;">About Us</h1>
+    <h1 class="section-header">About Us</h1>
 
     <div class="cards">
       <a class="card" href="mailto:k_ws@b-dog.co" title="Click to Email me">
         <img class="img-circle shadow" src="img/PFPs/k_ws.png">
-        <h2>Keegan - CEO (Southridge)</h2>
+        <h2>Keegan - CEO</h2>
         <p>Hi, I'm Keegan. I am the CEO of ButterDogCo, and I program and design all of our websites. I also
           created ButterDogCo. Want to contact me? Click on me to send me an Email, or reach out to me on Discord at
           @k_ws.</p>
@@ -54,16 +57,42 @@
 
       <a class="card" href="https://bento.me/accidentaltheory" title="Click to see my socials, and contact me">
         <img class="shadow" src="img/PFPs/IMG_0854.gif" style="border-radius: 30px;">
-        <h2>Kai - COO (Mountainside)</h2>
+        <h2>Kai - COO</h2>
         <p>Hello! I'm Kai, AKA AccidentalTheory. I'm the COO of ButterDogCo, and I am the assistant programmer, and I
-          make all the web
-          design changes to everything.</p>
+          make all the web design changes to everything.</p>
       </a>
 
-      <a class="card" href="https://discord.gg/KZzVM4rfg6" title="Click to join">
+      <div class="card no-link">
+        <img class="shadow" src="img/PFPs/Nick.png" style="border-radius: 30px;">
+        <h2>Nick - Admin</h2>
+        <p>HELLO I AM NICK</p>
+      </div>
+
+      <h2 class="section-header">Our Community</h2>
+
+      <a class="news-card" href="https://discord.gg/KZzVM4rfg6" title="Click to join">
         <img class="img-circle shadow" src="img/discord.jpg">
-        <h2>Join our Discord!</h2>
-        <p style="color:rgb(185, 185, 255);text-decoration: underline;">discord.gg/KZzVM4rfg6</p>
+        <article class="content">
+          <h1 class="header">Join our Discord!</h1>
+          <p class="text">Join our Discord server to stay up to date with ButterDogCo news, get support for our
+            applications, and chat with other members of the community!
+
+            <i>Click this card to join, or use this invite: <span style="color: var(--text-link-color);">discord.gg/KZzVM4rfg6</span></i>
+          </p>
+        </article>
+      </a>
+
+      <a class="news-card" href="https://www.roblox.com/communities/32038746/ButterDogCo#!/about"
+        title="Click to go to our Roblox group">
+        <object class="image img-square no-shadow" data="img/icons/Roblox_Tilt_White.svg" type="image/svg+xml"></object>
+        <article class="content">
+          <h1 class="header">Our Roblox Group</h1>
+          <p class="text">Join our Roblox group to stay up to date with ButterDogCo news, get support for our
+            applications, and chat with other members of the community!
+
+            <i>Click this card to visit our group!</i>
+          </p>  
+        </article>
       </a>
     </div>
   </main>

@@ -1,0 +1,65 @@
+@import url('../global.css');
+
+footer {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-top: 3px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  border-radius: 15px;
+
+  section.logo {
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img.logo {
+    height: 40px;
+    opacity: 0.5;
+  }
+
+  section.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li a {
+        text-decoration: underline transparent;
+        color: var(--text-link-color);
+        transition: 0.15s ease text-decoration-color;
+
+        &:hover {
+          text-decoration-color: var(--text-link-color);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  footer {
+    section.logo {
+      display: flex;
+    }
+
+    section.links .logo {
+      display: none;
+    }
+  }
+}

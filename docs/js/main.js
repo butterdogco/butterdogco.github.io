@@ -1,6 +1,10 @@
 const cardsContainer = document.getElementById("cards");
 const nav = document.getElementById("nav");
 
+let rotateNum = 0;
+let musicStarted = false;
+let footerLogoClicks = 0;
+
 // Card creation function
 // cardInfo attributes: Name, Desc?, Icon, Link, AltLink?, Secret?, Disabled?
 function createCard(cardInfo) {
@@ -80,7 +84,8 @@ const funnyImages = [
   "https://github.com/butterdogco/butterdogco.github.io/blob/main/docs/img/catipillar.jpg?raw=true",
   "https://upload.wikimedia.org/wikipedia/en/8/85/Bill_Nye_the_Science_Guy_title_screen.jpg",
   "https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/woah%20cat.jpg?raw=true",
-  "https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/butterdog.png?raw=true"
+  "https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/butterdog.png?raw=true",
+  "https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/stock/thumbs-up.jpg?raw=true"
 ];
 
 // Utility function that gets a random number between the 2 ranges (no way really)
@@ -97,10 +102,11 @@ function createFunny() {
     img.classList.add("dvd");
     img.src = image;
     document.body.appendChild(img);
+    document.body.classList.add("funny");
 
     function updatePosition() {
-      const randomX = getRandomInt(-50, screen.availWidth);
-      const randomY = getRandomInt(-50, screen.availHeight);
+      const randomX = getRandomInt(-400, screen.availWidth - 200);
+      const randomY = getRandomInt(-400, screen.availHeight - 50);
       const randomSomething = Math.random() * 500;
       img.style.left = `${randomX}px`;
       img.style.top = `${randomY}px`;
@@ -120,15 +126,12 @@ function toggleMenu() {
 }
 
 // Plays the funny sound
-function playFunnySound() {
-  const audio = new Audio("audio/this%20look%20like%20gaming%20area.mp3");
+function playFunnySound(src) {
+  const audio = new Audio(src ? src : "audio/this%20look%20like%20gaming%20area.mp3");
   audio.controls = true;
   document.head.appendChild(audio);
   audio.play();
 }
-
-let rotateNum = 0;
-let musicStarted = false;
 
 // I wonder when this runs
 function iconClick() {
@@ -144,37 +147,40 @@ function iconClick() {
   document.getElementById('icon').style.rotate = `${rotateNum}deg`;
 }
 
-// Alternate Site Detection
-// ⚠ Modifying these functions violates ButterDogCo Terms of Service ⚠
-const link = window.location.href;
-if (!link.includes("https://butterdogco.com")) {
-  const item = document.createElement('a');
-  const div = document.getElementById('nav');
-  if (div) {
-    item.innerText = "Important Info";
-    item.href = "altsite";
-    div.appendChild(item);
+function footerLogoClick() {
+  footerLogoClicks += 1;
 
-    if (link.includes("/altsite")) {
-      item.href = "#";
-      item.id = "active";
-      const p = document.getElementById('altSiteInfoText');
-      if (link.includes("https://butterdogceo.github.io") && p) {
-        p.innerHTML = "This is an alternate website for ButterDogCo, the main website can be found <a href='https://butterdogco.com'>here</a>.";
-      } else if (p) {
-        p.innerHTML = "This is an unofficial website for ButterDogCo. Please note that anything found here can be modified by the site host, the official website can be found <a href='https://butterdogco.com'>here</a>.";
-      }
-    }
+  if (footerLogoClicks >= 5) {
+    playFunnySound("audio/louie's pizza vocals.mp3");
+    footerLogoClicks = 0;
   }
-
-  var things = document.querySelectorAll("a");
-  var things_array = [...things];
-  things_array.forEach(obj => {
-    if (obj.getAttribute('data-alt-link')) {
-      obj.href = obj.getAttribute('data-alt-link');
-      obj.title = "Click to open alternate link";
-    }
-  });
-} else if (link.includes("/altsite")) {
-  window.location.href = "index";
 }
+
+function createFooter() {
+  const footer = document.createElement("footer");
+  footer.innerHTML = `
+    <section class="logo">
+      <img src="img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy">
+    </section>
+    <section class="links">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="applications">Apps</a></li>
+        <li><a href="news">News</a></li>
+        <li><a href="about">About</a></li>
+      </ul>
+      <img src="img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy">
+      <ul>
+        <li><a href="pp">Privacy Policy</a></li>
+        <li><a href="tos">Terms of Service</a></li>
+      </ul>
+    </section>
+  `;
+  const footerImage = footer.querySelectorAll('img.logo');
+  footerImage.forEach(img => {
+    img.addEventListener('click', footerLogoClick);
+  });
+  document.body.appendChild(footer);
+}
+
+createFooter();
