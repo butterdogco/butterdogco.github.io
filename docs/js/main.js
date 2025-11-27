@@ -172,7 +172,7 @@ function createFooter() {
       <img src="img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy">
       <ul>
         <li><a href="pp">Privacy Policy</a></li>
-        <li><a href="tos">Terms of Service</a></li>
+        <li><a href="tos">Terms of Use</a></li>
       </ul>
     </section>
   `;
