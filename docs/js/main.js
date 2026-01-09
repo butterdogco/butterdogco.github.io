@@ -30,9 +30,6 @@ function createCard(cardInfo) {
     // We don't want to apply this if a link is a page of this repo
     // But we should still allow links that include butterdogco.com
     if (!(a.href.includes("://butterdogco.com") && a.href.split("/").length <= 4)) {
-      // Open in a new tab
-      a.target = "_blank";
-      a.title += " in a new tab";
       // Create the "external link" icon
       const span = document.createElement("span");
       span.classList.add("material-symbols-rounded", "open-icon");
