@@ -21,12 +21,6 @@ const cards = {
   ],
   ["apps"]:[
     {
-      Name:"boogle",
-      Desc:"da best serch engun",
-      Icon:"img/icons/Boogle.png",
-      Link:"https://boogle.b-dog.co"
-    },
-    {
       Name:"wikabedia",
       Desc:"wikabedia uplode epik artikles instentley!",
       Icon:"img/icons/Wikabedia.png",
