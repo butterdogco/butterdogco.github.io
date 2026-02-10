@@ -157,19 +157,19 @@ function createFooter() {
   const footer = document.createElement("footer");
   footer.innerHTML = `
     <section class="logo">
-      <img src="img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy">
+      <img src="/img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy">
     </section>
     <section class="links">
       <ul>
-        <li><a href="./">Home</a></li>
-        <li><a href="applications">Apps</a></li>
-        <li><a href="news">News</a></li>
-        <li><a href="about">About</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/applications">Apps</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/about">About</a></li>
       </ul>
-      <img src="img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy">
+      <img src="/img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy">
       <ul>
-        <li><a href="pp">Privacy Policy</a></li>
-        <li><a href="tos">Terms of Use</a></li>
+        <li><a href="/pp">Privacy Policy</a></li>
+        <li><a href="/tos">Terms of Use</a></li>
       </ul>
     </section>
   `;
