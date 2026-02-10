@@ -86,7 +86,7 @@ const cards = {
       Name:"butterdonalds",
       Desc:"cheapest food for healthiest option 👍",
       Icon:"img/icons/ButterDonalds.png",
-      Link:"https://sites.google.com/bsd48.org/bdonalds"
+      Link:"https://butterdogco.com/ButterDonalds/"
     },
     {
       Name:"calculater",
