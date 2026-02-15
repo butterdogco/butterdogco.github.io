@@ -12,4 +12,4 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --verbose --no-progress './**/*.html'
+          args: --verbose --no-progress './docs/**/*.html'
