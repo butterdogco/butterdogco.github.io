@@ -34,6 +34,15 @@
     opacity: .5;
   }
 
+  .removing-soon-icon {
+    position: absolute;
+    top: var(--object-padding);
+    left: var(--object-padding);
+    color: #ffb347;
+    font-size: 40px;
+    opacity: .8;
+  }
+
   img {
     width: 250px;
     height: 250px;

@@ -11,50 +11,66 @@ function createCard(cardInfo) {
   const cardName = cardInfo.Name;
   const cardDesc = cardInfo.Desc;
   const cardIcon = cardInfo.Icon;
-  const cardLink = cardInfo.Link || "#";
+  const cardLink = cardInfo.Link;
   const cardAltLink = cardInfo.AltLink;
   const cardIsSecret = cardInfo.Secret || false;
   const cardIsDisabled = cardInfo.Disabled || false;
+  const cardRemovingDate = cardInfo.Removing ? new Date(cardInfo.Removing) : null;
+  const cardRemoveReason = cardInfo.RemoveReason || "No reason provided";
 
   if (cardIsDisabled || !cardsContainer) {
     return;
   }
 
-  const a = document.createElement("a");
-  a.classList.add("card");
-  a.classList.toggle("hidden", cardIsSecret);
-  a.href = cardAltLink || cardLink || "#";
-  if (a.href != "#") {
-    a.title = "Click to open " + cardName;
+  const card = document.createElement("a");
+  card.classList.add("card");
+  card.classList.toggle("hidden", cardIsSecret);
+  card.href = cardAltLink || cardLink || "#";
+  if (card.href != "#") {
+    card.title = "Click to go to " + (cardLink || cardName);
 
     // We don't want to apply this if a link is a page of this repo
     // But we should still allow links that include butterdogco.com
-    if (!(a.href.includes("://butterdogco.com") && a.href.split("/").length <= 4)) {
+    if (!(card.href.includes("://butterdogco.com") && card.href.split("/").length <= 4)) {
       // Create the "external link" icon
       const span = document.createElement("span");
       span.classList.add("material-symbols-rounded", "open-icon");
       span.innerHTML = "open_in_new";
-      a.appendChild(span);
+      card.appendChild(span);
     }
   }
   if (cardIcon) {
     const img = document.createElement("img");
     img.src = cardIcon;
     img.setAttribute("loading", "lazy");
-    a.appendChild(img);
+    card.appendChild(img);
   }
   if (cardName) {
     const heading = document.createElement("h2");
     heading.innerText = cardName;
-    a.appendChild(heading);
+    card.appendChild(heading);
   }
   if (cardDesc) {
     const p = document.createElement("p");
     p.innerText = cardDesc;
-    a.appendChild(p);
+    card.appendChild(p);
+  }
+  if (cardRemovingDate) {
+    console.log(new Date() > cardRemovingDate);
+    if (new Date() < cardRemovingDate) {
+      const span = document.createElement("span");
+      span.classList.add("material-symbols-rounded", "removing-soon-icon");
+      span.innerHTML = "schedule";
+      span.title = `${cardName} is being removed on ${cardRemovingDate.toLocaleDateString()} - ${cardRemoveReason}`;
+      card.appendChild(span);
+    } else {
+      // If the card has a removing date and it's past that date, don't add the card at all
+      card.remove();
+      return;
+    }
   }
 
-  cardsContainer.appendChild(a);
+  cardsContainer.appendChild(card);
 }
 
 try {

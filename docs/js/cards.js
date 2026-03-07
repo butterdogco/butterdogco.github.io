@@ -8,9 +8,9 @@ const cards = {
     },
 
     {
-      Name:"post some garbage on bweeter",
-      Icon:"img/icons/Bweeter.png",
-      Link:"https://bweeter.bettermode.io/",
+      Name:"see what's new",
+      Icon:"img/icons/news.png",
+      Link:"news",
     },
     
     {
@@ -67,7 +67,9 @@ const cards = {
       Name:"bweeter",
       Desc:"most epic socal meda (beta)",
       Icon:"img/icons/Bweeter.png",
-      Link:"https://bweeter.bettermode.io"
+      Link:"https://bweeter.bettermode.io",
+      Removing: "March 15, 2026",
+      RemoveReason: "BetterMode, which Bweeter runs on, is removing their free plan, and the paid plans are incredibly expensive."
     },
     {
       Name:"bbay",
