@@ -67,9 +67,9 @@ const cards = {
       Name:"bweeter",
       Desc:"most epic socal meda (beta)",
       Icon:"img/icons/Bweeter.png",
-      Link:"https://bweeter.bettermode.io",
-      Removing: "March 15, 2026",
-      RemoveReason: "BetterMode, which Bweeter runs on, is removing their free plan, and the paid plans are incredibly expensive."
+      Link:"https://bweeter.butterdogco.com",
+      Removing:"March 15, 2026",
+      RemoveReason:"BetterMode, which Bweeter runs on, is removing their free plan, and the paid plans are incredibly expensive."
     },
     {
       Name:"bbay",
@@ -82,7 +82,7 @@ const cards = {
       Desc:"da latest and greatest ting for ur computer",
       Icon:"img/icons/ButterOS.png",
       Link:"https://b-dog.co/ButterOS/",
-      AltLink: "https://butterdogceo.github.io/ButterOS/"
+      AltLink:"https://butterdogceo.github.io/ButterOS/"
     },
     {
       Name:"butterdonalds",
