@@ -65,10 +65,10 @@ const cards = {
     },
     {
       Name:"bweeter",
-      Desc:"most epic socal meda (beta)",
+      Desc:"most epic socal meda",
       Icon:"img/icons/Bweeter.png",
-      Link:"https://bweeter.bettermode.io",
-      // Removing:"March 15, 2026",
+      Link:"https://bweeter.butterdogco.com",
+      Removing:"March 15, 2026",
       RemoveReason:"BetterMode, which Bweeter runs on, is removing their free plan, and the paid plans are incredibly expensive."
     },
     {
