@@ -26,7 +26,7 @@
     <a href="#" id="active">About</a>
   </nav>
   <main>
-    <div class="news-card">
+    <section class="news-card">
       <img class="img-square img-circle no-shadow" src="img/general/ButterDog Glow.png">
       <article class="content">
         <h1 class="header">What is ButterDogCo?</h1>
@@ -35,11 +35,11 @@
           grown far from there, now creating all kinds of apps, websites, games, and more.
         </p>
       </article>
-    </div>
+    </section>
 
     <h1 class="section-header">About Us</h1>
 
-    <div class="cards">
+    <section class="cards">
       <a class="card" href="mailto:k_ws@b-dog.co" title="Click to Email me">
         <img class="img-circle shadow" src="img/PFPs/k_ws.png">
         <h2>Keegan - CEO</h2>
@@ -49,17 +49,18 @@
       </a>
 
       <a class="card" href="https://bento.me/accidentaltheory" title="Click to see my socials, and contact me">
-        <img class="shadow" src="img/PFPs/IMG_0854.gif" style="border-radius: 30px;">
+        <!-- CSS background image used for: Smaller image while GIF is loading (due to concerns with 7 MB size) -->
+        <img class="shadow" src="img/PFPs/IMG_0854.gif" style="border-radius: 30px; background-image: url('img/PFPs/IMG_0854.jpg'); background-size: cover;">
         <h2>Kai - COO</h2>
         <p>Hello! I'm Kai, AKA AccidentalTheory. I'm the COO of ButterDogCo, and I am the assistant programmer, and I
           make all the web design changes to everything.</p>
       </a>
 
-      <div class="card no-link">
+      <article class="card no-link">
         <img class="shadow" src="img/PFPs/Nick.png" style="border-radius: 30px;">
         <h2>Nick - Admin</h2>
         <p>HELLO I AM NICK</p>
-      </div>
+      </article>
 
       <h2 class="section-header">Our Community</h2>
 
@@ -77,7 +78,7 @@
 
       <a class="news-card" href="https://www.roblox.com/communities/32038746/ButterDogCo#!/about"
         title="Click to go to our Roblox group">
-        <object class="image img-square no-shadow" data="img/icons/Roblox_Tilt_White.svg" type="image/svg+xml"></object>
+        <img class="image img-square no-shadow" data="img/icons/Roblox_Tilt_White.png">
         <article class="content">
           <h1 class="header">Our Roblox Group</h1>
           <p class="text">Join our Roblox group to stay up to date with ButterDogCo news, get support for our
@@ -87,7 +88,7 @@
           </p>  
         </article>
       </a>
-    </div>
+    </section>
   </main>
   <script src="js/main.js"></script>
 </body>
