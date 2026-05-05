@@ -17,8 +17,9 @@ function createCard(cardInfo) {
   const cardIsDisabled = cardInfo.Disabled || false;
   const cardRemovingDate = cardInfo.Removing ? new Date(cardInfo.Removing) : null;
   const cardRemoveReason = cardInfo.RemoveReason || "No reason provided";
+  const now = new Date();
 
-  if (cardIsDisabled || !cardsContainer) {
+  if (cardIsDisabled || !cardsContainer || (cardRemovingDate && now > cardRemovingDate)) {
     return;
   }
 
@@ -55,19 +56,12 @@ function createCard(cardInfo) {
     p.innerText = cardDesc;
     card.appendChild(p);
   }
-  if (cardRemovingDate) {
-    console.log(new Date() > cardRemovingDate);
-    if (new Date() < cardRemovingDate) {
-      const span = document.createElement("span");
-      span.classList.add("material-symbols-rounded", "removing-soon-icon");
-      span.innerHTML = "schedule";
-      span.title = `${cardName} is being removed on ${cardRemovingDate.toLocaleDateString()} - ${cardRemoveReason}`;
-      card.appendChild(span);
-    } else {
-      // If the card has a removing date and it's past that date, don't add the card at all
-      card.remove();
-      return;
-    }
+  if (cardRemovingDate) { // No need to double check date as we already check at the start
+    const span = document.createElement("span");
+    span.classList.add("material-symbols-rounded", "removing-soon-icon");
+    span.innerHTML = "schedule";
+    span.title = `${cardName} is being removed on ${cardRemovingDate.toLocaleDateString()}${cardRemoveReason ? ' - ' + cardRemoveReason : ''}`;
+    card.appendChild(span);
   }
 
   cardsContainer.appendChild(card);
@@ -83,6 +77,7 @@ try {
   if (!pageId) {
     throw new Error("Page ID element is missing content")
   }
+  
   cards[pageId].forEach(function (cardInfo) {
     createCard(cardInfo);
   });
