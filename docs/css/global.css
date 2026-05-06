@@ -138,6 +138,7 @@ a {
 .section-header {
   padding-left: 14px;
   border-left: 4px solid #ffffff88;
+  text-align: left;
 }
 
 .hyperlink {
