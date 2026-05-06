@@ -17,27 +17,30 @@
 
 <body>
   <nav class="top-nav" id="nav">
-    <img src="img/Menu%20icon.png" onclick="toggleMenu()" id="menuIcon">
-    <img src="img/Close%20icon.png" onclick="toggleMenu()" id="closeMenuIcon">
-    <img src="img/icons/ButterDog.png" id="icon" onclick="iconClick()">
+    <img src="img/icons/menu.png" class="mobile-menu-icon open" alt="Open menu icon">
+    <img src="img/icons/close.png" class="mobile-menu-icon close" alt="Close menu icon">
+    <img src="img/icons/ButterDog.png" class="logo" id="nav-logo" alt="ButterDog icon">
     <a href="./">Home</a>
     <a href="applications">Apps</a>
     <a href="news">News</a>
     <a href="#" id="active">About</a>
   </nav>
+
   <main>
+    <h1 class="page-title">About</h1>
+
     <section class="news-card">
       <img class="img-square img-circle no-shadow" src="img/general/ButterDog Glow.png">
       <article class="content">
         <h1 class="header">What is ButterDogCo?</h1>
         <p class="text" style="white-space: normal;">We're a group that creates services for others to simply enjoy.
-          Created on November 9th, 2025, we initially started as a simple "search engine" on Google Sites. We've since
+          Created on November 9th, 2025, we initially started as a sort of search engine on Google Sites. We've since
           grown far from there, now creating all kinds of apps, websites, games, and more.
         </p>
       </article>
     </section>
 
-    <h1 class="section-header">About Us</h1>
+    <h2 class="section-header">Who We Are</h2>
 
     <section class="cards">
       <a class="card" href="mailto:k_ws@b-dog.co" title="Click to Email me">
@@ -56,14 +59,16 @@
           make all the web design changes to everything.</p>
       </a>
 
-      <article class="card no-link">
+      <article class="card">
         <img class="shadow" loading="lazy" src="img/PFPs/Nick.png" style="border-radius: 30px;">
         <h2>Nick - Admin</h2>
         <p>HELLO I AM NICK</p>
       </article>
+    </section>
 
-      <h2 class="section-header">Our Community</h2>
+    <h2 class="section-header">Our Socials</h2>
 
+    <section class="cards">
       <a class="news-card" href="https://discord.butterdogco.com" title="Click to go to Discord">
         <img class="img-circle shadow" loading="lazy" src="img/discord.jpg">
         <article class="content">
@@ -102,6 +107,7 @@
       </a>
     </section>
   </main>
+
   <script src="js/main.js"></script>
 </body>
 

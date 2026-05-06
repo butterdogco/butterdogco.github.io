@@ -3,19 +3,13 @@
 @import url('./elements/cards.css');
 @import url('./elements/card.css');
 
-.section-header {
-	animation: fadeIn 0.3s ease;
-	width: 100%;
-	text-align: center;
-	margin: 24px 0 20px 0;
-}
-
 .news-card {
-
 	img,
 	.image {
 		object-fit: contain;
-		width: 300px;
+		width: 250px;
+		height: 250px;
+		min-height: 220px;
 	}
 }
 

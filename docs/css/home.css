@@ -8,13 +8,6 @@ main {
   justify-content: center;
 }
 
-.section-header {
-  animation: fadeIn 0.3s ease;
-  width: 100%;
-  text-align: center;
-  margin: 24px 0 20px 0;
-}
-
 .news {
   width: calc(100% - (var(--object-padding) * 2));
   background-color: rgba(230, 230, 240, 0.1);
@@ -23,7 +16,6 @@ main {
   text-align: center;
   cursor: default;
   transition: 0.15s Ease-in-out;
-  animation: slideInFromTop 0.3s ease;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
@@ -38,10 +30,10 @@ main {
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  height: 44vh;
+  /* height: 44vh; */
   justify-content: center;
 }
 
@@ -60,7 +52,6 @@ main {
   cursor: pointer;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  animation: slideInFromTop 0.3s ease;
   transition: 0.15s ease background-color;
 
   .open-icon {
@@ -120,6 +111,8 @@ main {
 
 @media (max-width: 1117px) {
   .cards {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     gap: 15px;
     height: auto;

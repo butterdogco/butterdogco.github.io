@@ -17,17 +17,18 @@
 
 <body>
   <nav class="top-nav" id="nav">
-    <img src="img/Menu%20icon.png" onclick="toggleMenu()" id="menuIcon">
-    <img src="img/Close%20icon.png" onclick="toggleMenu()" id="closeMenuIcon">
-    <img src="img/icons/ButterDog.png" id="icon" onclick="iconClick()">
-
+    <img src="img/icons/menu.png" class="mobile-menu-icon open" alt="Open menu icon">
+    <img src="img/icons/close.png" class="mobile-menu-icon close" alt="Close menu icon">
+    <img src="img/icons/ButterDog.png" class="logo" id="nav-logo" alt="ButterDog icon">
     <a href="./">Home</a>
     <a href="applications">Apps</a>
     <a href="#" id="active">News</a>
     <a href="about">About</a>
   </nav>
+
   <main>
-    <div class="news-container">
+    <h1 class="page-title">News</h1>
+    <section class="news-container">
       <a class="news-card" href="https://bweeter.butterdogco.com" id="post-5">
         <img src="img/posters/BweeterShutdown.png" alt="Bweeter shutdown sob story sad angry poster" loading="lazy">
         <article class="content">
@@ -37,6 +38,7 @@
           <p class="details">Posted March 7th, 2026</p>
         </article>
       </a>
+
       <a class="news-card" href="#post-5" id="post-5">
         <img src="img/posters/Birthday.png" alt="ButterDogCo 3rd Birthday Poster"
           class="img-anchor-right" loading="lazy">
@@ -47,6 +49,7 @@
           <p class="details">Posted November 9th, 2025 and NOT on November 22nd (trust)</p>
         </article>
       </a>
+
       <a class="news-card" href="#post-4" id="post-4">
         <img src="img/posters/SiteImprovements.png" alt="Website Improvements Announcement Poster"
           class="img-anchor-right" loading="lazy">
@@ -60,6 +63,7 @@
           <p class="details">Posted August 14th, 2025</p>
         </article>
       </a>
+
       <a class="news-card" href="about" id="post-3">
         <img src="img/posters/VillagerRizz.gif" alt="Minecraft Server Season 5 Poster" loading="lazy">
         <article class="content">
@@ -69,6 +73,7 @@
           <p class="details">Posted July 28th, 2025</p>
         </article>
       </a>
+
       <a class="news-card" href="#post-2" id="post-2">
         <img src="img/posters/KaiBlair.png" alt="Kai Blair Super Duper Urgent Announcement Poster" loading="lazy">
         <article class="content">
@@ -77,6 +82,7 @@
           <p class="details">Posted July 27th, 2025</p>
         </article>
       </a>
+
       <a class="news-card" href="#post-1" id="post-1">
         <img src="img/posters/DarkMode.png" alt="Dark Mode Announcement Poster" loading="lazy">
         <article class="content">
@@ -85,8 +91,9 @@
           <p class="details">Posted January 25th, 2024</p>
         </article>
       </a>
-    </div>
+    </section>
   </main>
+
   <script src="js/main.js"></script>
 </body>
 
