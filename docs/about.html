@@ -10,38 +10,43 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="keywords" content="butterdogco, bdogco, butterdogco.github.io, butterdogco.com">
   <meta name="description" content="te ofical buterdogco lore">
-  <script defer src="https://stats.butterdogco.com/script.js" data-website-id="f250a8de-fc96-4da4-815a-91a8f3f4e862"></script>
+  <script defer src="https://stats.butterdogco.com/script.js"
+    data-website-id="f250a8de-fc96-4da4-815a-91a8f3f4e862"></script>
   <script src="https://cdn.jsdelivr.net/npm/ios-pwa-splash@1.0.0/cdn.min.js"></script>
   <script>iosPWASplash('img/butterdog.png', '#19120d');</script>
 </head>
 
 <body>
   <nav class="top-nav" id="nav">
-    <img src="img/Menu%20icon.png" onclick="toggleMenu()" id="menuIcon">
-    <img src="img/Close%20icon.png" onclick="toggleMenu()" id="closeMenuIcon">
-    <img src="img/icons/ButterDog.png" id="icon" onclick="iconClick()">
+    <img src="img/icons/menu.png" class="mobile-menu-icon open" alt="Open menu icon">
+    <img src="img/icons/close.png" class="mobile-menu-icon close" alt="Close menu icon">
+    <img src="img/icons/ButterDog.png" class="logo" id="nav-logo" alt="ButterDog icon" tabindex="0" role="button" aria-label="Funny secret">
     <a href="./">Home</a>
     <a href="applications">Apps</a>
     <a href="news">News</a>
-    <a href="#" id="active">About</a>
+    <a href="about" aria-current="page" id="active">About</a>
   </nav>
+
   <main>
+    <h1 class="page-title">About</h1>
+
     <section class="news-card">
-      <img class="img-square img-circle no-shadow" src="img/general/ButterDog Glow.png">
+      <img class="img-square img-circle no-shadow" src="img/general/ButterDog Glow.png" loading="lazy"
+        alt="Glowing ButterDog icon">
       <article class="content">
         <h1 class="header">What is ButterDogCo?</h1>
         <p class="text" style="white-space: normal;">We're a group that creates services for others to simply enjoy.
-          Created on November 9th, 2025, we initially started as a simple "search engine" on Google Sites. We've since
+          Created on November 9th, 2025, we initially started as a sort of search engine on Google Sites. We've since
           grown far from there, now creating all kinds of apps, websites, games, and more.
         </p>
       </article>
     </section>
 
-    <h1 class="section-header">About Us</h1>
+    <h2 class="section-header">Who We Are</h2>
 
     <section class="cards">
-      <a class="card" href="mailto:k_ws@b-dog.co" title="Click to Email me">
-        <img class="img-circle shadow" loading="lazy" src="img/PFPs/k_ws.jpg">
+      <a class="card" href="mailto:keegan@butterdogco.com" title="Click to Email me">
+        <img class="img-circle shadow" loading="lazy" src="img/PFPs/k_ws.jpg" alt="The ButterDog">
         <h2>Keegan - CEO</h2>
         <p>Hi, I'm Keegan. I am the CEO of ButterDogCo, and I program and design all of our websites. I also
           created ButterDogCo. Want to contact me? Click on me to send me an Email, or reach out to me on Discord at
@@ -50,58 +55,62 @@
 
       <a class="card" href="https://bento.me/accidentaltheory" title="Click to see my socials, and contact me">
         <!-- CSS background image used for: Smaller image while GIF is loading (due to concerns with 7 MB size) -->
-        <img class="shadow" src="img/PFPs/IMG_0854.gif" loading="lazy" style="border-radius: 30px; background-image: url('img/PFPs/IMG_0854.jpg'); background-size: cover;">
+        <img class="shadow" src="img/PFPs/IMG_0854.gif" loading="lazy"
+          style="border-radius: 30px; background-image: url('img/PFPs/IMG_0854.jpg'); background-size: cover;" alt="GIF of Kai's Mii">
         <h2>Kai - COO</h2>
         <p>Hello! I'm Kai, AKA AccidentalTheory. I'm the COO of ButterDogCo, and I am the assistant programmer, and I
           make all the web design changes to everything.</p>
       </a>
 
-      <article class="card no-link">
-        <img class="shadow" loading="lazy" src="img/PFPs/Nick.png" style="border-radius: 30px;">
+      <article class="card">
+        <img class="shadow" loading="lazy" src="img/PFPs/Nick.png" style="border-radius: 30px;" alt="Nick's random BMW from Roblox">
         <h2>Nick - Admin</h2>
         <p>HELLO I AM NICK</p>
       </article>
+    </section>
 
-      <h2 class="section-header">Our Community</h2>
+    <h2 class="section-header">Our Socials</h2>
 
+    <section class="cards">
       <a class="news-card" href="https://discord.butterdogco.com" title="Click to go to Discord">
-        <img class="img-circle shadow" loading="lazy" src="img/discord.jpg">
+        <img class="img-circle shadow" loading="lazy" src="img/discord.jpg" alt="Discord's logo">
         <article class="content">
-          <h1 class="header">Join our Discord!</h1>
+          <h1 class="header">Discord Server</h1>
           <p class="text">Join our Discord server to stay up to date with ButterDogCo news, get support for our
             applications, and chat with other members of the community!
 
-            <i>Click this card to join, or use this invite: <span style="color: var(--text-link-color);">discord.gg/KZzVM4rfg6</span></i>
+            <i>Click this card to join, or use this invite: <span
+                style="color: var(--text-link-color);">discord.gg/KZzVM4rfg6</span></i>
           </p>
         </article>
       </a>
 
       <a class="news-card" href="https://patreon.butterdogco.com" title="Click to go to our Patreon">
-        <img class="image img-square no-shadow" loading="lazy" src="img/icons/patreon_white.png">
+        <img class="image img-square no-shadow" loading="lazy" src="img/icons/patreon_white.png" alt="Patreon's logo">
         <article class="content">
-          <h1 class="header">Our Patreon</h1>
+          <h1 class="header">Patreon</h1>
           <p class="text">Support the development of ButterDogCo and receive perks! With your support, we can
             host faster and better applications.
 
             <i>Click this card to visit our Patreon!</i>
-          </p>  
+          </p>
         </article>
       </a>
 
       <a class="news-card" href="https://www.roblox.com/communities/32038746/ButterDogCo#!/about"
         title="Click to go to our Roblox group">
-        <img class="image img-square no-shadow" loading="lazy" src="img/icons/Roblox_Tilt_White.png">
+        <img class="image img-square no-shadow" loading="lazy" src="img/icons/Roblox_Tilt_White.png" alt="Roblox's logo">
         <article class="content">
-          <h1 class="header">Our Roblox Group</h1>
-          <p class="text">Join our Roblox group to stay up to date with ButterDogCo news, get support for our
-            applications, and chat with other members of the community!
+          <h1 class="header">Roblox Group</h1>
+          <p class="text">Join our Roblox group to play our games, and stay up to date with our Roblox news!
 
             <i>Click this card to visit our group!</i>
-          </p>  
+          </p>
         </article>
       </a>
     </section>
   </main>
+
   <script src="js/main.js"></script>
 </body>
 

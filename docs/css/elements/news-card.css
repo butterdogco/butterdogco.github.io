@@ -2,24 +2,23 @@
   display: flex;
   flex-flow: row;
   gap: 30px;
-  padding: 30px;
-  border-radius: 30px;
+  padding: 14px;
+  border-radius: 14px;
   background-color: rgba(230, 230, 240, 0.1);
   text-align: left;
   text-shadow: var(--shadow-medium);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: 0.15s ease-in-out background-color;
-  animation: slideIn 0.3s ease;
 
   img,
   .image {
-    width: 500px;
-    max-width: 70%;
-    min-height: 300px;
+		height: 250px;
+		min-height: 220px;
     object-fit: cover;
     aspect-ratio: 16 / 9;
     border-radius: 12px;
+    animation: fadeIn 0.3s ease;
     
     &:not(.no-shadow) {
       box-shadow: var(--shadow-light);
@@ -43,7 +42,7 @@
     }
   }
 
-  &:not([href="#"]) {
+  &:is(a) {
     cursor: pointer;
 
     &:hover {
@@ -65,7 +64,7 @@
     }
 
     img {
-      width: 100%;
+      width: 100% !important;
       max-width: none;
     }
   }

@@ -1,5 +1,7 @@
-const cardsContainer = document.getElementById("cards");
-const nav = document.getElementById("nav");
+const CARDS_CONTAINER = document.getElementById("cards");
+const NAV = document.getElementById("nav");
+const NAV_MOBILE_MENU_ICONS = document.querySelectorAll(".mobile-menu-icon");
+const NAV_LOGO = document.getElementById("nav-logo");
 
 let rotateNum = 0;
 let musicStarted = false;
@@ -19,7 +21,7 @@ function createCard(cardInfo) {
   const cardRemoveReason = cardInfo.RemoveReason || "No reason provided";
   const now = new Date();
 
-  if (cardIsDisabled || !cardsContainer || (cardRemovingDate && now > cardRemovingDate)) {
+  if (cardIsDisabled || !CARDS_CONTAINER || (cardRemovingDate && now > cardRemovingDate)) {
     return;
   }
 
@@ -44,6 +46,7 @@ function createCard(cardInfo) {
     const img = document.createElement("img");
     img.src = cardIcon;
     img.setAttribute("loading", "lazy");
+    img.setAttribute("alt", cardName + " icon");
     card.appendChild(img);
   }
   if (cardName) {
@@ -64,36 +67,35 @@ function createCard(cardInfo) {
     card.appendChild(span);
   }
 
-  cardsContainer.appendChild(card);
+  CARDS_CONTAINER.appendChild(card);
 }
 
-try {
+function initCards() {
   const pageIdElement = document.querySelector('meta[name="page-id"]');
   if (!pageIdElement) {
-    throw new Error("Page ID element not found");
+    return; // No page ID means no cards, so just return early
   }
 
   const pageId = pageIdElement.getAttribute("content");
   if (!pageId) {
-    throw new Error("Page ID element is missing content")
+    console.warn("Page ID meta tag is empty, cannot initialize cards.");
+    return;
   }
   
   cards[pageId].forEach(function (cardInfo) {
     createCard(cardInfo);
   });
-} catch (err) {
-  console.error(err);
 }
 
 // DVD logo funny bouncing images
 const funnyEnabled = true;
 const funnyImages = [
-  "https://w7.pngwing.com/pngs/626/579/png-transparent-blu-ray-disc-computer-icons-dvd-compact-disc-dvd-text-logo-desktop-wallpaper-thumbnail.png",
-  "https://github.com/butterdogco/butterdogco.github.io/blob/main/docs/img/catipillar.jpg?raw=true",
-  "https://upload.wikimedia.org/wikipedia/en/8/85/Bill_Nye_the_Science_Guy_title_screen.jpg",
-  "https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/woah%20cat.jpg?raw=true",
-  "https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/butterdog.png?raw=true",
-  "https://raw.githubusercontent.com/butterdogco/butterdogco.github.io/main/docs/img/stock/thumbs-up.jpg?raw=true"
+  "./img/funny/dvd.png",
+  "./img/catipillar.jpg",
+  "./img/funny/bill_nye.jpg",
+  "./img/funny/woah_cat.jpg",
+  "./img/butterdog.png",
+  "./img/funny/thumbs_up.jpg"
 ];
 
 // Utility function that gets a random number between the 2 ranges (no way really)
@@ -127,10 +129,12 @@ function createFunny() {
 }
 
 // Take a guess as to what this does
-function toggleMenu() {
-  if (nav) {
-    nav.classList.toggle("active");
+function toggleNav() {
+  if (!NAV) {
+    return;
   }
+
+  NAV.classList.toggle("active");
 }
 
 // Plays the funny sound
@@ -142,17 +146,31 @@ function playFunnySound(src) {
 }
 
 // I wonder when this runs
-function iconClick() {
+function navIconClick() {
   playFunnySound();
   createFunny();
+
   if (musicStarted === false) {
     musicStarted = true;
     const audio = new Audio("audio/dubstep.wav");
     document.head.appendChild(audio);
     audio.play();
   }
+
   rotateNum = rotateNum + 180;
-  document.getElementById('icon').style.rotate = `${rotateNum}deg`;
+  NAV_LOGO.style.rotate = `${rotateNum}deg`;
+}
+
+function setupNav() {
+  if (!NAV || !NAV_MOBILE_MENU_ICONS || !NAV_LOGO) {
+    return;
+  }
+
+  NAV_MOBILE_MENU_ICONS.forEach(icon => {
+    icon.addEventListener("click", toggleNav);
+  });
+
+  NAV_LOGO.addEventListener("click", navIconClick);
 }
 
 function footerLogoClick() {
@@ -177,7 +195,7 @@ function createFooter() {
         <li><a href="/news">News</a></li>
         <li><a href="/about">About</a></li>
       </ul>
-      <img src="/img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy">
+      <img src="/img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy" tabindex="0" role="button" aria-label="Funny secret">
       <ul>
         <li><a href="/pp">Privacy Policy</a></li>
         <li><a href="/tos">Terms of Use</a></li>
@@ -187,8 +205,15 @@ function createFooter() {
   const footerImage = footer.querySelectorAll('img.logo');
   footerImage.forEach(img => {
     img.addEventListener('click', footerLogoClick);
+    img.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        footerLogoClick();
+      }
+    });
   });
   document.body.appendChild(footer);
 }
 
+initCards();
 createFooter();
+setupNav();
