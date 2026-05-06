@@ -46,7 +46,7 @@
     <p id="longitude" class="text"></p>
   </center>
 
-  <script defer>
+  <script>
     $.getJSON("https://api.ipify.org?format=json", function (data) {
       $("#ip").html("IP: " + data.ip);
     })

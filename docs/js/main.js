@@ -205,6 +205,11 @@ function createFooter() {
   const footerImage = footer.querySelectorAll('img.logo');
   footerImage.forEach(img => {
     img.addEventListener('click', footerLogoClick);
+    img.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        footerLogoClick();
+      }
+    });
   });
   document.body.appendChild(footer);
 }

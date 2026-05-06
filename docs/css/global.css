@@ -148,8 +148,6 @@ a {
 .top-nav {
   display: inline-flex;
   position: fixed;
-  /* left: 50%;
-  transform: translateX(-50%); */
   flex-flow: row;
   margin: var(--nav-outline-thickness) 0 0 var(--nav-outline-thickness);
   gap: var(--nav-object-gap);
@@ -263,8 +261,6 @@ pre {
 @media (max-width: 725px) {
   /* Collapse top-nav */
   .top-nav {
-    /* left: unset;
-    transform: unset; */
     width: var(--nav-default-width);
 
     .mobile-menu-icon {

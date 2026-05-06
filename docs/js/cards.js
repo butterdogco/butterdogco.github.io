@@ -6,7 +6,7 @@
  * @property {string} [Desc] - A description of the card (optional).
  * @property {string} [Removing] - The date the card will be removed (optional).
  * @property {string} [RemoveReason] - The reason the card is being removed (optional).
- * @property {string} [AddedDate] - The date the card was added (optional).
+ * @property {string} [Added] - The date the card was added (optional).
  */
 const cards = {
   ["home"]: [
