@@ -3,14 +3,9 @@
 @import url('./elements/cards.css');
 @import url('./elements/card.css');
 
-.news-card {
-	img,
-	.image {
-		object-fit: contain;
-		width: 250px;
-		height: 250px;
-		min-height: 220px;
-	}
+.news-card img {
+	width: 250px;
+	object-fit: contain !important;
 }
 
 .cards .news-card {

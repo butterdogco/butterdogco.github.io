@@ -20,18 +20,23 @@
   <nav class="top-nav" id="nav">
     <img src="img/icons/menu.png" class="mobile-menu-icon open" alt="Open menu icon">
     <img src="img/icons/close.png" class="mobile-menu-icon close" alt="Close menu icon">
-    <img src="img/icons/ButterDog.png" class="logo" id="nav-logo" alt="ButterDog icon">
-    <a href="#" id="active">Home</a>
+    <img src="img/icons/ButterDog.png" class="logo" id="nav-logo" alt="ButterDog icon" tabindex="0" role="button" aria-label="Funny secret">
+    <a href="" id="active">Home</a>
     <a href="applications">Apps</a>
     <a href="news">News</a>
     <a href="about">About</a>
   </nav>
   
   <main>
-    <div class="news">
-      <img src="img/general/ButterDog Glow.png">
-      <h1>Welcome to ButterDogCo!</h1>
-    </div>
+    <section class="news-card welcome-card">
+      <img class="img-square img-circle no-shadow" src="img/general/ButterDog Glow.png" alt="ButterDogCo Logo (Glow)" loading="lazy">
+      <article class="content">
+        <h1 class="header">Welcome to ButterDogCo!</h1>
+        <p class="text" style="white-space: normal;">Welcome to the official ButterDogCo website! Check out our applications, news, and about pages to learn more about us, and what we do!</p>
+      </article>
+    </section>
+
+    <h2 class="section-header">What You Should Check Out</h2>
     <div class="cards" id="cards"></div>
   
     <h2 class="section-header">Latest News</h2>

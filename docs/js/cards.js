@@ -11,25 +11,28 @@
 const cards = {
   ["home"]: [
     {
-      Name: "learn more with Wikabedia",
+      Name: "Wikabedia",
+      Desc: "a free encyclopedia",
       Icon: "img/icons/Wikabedia.png",
       Link: "https://wikabedia.b-dog.co"
     },
     {
-      Name: "see what's new",
-      Icon: "img/icons/news.png",
-      Link: "news",
-    },
-    {
-      Name: "check out some apps",
+      Name: "Applications",
+      Desc: "our other applications",
       Icon: "img/icons/Apps.png",
       Link: "applications",
-    }
+    },
+    {
+      Name: "About Us",
+      Desc: "learn more about us and what we do",
+      Icon: "img/team.png",
+      Link: "about",
+    },
   ],
   ["apps"]: [
     {
       Name: "wikabedia",
-      Desc: "wikabedia uplode epik artikles instentley!",
+      Desc: "te worlds bestest free enceyeclopedia",
       Icon: "img/icons/Wikabedia.png",
       Link: "https://wikabedia.b-dog.co"
     },
@@ -79,7 +82,7 @@ const cards = {
       Name: "butterOS",
       Desc: "da latest and greatest ting for ur computer",
       Icon: "img/icons/ButterOS.png",
-      Link: "https://butterdogco.com/ButterOS/"
+      Link: "https://butterdogceo.github.io/ButterOS/"
     },
     {
       Name: "butterdonalds",

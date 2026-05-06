@@ -140,15 +140,15 @@ a {
 }
 
 .hyperlink {
-  color: #9292ff;
+  color: #8686ff;
   text-decoration: underline;
 }
 
 .top-nav {
   display: inline-flex;
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%;
+  transform: translateX(-50%); */
   flex-flow: row;
   margin: var(--nav-outline-thickness) 0 0 var(--nav-outline-thickness);
   gap: var(--nav-object-gap);
@@ -256,14 +256,14 @@ pre {
 }
 
 .img-circle {
-  border-radius: 50% !important;
+  border-radius: 99vh !important;
 }
 
 @media (max-width: 725px) {
   /* Collapse top-nav */
   .top-nav {
-    left: unset;
-    transform: unset;
+    /* left: unset;
+    transform: unset; */
     width: var(--nav-default-width);
 
     .mobile-menu-icon {

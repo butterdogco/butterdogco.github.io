@@ -46,6 +46,7 @@ function createCard(cardInfo) {
     const img = document.createElement("img");
     img.src = cardIcon;
     img.setAttribute("loading", "lazy");
+    img.setAttribute("alt", cardName + " icon");
     card.appendChild(img);
   }
   if (cardName) {
@@ -194,7 +195,7 @@ function createFooter() {
         <li><a href="/news">News</a></li>
         <li><a href="/about">About</a></li>
       </ul>
-      <img src="/img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy">
+      <img src="/img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy" tabindex="0" role="button" aria-label="Funny secret">
       <ul>
         <li><a href="/pp">Privacy Policy</a></li>
         <li><a href="/tos">Terms of Use</a></li>
