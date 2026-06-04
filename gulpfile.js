@@ -23,7 +23,7 @@ function minifyCss() {
 
 function copyOtherFiles() {
   return gulp
-    .src(['docs/**/*', '!docs/**/*.html', '!docs/**/*.css'], { base: 'docs' })
+    .src(['docs/**/*', '!docs/**/*.html', '!docs/**/*.css'], { base: 'docs', encoding: false })
     .pipe(gulp.dest('dist'));
 }
 
