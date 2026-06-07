@@ -64,9 +64,13 @@
   color: white;
 }
 
+html,
 body {
   scroll-behavior: smooth;
   scroll-padding-top: var(--computed-page-top-margin);
+}
+
+body {
   background-color: #19120d;
   background-image: url("../img/backgrounds/VerticalBackgroundTest3.png");
   background-size: cover;
