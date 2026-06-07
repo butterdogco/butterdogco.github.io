@@ -1,0 +1,62 @@
+@import url('./global.css');
+@import url('./elements/card.css');
+@import url('./elements/news-card.css');
+
+main {
+  display: flex;
+  flex-flow: column;
+  gap: var(--cardGap);
+  justify-content: center;
+}
+
+.welcome-card img {
+  object-fit: contain;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  /* height: 44vh; */
+  justify-content: center;
+}
+
+/* In the future this should be imported from the card.css file, but for simplicity right now we'll recreate it, since it has custom behavior */
+.card {
+  width: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* Make the first one not have a top or bottom right curved corner */
+.card:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Make the middle one not have any curved corners */
+.card:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+/* Make the last one not have a top or bottom left curved corner */
+.card:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+@media (max-width: 1117px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+    height: auto;
+  }
+
+  /* Increase card height and set default corners for mobile */
+  .card {
+    height: 410px;
+    border-radius: var(--cardCornerRadius) !important;
+  }
+}

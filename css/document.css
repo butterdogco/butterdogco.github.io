@@ -1,0 +1,16 @@
+@import url('./global.css');
+
+main {
+  text-shadow: 0 0 12px rgba(0,0,0,0.6);
+
+  code {
+    font-family: monospace;
+    background-color: black;
+    outline: black 2px solid;
+    border-radius: 2px;
+  }
+}
+
+pre {
+  white-space: pre-wrap;
+}
