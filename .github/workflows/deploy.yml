@@ -10,6 +10,7 @@ on:
 permissions:
   contents: read
   pages: write
+  id-token: write
 
 # Ensure that only one deployment runs at a time to prevent conflicts
 concurrency:
