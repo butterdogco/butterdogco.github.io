@@ -182,27 +182,13 @@ function footerLogoClick() {
   }
 }
 
-function createFooter() {
-  const footer = document.createElement("footer");
-  footer.innerHTML = `
-    <section class="logo">
-      <img src="/img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy">
-    </section>
-    <section class="links">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/applications">Apps</a></li>
-        <li><a href="/news">News</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-      <img src="/img/general/ButterDogCo%20Wide%20Logo.png" alt="ButterDogCo Logo (Wide)" class="logo" loading="lazy" tabindex="0" role="button" aria-label="Funny secret">
-      <ul>
-        <li><a href="/pp">Privacy Policy</a></li>
-        <li><a href="https://status.b-dog.co">Status</a></li>
-        <li><a href="/tos">Terms of Use</a></li>
-      </ul>
-    </section>
-  `;
+function setupFooter() {
+  const footer = document.getElementById("footer");
+  if (!footer) {
+    console.warn("Footer element not found, skipping footer setup.");
+    return;
+  }
+
   const footerImage = footer.querySelectorAll('img.logo');
   footerImage.forEach(img => {
     img.addEventListener('click', footerLogoClick);
@@ -212,9 +198,34 @@ function createFooter() {
       }
     });
   });
-  document.body.appendChild(footer);
 }
 
-initCards();
-createFooter();
-setupNav();
+function highlightHashElement() {
+  const hash = window.location.hash;
+  if (hash) {
+    const element = document.getElementById(hash.substring(1));
+    if (element) {
+      if (element.classList.contains("highlight")) return; // Don't re-apply highlight if it's already highlighted
+      
+      element.classList.add("highlight");
+      setTimeout(() => {
+        element.classList.remove("highlight");
+      }, 3000);
+    }
+  }
+}
+
+// If a hash is present in the URL, highlight the element with that ID
+function setupHashHighlight() {
+  highlightHashElement();
+
+  // Also listen for hash changes after the page has loaded
+  window.addEventListener("hashchange", highlightHashElement);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initCards();
+  setupNav();
+  setupFooter();
+  setupHashHighlight();
+});

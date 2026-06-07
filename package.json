@@ -1,0 +1,30 @@
+{
+  "name": "butterdogco.github.io",
+  "version": "1.0.0",
+  "description": "This is the official repository for the ButterDogCo website, which can be found at https://butterdogco.com.",
+  "homepage": "https://github.com/butterdogco/butterdogco.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/butterdogco/butterdogco.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/butterdogco/butterdogco.github.io.git"
+  },
+  "author": "ButterDogCo",
+  "type": "commonjs",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglify": "^3.0.2",
+    "through2": "^4.0.2"
+  }
+}
