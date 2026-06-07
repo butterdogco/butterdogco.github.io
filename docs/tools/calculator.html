@@ -18,7 +18,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script defer src="https://stats.butterdogco.com/script.js" data-website-id="f89d9bc3-6551-4bef-a04d-02e18710fe69"></script>
   <script src="https://cdn.jsdelivr.net/npm/ios-pwa-splash@1.0.0/cdn.min.js"></script>
-  <script>iosPWASplash('img/butterdog.png', '#19120d');</script>
+  <script>iosPWASplash('../img/butterdog.png', '#19120d');</script>
   <style>
     table {
       border: none;
@@ -95,30 +95,30 @@
     <tr>
       <!-- create button and assign value to each button -->
       <!-- dis("1") will call function dis to display value -->
-      <td><input type="button" value="1" onclick="dis('1')" onkeydown="myFunction(event)"> </td>
-      <td><input type="button" value="2" onclick="dis('2')" onkeydown="myFunction(event)"> </td>
-      <td><input type="button" value="3" onclick="dis('3')" onkeydown="myFunction(event)"> </td>
-      <td><input type="button" value="÷" onclick="dis('/')" onkeydown="myFunction(event)"> </td>
+      <td><input type="button" value="1" onclick="dis('1')" onkeydown="handleClick(event)"> </td>
+      <td><input type="button" value="2" onclick="dis('2')" onkeydown="handleClick(event)"> </td>
+      <td><input type="button" value="3" onclick="dis('3')" onkeydown="handleClick(event)"> </td>
+      <td><input type="button" value="÷" onclick="dis('/')" onkeydown="handleClick(event)"> </td>
     </tr>
     <tr>
-      <td><input type="button" value="4" onclick="dis('4')" onkeydown="myFunction(event)"> </td>
-      <td><input type="button" value="5" onclick="dis('5')" onkeydown="myFunction(event)"> </td>
-      <td><input type="button" value="6" onclick="dis('6')" onkeydown="myFunction(event)"> </td>
-      <td><input type="button" value="x" onclick="dis('*')" onkeydown="myFunction(event)"> </td>
+      <td><input type="button" value="4" onclick="dis('4')" onkeydown="handleClick(event)"> </td>
+      <td><input type="button" value="5" onclick="dis('5')" onkeydown="handleClick(event)"> </td>
+      <td><input type="button" value="6" onclick="dis('6')" onkeydown="handleClick(event)"> </td>
+      <td><input type="button" value="x" onclick="dis('*')" onkeydown="handleClick(event)"> </td>
     </tr>
     <tr>
-      <td><input type="button" value="7" onclick="dis('7')" onkeydown="myFunction(event)"> </td>
-      <td><input type="button" value="8" onclick="dis('8')" onkeydown="myFunction(event)"> </td>
-      <td><input type="button" value="9" onclick="dis('9')" onkeydown="myFunction(event)"> </td>
-      <td><input type="button" value="-" onclick="dis('-')" onkeydown="myFunction(event)"> </td>
+      <td><input type="button" value="7" onclick="dis('7')" onkeydown="handleClick(event)"> </td>
+      <td><input type="button" value="8" onclick="dis('8')" onkeydown="handleClick(event)"> </td>
+      <td><input type="button" value="9" onclick="dis('9')" onkeydown="handleClick(event)"> </td>
+      <td><input type="button" value="-" onclick="dis('-')" onkeydown="handleClick(event)"> </td>
     </tr>
     <tr>
-      <td><input type="button" value="0" onclick="dis('0')" onkeydown="myFunction(event)"> </td>
-      <td><input type="button" value="." onclick="dis('.')" onkeydown="myFunction(event)"> </td>
+      <td><input type="button" value="0" onclick="dis('0')" onkeydown="handleClick(event)"> </td>
+      <td><input type="button" value="." onclick="dis('.')" onkeydown="handleClick(event)"> </td>
       <!-- solve function call function solve to evaluate value -->
       <td><input type="button" value="=" onclick="solve()"> </td>
 
-      <td><input type="button" value="+" onclick="dis('+')" onkeydown="myFunction(event)"> </td>
+      <td><input type="button" value="+" onclick="dis('+')" onkeydown="handleClick(event)"> </td>
     </tr>
   </table>
 
@@ -128,7 +128,7 @@
       document.getElementById("result").value += val
     }
 
-    function myFunction(event) {
+    function handleClick(event) {
       if (event.key == '0' || event.key == '1'
         || event.key == '2' || event.key == '3'
         || event.key == '4' || event.key == '5'
