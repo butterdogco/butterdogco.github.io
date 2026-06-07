@@ -31,12 +31,17 @@
     justify-content: center;
     width: 100%;
 
+    .header {
+      margin: 0 0 8px 0;
+    }
+
     .text {
-      margin-top: 0;
+      margin: 0;
       white-space: preserve-breaks;
     }
 
     .details {
+      margin: 8px 0 0 0;
       font-style: italic;
       color: rgb(200, 200, 200);
     }

@@ -1,8 +1,6 @@
 @import url('./global.css');
 
 main {
-  margin-top: 170px !important;
-  margin-left: 12px;
   text-shadow: 0 0 12px rgba(0,0,0,0.6);
 
   code {
