@@ -37,6 +37,12 @@ const cards = {
       Link: "https://wikabedia.b-dog.co"
     },
     {
+      Name: "butterTube",
+      Desc: "bestest video platform on eart",
+      Icon: "https://cdn.jsdelivr.net/gh/butterdogco/ButterTube@main/docs/img/buttertube-icon.png",
+      Link: "https://butterdogco.com/ButterTube/"
+    },
+    {
       Name: "butterFlix",
       Desc: "super 99.99% real epik movie",
       Icon: "img/icons/ButterFlix.png",
