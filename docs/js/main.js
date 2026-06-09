@@ -32,10 +32,17 @@ function createCard(cardInfo) {
   if (card.href != "#") {
     card.title = "Click to go to " + (cardLink || cardName);
 
-    // We don't want to apply this if a link is a page of this repo
-    // But we should still allow links that include butterdogco.com
-    if (!(card.href.includes("://butterdogco.com") && card.href.split("/").length <= 4)) {
-      // Create the "external link" icon
+    const isInternalLink = () => {
+      try {
+        const url = new URL(card.href, window.location.origin);
+        return url.hostname.endsWith("butterdogco.com") && 
+              url.pathname.split("/").length <= 4;
+      } catch {
+        return false;
+      }
+    };
+
+    if (!isInternalLink()) {
       const span = document.createElement("span");
       span.classList.add("material-symbols-rounded", "open-icon");
       span.innerHTML = "open_in_new";
