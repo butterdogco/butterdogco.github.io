@@ -35,7 +35,7 @@ function createCard(cardInfo) {
     const isInternalLink = () => {
       try {
         const url = new URL(card.href, window.location.origin);
-        return url.hostname.endsWith("butterdogco.com") && 
+        return url.hostname === "butterdogco.com" && 
               url.pathname.split("/").length <= 4;
       } catch {
         return false;
