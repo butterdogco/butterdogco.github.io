@@ -39,7 +39,7 @@ const cards = {
     {
       Name: "butterTube",
       Desc: "bestest video platform on eart",
-      Icon: "https://cdn.jsdelivr.net/gh/butterdogco/ButterTube@main/docs/img/buttertube-icon.png",
+      Icon: "https://cdn.jsdelivr.net/gh/butterdogco/ButterTube@main/docs/img/buttertube-square.jpg",
       Link: "https://butterdogco.com/ButterTube/"
     },
     {
