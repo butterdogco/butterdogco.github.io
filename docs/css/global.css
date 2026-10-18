@@ -85,6 +85,8 @@ body {
   min-height: 100vh;
   padding: var(--page-side-padding);
   padding-bottom: var(--page-bottom-padding);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
 
   &.funny img:not(.dvd) {
     animation: spin 5s linear infinite;
