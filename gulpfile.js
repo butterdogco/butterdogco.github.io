@@ -26,6 +26,7 @@ const footer = `<footer id="footer">
     <ul>
       <li><a href="/privacy">Privacy</a></li>
       <li><a href="/terms">Terms</a></li>
+      <li><button class="pill-button" id="button-toggle-accessibility-panel">Accessibility</button></li>
     </ul>
   </section>
 </footer>`;
