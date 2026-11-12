@@ -1,5 +1,3 @@
-@import url('../global.css');
-
 footer {
   margin-top: 15px;
   display: flex;
@@ -23,17 +21,16 @@ footer {
   }
 
   section.links {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: space-evenly;
     gap: 10px;
-    flex-wrap: wrap;
     width: 100%;
 
     ul {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       gap: 16px;
       list-style-type: none;
       padding: 0;
@@ -58,8 +55,12 @@ footer {
       display: flex;
     }
 
-    section.links .logo {
-      display: none;
+    section.links {
+      grid-template-columns: 1fr;
+
+      .logo {
+        display: none;
+      }
     }
   }
 }
