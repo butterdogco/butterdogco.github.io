@@ -46,6 +46,10 @@ footer {
         }
       }
     }
+
+    img.logo {
+      justify-self: center;
+    }
   }
 }
 
