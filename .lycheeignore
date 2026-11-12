@@ -4,5 +4,5 @@
 .*applications
 .*terms
 .*privacy
-bento.me/.*
-*/articles/
+bento.me\/.*
+.*\/articles\/
